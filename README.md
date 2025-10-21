@@ -29,6 +29,7 @@ cd alert-promo
 
 ### Commandes
 python scan_websites.py --input websites.txt
+
 python scan_websites.py --input websites.txt --output results.csv
 
 
