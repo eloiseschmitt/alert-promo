@@ -29,11 +29,11 @@ USER_AGENT = (
 KEYWORDS: List[str] = [
     "promo", "promos", "promotion", "promotions", "soldes", "remise", "réduction", "reductions",
     "sale", "sales", "discount", "discounts", "deal", "deals", "clearance", "markdown",
-    "promotion", "promotions", "offer", "offers"
+    "promotion", "promotions", "offers"
 ]
 
 PERCENT_REGEX = re.compile(
-    r"(?<!\d)(?:[3-9]0|100)\s?%|\b(?:[3-9]0|100)\s?%|\b-\s?(?:[3-9]0|100)\s?%",
+    r"-?\s?(?:50|60|70)\s?%",
     flags=re.IGNORECASE,
 )
 
