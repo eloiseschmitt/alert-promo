@@ -27,9 +27,15 @@ git clone https://github.com/eloiseschmitt/alert-promo.git
 cd alert-promo
 ```
 
-### Commandes
+### Commandes principales
 python scan_websites.py --input websites.txt
 
 python scan_websites.py --input websites.txt --output results.csv
 
+---
+
+## ✅ Tests
+
+- `python3 -m pip install -r requirements.txt`
+- `python3 -m pytest tests/test_app_approval.py`
 

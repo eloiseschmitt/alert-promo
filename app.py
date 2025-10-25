@@ -43,30 +43,30 @@ PERCENT_REGEX = re.compile(
 
 
 STYLE_BLOCK = """
-    :root {{ --bg:#0b1020; --card:#11162a; --muted:#8ea1b2; --text:#e9eef5; --accent:#2dd4bf; --warn:#f59e0b; --danger:#ef4444; --ok:#22c55e; }}
-    html,body {{ margin:0; padding:0; background:var(--bg); color:var(--text); font-family: system-ui, -apple-system, Segoe UI, Roboto, Cantarell, \"Helvetica Neue\", Arial, \"Noto Sans\", \"Apple Color Emoji\", \"Segoe UI Emoji\"; }}
-    .container {{ max-width: 1100px; margin: 40px auto; padding: 0 16px; }}
-    .card {{ background: var(--card); border: 1px solid rgba(255,255,255,.06); border-radius: 16px; padding: 20px; box-shadow: 0 10px 30px rgba(0,0,0,.2); }}
-    h1 {{ font-size: 28px; margin: 0 0 10px; }}
-    p.muted {{ color: var(--muted); margin-top: 0; }}
-    .actions {{ display: flex; gap: 12px; align-items: center; margin: 18px 0 8px; flex-wrap: wrap; }}
-    button {{ background: var(--accent); color:#062b2b; font-weight: 700; border: 0; padding: 10px 16px; border-radius: 12px; cursor: pointer; transition: transform .05s ease; }}
-    button:active {{ transform: translateY(1px); }}
-    .hint {{ color: var(--muted); font-size: 14px; }}
-    .badge {{ display:inline-block; padding: 2px 8px; border-radius: 999px; font-size: 12px; font-weight: 700; }}
-    .badge.ok {{ background: rgba(34,197,94,.15); color: var(--ok); }}
-    .badge.none {{ background: rgba(239,68,68,.12); color: var(--danger); }}
-    .badge.http {{ background: rgba(245,158,11,.12); color: var(--warn); }}
-    .table-wrap {{ overflow:auto; border-radius: 12px; border: 1px solid rgba(255,255,255,.06); }}
-    table {{ width:100%; border-collapse: collapse; }}
-    th, td {{ padding: 10px 12px; border-bottom: 1px solid rgba(255,255,255,.06); text-align: left; font-size: 14px; }}
-    th {{ background: rgba(255,255,255,.03); position: sticky; top:0; }}
-    tr:hover td {{ background: rgba(255,255,255,.02); }}
-    .mono {{ font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, \"Liberation Mono\", monospace; }}
-    .loader {{ display:none; margin-left: 8px; width: 18px; height: 18px; border-radius:50%; border: 2px solid rgba(255,255,255,.2); border-top-color: var(--accent); animation: spin 0.8s linear infinite; }}
-    .loader.show {{ display:inline-block; }}
-    @keyframes spin {{ to {{ transform: rotate(360deg); }} }}
-    .footer {{ color: var(--muted); font-size: 12px; margin-top: 10px; }}
+    :root { --bg:#0b1020; --card:#11162a; --muted:#8ea1b2; --text:#e9eef5; --accent:#2dd4bf; --warn:#f59e0b; --danger:#ef4444; --ok:#22c55e; }
+    html,body { margin:0; padding:0; background:var(--bg); color:var(--text); font-family: system-ui, -apple-system, Segoe UI, Roboto, Cantarell, \"Helvetica Neue\", Arial, \"Noto Sans\", \"Apple Color Emoji\", \"Segoe UI Emoji\"; }
+    .container { max-width: 1100px; margin: 40px auto; padding: 0 16px; }
+    .card { background: var(--card); border: 1px solid rgba(255,255,255,.06); border-radius: 16px; padding: 20px; box-shadow: 0 10px 30px rgba(0,0,0,.2); }
+    h1 { font-size: 28px; margin: 0 0 10px; }
+    p.muted { color: var(--muted); margin-top: 0; }
+    .actions { display: flex; gap: 12px; align-items: center; margin: 18px 0 8px; flex-wrap: wrap; }
+    button { background: var(--accent); color:#062b2b; font-weight: 700; border: 0; padding: 10px 16px; border-radius: 12px; cursor: pointer; transition: transform .05s ease; }
+    button:active { transform: translateY(1px); }
+    .hint { color: var(--muted); font-size: 14px; }
+    .badge { display:inline-block; padding: 2px 8px; border-radius: 999px; font-size: 12px; font-weight: 700; }
+    .badge.ok { background: rgba(34,197,94,.15); color: var(--ok); }
+    .badge.none { background: rgba(239,68,68,.12); color: var(--danger); }
+    .badge.http { background: rgba(245,158,11,.12); color: var(--warn); }
+    .table-wrap { overflow:auto; border-radius: 12px; border: 1px solid rgba(255,255,255,.06); }
+    table { width:100%; border-collapse: collapse; }
+    th, td { padding: 10px 12px; border-bottom: 1px solid rgba(255,255,255,.06); text-align: left; font-size: 14px; }
+    th { background: rgba(255,255,255,.03); position: sticky; top:0; }
+    tr:hover td { background: rgba(255,255,255,.02); }
+    .mono { font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, \"Liberation Mono\", monospace; }
+    .loader { display:none; margin-left: 8px; width: 18px; height: 18px; border-radius:50%; border: 2px solid rgba(255,255,255,.2); border-top-color: var(--accent); animation: spin 0.8s linear infinite; }
+    .loader.show { display:inline-block; }
+    @keyframes spin { to { transform: rotate(360deg); } }
+    .footer { color: var(--muted); font-size: 12px; margin-top: 10px; }
 """
 
 
