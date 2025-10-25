@@ -1,0 +1,36 @@
+name: Daily Promotion Email
+
+on:
+  schedule:
+    - cron: "0 7 * * *"  # 07:00 UTC = 09:00 Europe/Paris
+  workflow_dispatch: {}
+
+jobs:
+  email-report:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    env:
+      SMTP_HOST: ${{ secrets.SMTP_HOST }}
+      SMTP_PORT: ${{ secrets.SMTP_PORT }}
+      SMTP_USER: ${{ secrets.SMTP_USER }}
+      SMTP_PASSWORD: ${{ secrets.SMTP_PASSWORD }}
+      MAIL_FROM: ${{ secrets.MAIL_FROM }}
+      MAIL_TO: ${{ secrets.MAIL_TO }}
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: "pip"
+
+      - name: Install dependencies
+        run: |
+          pip install -r requirements.txt
+
+      - name: Run batch and send email
+        run: |
+          python app.py --email
