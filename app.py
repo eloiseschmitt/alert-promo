@@ -2,8 +2,12 @@
 # -*- coding: utf-8 -*-
 
 from pathlib import Path
-from typing import Dict, List, Optional
+from typing import Any, Dict, Iterable, List, Optional, Sequence, TypedDict, cast
+import datetime
+import io
+import os
 import re
+import smtplib
 import unicodedata
 
 from flask import Flask, jsonify, render_template_string, send_file
@@ -12,10 +16,7 @@ from bs4 import BeautifulSoup
 from requests.adapters import HTTPAdapter
 from urllib3.util.retry import Retry
 import csv
-import io
-import datetime
 
-import smtplib, os
 from email.message import EmailMessage
 
 app = Flask(__name__)
@@ -39,6 +40,58 @@ PERCENT_REGEX = re.compile(
     r"-?\s?(?:50|60|70)\s?%",
     flags=re.IGNORECASE,
 )
+
+
+STYLE_BLOCK = """
+    :root {{ --bg:#0b1020; --card:#11162a; --muted:#8ea1b2; --text:#e9eef5; --accent:#2dd4bf; --warn:#f59e0b; --danger:#ef4444; --ok:#22c55e; }}
+    html,body {{ margin:0; padding:0; background:var(--bg); color:var(--text); font-family: system-ui, -apple-system, Segoe UI, Roboto, Cantarell, \"Helvetica Neue\", Arial, \"Noto Sans\", \"Apple Color Emoji\", \"Segoe UI Emoji\"; }}
+    .container {{ max-width: 1100px; margin: 40px auto; padding: 0 16px; }}
+    .card {{ background: var(--card); border: 1px solid rgba(255,255,255,.06); border-radius: 16px; padding: 20px; box-shadow: 0 10px 30px rgba(0,0,0,.2); }}
+    h1 {{ font-size: 28px; margin: 0 0 10px; }}
+    p.muted {{ color: var(--muted); margin-top: 0; }}
+    .actions {{ display: flex; gap: 12px; align-items: center; margin: 18px 0 8px; flex-wrap: wrap; }}
+    button {{ background: var(--accent); color:#062b2b; font-weight: 700; border: 0; padding: 10px 16px; border-radius: 12px; cursor: pointer; transition: transform .05s ease; }}
+    button:active {{ transform: translateY(1px); }}
+    .hint {{ color: var(--muted); font-size: 14px; }}
+    .badge {{ display:inline-block; padding: 2px 8px; border-radius: 999px; font-size: 12px; font-weight: 700; }}
+    .badge.ok {{ background: rgba(34,197,94,.15); color: var(--ok); }}
+    .badge.none {{ background: rgba(239,68,68,.12); color: var(--danger); }}
+    .badge.http {{ background: rgba(245,158,11,.12); color: var(--warn); }}
+    .table-wrap {{ overflow:auto; border-radius: 12px; border: 1px solid rgba(255,255,255,.06); }}
+    table {{ width:100%; border-collapse: collapse; }}
+    th, td {{ padding: 10px 12px; border-bottom: 1px solid rgba(255,255,255,.06); text-align: left; font-size: 14px; }}
+    th {{ background: rgba(255,255,255,.03); position: sticky; top:0; }}
+    tr:hover td {{ background: rgba(255,255,255,.02); }}
+    .mono {{ font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, \"Liberation Mono\", monospace; }}
+    .loader {{ display:none; margin-left: 8px; width: 18px; height: 18px; border-radius:50%; border: 2px solid rgba(255,255,255,.2); border-top-color: var(--accent); animation: spin 0.8s linear infinite; }}
+    .loader.show {{ display:inline-block; }}
+    @keyframes spin {{ to {{ transform: rotate(360deg); }} }}
+    .footer {{ color: var(--muted); font-size: 12px; margin-top: 10px; }}
+"""
+
+
+TABLE_HEADER_HTML = """
+            <tr>
+              <th>#</th>
+              <th>URL</th>
+              <th>Final URL</th>
+              <th>HTTP</th>
+              <th>Status</th>
+              <th>Promo?</th>
+              <th>Found</th>
+              <th>Error</th>
+            </tr>
+"""
+
+
+class ScanResult(TypedDict):
+    url: str
+    status: Optional[str]
+    http_status: Optional[int]
+    final_url: Optional[str]
+    has_promo: bool
+    found: List[str]
+    error: Optional[str]
 
 
 # ----------------- HTTP session -----------------
@@ -98,31 +151,30 @@ def read_urls(input_path: Path) -> List[str]:
     return [ln.strip() for ln in lines if ln.strip() and not ln.strip().startswith("#")]
 
 
-def check_url(session: requests.Session, url: str, timeout: int = DEFAULT_TIMEOUT) -> Dict[str, Optional[str]]:
-    original_url = url.strip()
-    if not original_url:
-        return {
-            "url": original_url, "status": "skipped", "http_status": None,
-            "final_url": None, "has_promo": False, "found": [], "error": None
-        }
-
-    if not original_url.startswith(("http://", "https://")):
-        url = "https://" + original_url
-    else:
-        url = original_url
-
-    result = {
-        "url": original_url,
+def _make_empty_result(url: str) -> ScanResult:
+    return {
+        "url": url,
         "status": None,
         "http_status": None,
         "final_url": None,
         "has_promo": False,
-        "found": [],
+        "found": cast(List[str], []),
         "error": None,
     }
 
+
+def check_url(session: requests.Session, url: str, timeout: int = DEFAULT_TIMEOUT) -> ScanResult:
+    original_url = url.strip()
+    if not original_url:
+        result = _make_empty_result(original_url)
+        result["status"] = "skipped"
+        return result
+
+    request_url = original_url if original_url.startswith(("http://", "https://")) else f"https://{original_url}"
+    result = _make_empty_result(original_url)
+
     try:
-        resp = session.get(url, timeout=timeout, allow_redirects=True)
+        resp = session.get(request_url, timeout=timeout, allow_redirects=True)
         result["http_status"] = resp.status_code
         result["final_url"] = str(resp.url)
 
@@ -137,91 +189,68 @@ def check_url(session: requests.Session, url: str, timeout: int = DEFAULT_TIMEOU
         result["status"] = "ok"
         return result
 
-    except requests.exceptions.SSLError as e:
+    except requests.exceptions.SSLError as exc:
         result["status"] = "ssl_error"
-        result["error"] = str(e)
-    except requests.exceptions.Timeout as e:
+        result["error"] = str(exc)
+    except requests.exceptions.Timeout as exc:
         result["status"] = "timeout"
-        result["error"] = str(e)
-    except requests.exceptions.RequestException as e:
+        result["error"] = str(exc)
+    except requests.exceptions.RequestException as exc:
         result["status"] = "request_error"
-        result["error"] = str(e)
+        result["error"] = str(exc)
 
     return result
 
 
-def to_csv_bytes(rows: List[Dict]) -> bytes:
+def to_csv_bytes(rows: Iterable[ScanResult]) -> bytes:
     output = io.StringIO()
     fieldnames = ["url", "final_url", "http_status", "status", "has_promo", "found", "error"]
     writer = csv.DictWriter(output, fieldnames=fieldnames)
     writer.writeheader()
     for r in rows:
-        row = r.copy()
-        row["found"] = ", ".join(r.get("found", [])) if r.get("found") else ""
+        row: Dict[str, Any] = dict(r)
+        row["found"] = ", ".join(r["found"]) if r["found"] else ""
         writer.writerow(row)
     return output.getvalue().encode("utf-8")
 
 
-# ----------------- Web UI -----------------
-TEMPLATE = """
-<!doctype html>
+def scan_urls(urls: Sequence[str], timeout: int = DEFAULT_TIMEOUT) -> List[ScanResult]:
+    if not urls:
+        return []
+
+    session = build_session()
+    try:
+        return [check_url(session, candidate, timeout=timeout) for candidate in urls]
+    finally:
+        session.close()
+
+
+TEMPLATE = """<!doctype html>
 <html lang="fr">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta charset=\"utf-8\" />
+  <meta name=\"viewport\" content=\"width=device-width,initial-scale=1\" />
   <title>Check Promotions</title>
   <style>
-    :root { --bg:#0b1020; --card:#11162a; --muted:#8ea1b2; --text:#e9eef5; --accent:#2dd4bf; --warn:#f59e0b; --danger:#ef4444; --ok:#22c55e; }
-    html,body { margin:0; padding:0; background:var(--bg); color:var(--text); font-family: system-ui, -apple-system, Segoe UI, Roboto, Cantarell, "Helvetica Neue", Arial, "Noto Sans", "Apple Color Emoji", "Segoe UI Emoji"; }
-    .container { max-width: 1100px; margin: 40px auto; padding: 0 16px; }
-    .card { background: var(--card); border: 1px solid rgba(255,255,255,.06); border-radius: 16px; padding: 20px; box-shadow: 0 10px 30px rgba(0,0,0,.2); }
-    h1 { font-size: 28px; margin: 0 0 10px; }
-    p.muted { color: var(--muted); margin-top: 0; }
-    .actions { display: flex; gap: 12px; align-items: center; margin: 18px 0 8px; flex-wrap: wrap; }
-    button { background: var(--accent); color:#062b2b; font-weight: 700; border: 0; padding: 10px 16px; border-radius: 12px; cursor: pointer; transition: transform .05s ease; }
-    button:active { transform: translateY(1px); }
-    .hint { color: var(--muted); font-size: 14px; }
-    .badge { display:inline-block; padding: 2px 8px; border-radius: 999px; font-size: 12px; font-weight: 700; }
-    .badge.ok { background: rgba(34,197,94,.15); color: var(--ok); }
-    .badge.none { background: rgba(239,68,68,.12); color: var(--danger); }
-    .badge.http { background: rgba(245,158,11,.12); color: var(--warn); }
-    .table-wrap { overflow:auto; border-radius: 12px; border: 1px solid rgba(255,255,255,.06); }
-    table { width:100%; border-collapse: collapse; }
-    th, td { padding: 10px 12px; border-bottom: 1px solid rgba(255,255,255,.06); text-align: left; font-size: 14px; }
-    th { background: rgba(255,255,255,.03); position: sticky; top:0; }
-    tr:hover td { background: rgba(255,255,255,.02); }
-    .mono { font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace; }
-    .loader { display:none; margin-left: 8px; width: 18px; height: 18px; border-radius:50%; border: 2px solid rgba(255,255,255,.2); border-top-color: var(--accent); animation: spin 0.8s linear infinite; }
-    .loader.show { display:inline-block; }
-    @keyframes spin { to { transform: rotate(360deg); } }
-    .footer { color: var(--muted); font-size: 12px; margin-top: 10px; }
+""" + STYLE_BLOCK + """
   </style>
 </head>
 <body>
-  <div class="container">
-    <div class="card">
+  <div class=\"container\">
+    <div class=\"card\">
       <h1>🔍 Check Promotions</h1>
-      <p class="muted">Clique sur “Run scan” pour analyser les URLs de <span class="mono">websites.txt</span> et détecter la présence de promotions (multi-langues + pourcentages).</p>
-      <div class="actions">
-        <button id="runBtn">▶︎ Run scan</button>
-        <div id="spinner" class="loader"></div>
-        <button id="downloadCsvBtn" disabled>⬇️ Download CSV</button>
-        <span class="hint">Astuce : édite <span class="mono">websites.txt</span> (une URL par ligne), puis relance le scan.</span>
+      <p class=\"muted\">Clique sur “Run scan” pour analyser les URLs de <span class=\"mono\">websites.txt</span> et détecter la présence de promotions (multi-langues + pourcentages).</p>
+      <div class=\"actions\">
+        <button id=\"runBtn\">▶︎ Run scan</button>
+        <div id=\"spinner\" class=\"loader\"></div>
+        <button id=\"downloadCsvBtn\" disabled>⬇️ Download CSV</button>
+        <span class=\"hint\">Astuce : édite <span class=\"mono\">websites.txt</span> (une URL par ligne), puis relance le scan.</span>
       </div>
 
-      <div class="table-wrap">
-        <table id="resultsTable">
+      <div class=\"table-wrap\">
+        <table id=\"resultsTable\">
           <thead>
-            <tr>
-              <th>#</th>
-              <th>URL</th>
-              <th>Final URL</th>
-              <th>HTTP</th>
-              <th>Status</th>
-              <th>Promo?</th>
-              <th>Found</th>
-              <th>Error</th>
-            </tr>
+""" + TABLE_HEADER_HTML + """
           </thead>
           <tbody>
             <!-- rows injected -->
@@ -229,7 +258,7 @@ TEMPLATE = """
         </table>
       </div>
 
-      <div class="footer">Lit <span class="mono">websites.txt</span> côté serveur • Timeout {{timeout}}s • Retries: 3 • User-Agent réaliste</div>
+      <div class=\"footer\">Lit <span class=\"mono\">websites.txt</span> côté serveur • Timeout {{timeout}}s • Retries: 3 • User-Agent réaliste</div>
     </div>
   </div>
 
@@ -316,7 +345,7 @@ TEMPLATE = """
 """
 
 # in-memory cache for last results to allow CSV download
-LAST_RESULTS: List[Dict] = []
+LAST_RESULTS: List[ScanResult] = []
 
 
 @app.route("/")
@@ -328,12 +357,8 @@ def index():
 def scan():
     global LAST_RESULTS
     urls = read_urls(URLS_FILE)
-    session = build_session()
-    results = []
-    for u in urls:
-        r = check_url(session, u, timeout=DEFAULT_TIMEOUT)
-        results.append(r)
-    LAST_RESULTS = results
+    results = scan_urls(urls, timeout=DEFAULT_TIMEOUT)
+    LAST_RESULTS = list(results)
     return jsonify({"results": results})
 
 
@@ -352,17 +377,12 @@ def download_csv():
 
 
 # ---------- Batch scan (reusable) ----------
-def run_batch_scan(timeout: int = DEFAULT_TIMEOUT) -> List[Dict]:
-    session = build_session()
+def run_batch_scan(timeout: int = DEFAULT_TIMEOUT) -> List[ScanResult]:
     urls = read_urls(URLS_FILE)
-    results = []
-    for u in urls:
-        r = check_url(session, u, timeout=timeout)
-        results.append(r)
-    return results
+    return scan_urls(urls, timeout=timeout)
 
 # ---------- HTML rendering for email ----------
-def render_email_html(results: List[Dict], generated_at: str) -> str:
+def render_email_html(results: Sequence[ScanResult], generated_at: str) -> str:
     # Reprend ton style et le tableau, sans les boutons/JS.
     return f"""<!doctype html>
 <html lang="fr">
@@ -371,22 +391,12 @@ def render_email_html(results: List[Dict], generated_at: str) -> str:
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Check Promotions – Report</title>
   <style>
-    :root {{ --bg:#0b1020; --card:#11162a; --muted:#8ea1b2; --text:#e9eef5; --accent:#2dd4bf; --warn:#f59e0b; --danger:#ef4444; --ok:#22c55e; }}
-    body {{ margin:0; padding:0; background:var(--bg); color:var(--text); font-family: system-ui,-apple-system,Segoe UI,Roboto,Cantarell,"Helvetica Neue",Arial,"Noto Sans","Apple Color Emoji","Segoe UI Emoji"; }}
-    .container {{ max-width: 1100px; margin: 24px auto; padding: 0 16px; }}
-    .card {{ background: var(--card); border: 1px solid rgba(255,255,255,.06); border-radius: 16px; padding: 20px; box-shadow: 0 10px 30px rgba(0,0,0,.2); }}
+{STYLE_BLOCK}
+    .container {{ margin: 24px auto; padding: 0 16px; }}
     h1 {{ font-size: 22px; margin: 0 0 4px; }}
-    p.muted {{ color: var(--muted); margin: 0 0 16px; }}
-    .badge {{ display:inline-block; padding: 2px 8px; border-radius: 999px; font-size: 12px; font-weight: 700; }}
-    .ok {{ background: rgba(34,197,94,.15); color: var(--ok); }}
-    .none {{ background: rgba(239,68,68,.12); color: var(--danger); }}
-    .http {{ background: rgba(245,158,11,.12); color: var(--warn); }}
-    .table-wrap {{ overflow:auto; border-radius: 12px; border: 1px solid rgba(255,255,255,.06); }}
-    table {{ width:100%; border-collapse: collapse; }}
-    th, td {{ padding: 10px 12px; border-bottom: 1px solid rgba(255,255,255,.06); text-align: left; font-size: 14px; }}
-    th {{ background: rgba(255,255,255,.03); }}
-    .mono {{ font-family: ui-monospace,SFMono-Regular,Menlo,Consolas,"Liberation Mono",monospace; font-size: 12px; }}
-    .footer {{ color: var(--muted); font-size: 12px; margin-top: 10px; }}
+    p.muted {{ margin: 0 0 16px; }}
+    th {{ position: static; }}
+    .mono {{ font-size: 12px; }}
     a {{ color: var(--accent); text-decoration: none; }}
   </style>
 </head>
@@ -399,16 +409,7 @@ def render_email_html(results: List[Dict], generated_at: str) -> str:
       <div class="table-wrap">
         <table role="grid" aria-label="Results">
           <thead>
-            <tr>
-              <th>#</th>
-              <th>URL</th>
-              <th>Final URL</th>
-              <th>HTTP</th>
-              <th>Status</th>
-              <th>Promo?</th>
-              <th>Found</th>
-              <th>Error</th>
-            </tr>
+{TABLE_HEADER_HTML}
           </thead>
           <tbody>
             {''.join(_render_email_row(i, r) for i, r in enumerate(results, 1))}
@@ -433,26 +434,30 @@ def _status_badge(status: Optional[str]) -> str:
 def _promo_badge(has: bool) -> str:
     return '<span class="badge ok">PROMO</span>' if has else '<span class="badge none">—</span>'
 
-def _esc(s: Optional[str]) -> str:
-    if s is None: return ""
-    return (str(s)
-            .replace("&","&amp;")
-            .replace("<","&lt;")
-            .replace(">","&gt;")
-            .replace('"',"&quot;")
-            .replace("'","&#39;"))
+def _esc(value: Optional[object]) -> str:
+    if value is None:
+        return ""
+    return (
+        str(value)
+        .replace("&", "&amp;")
+        .replace("<", "&lt;")
+        .replace(">", "&gt;")
+        .replace('"', "&quot;")
+        .replace("'", "&#39;")
+    )
 
-def _render_email_row(idx: int, row: Dict) -> str:
+
+def _render_email_row(idx: int, row: ScanResult) -> str:
     return f"""
     <tr>
       <td class="mono">{idx}</td>
-      <td class="mono">{_esc(row.get('url'))}</td>
-      <td class="mono">{_esc(row.get('final_url') or '')}</td>
-      <td>{_esc(row.get('http_status'))}</td>
-      <td>{_status_badge(row.get('status'))}</td>
-      <td>{_promo_badge(bool(row.get('has_promo')))}</td>
-      <td>{_esc(', '.join(row.get('found') or []))}</td>
-      <td class="mono">{_esc(row.get('error') or '')}</td>
+      <td class="mono">{_esc(row['url'])}</td>
+      <td class="mono">{_esc(row['final_url'])}</td>
+      <td>{_esc(row['http_status'])}</td>
+      <td>{_status_badge(row['status'])}</td>
+      <td>{_promo_badge(row['has_promo'])}</td>
+      <td>{_esc(', '.join(row['found']))}</td>
+      <td class="mono">{_esc(row['error'])}</td>
     </tr>
     """
 
@@ -468,8 +473,10 @@ def send_email(subject: str, html_body: str, to_addrs: List[str]) -> None:
     smtp_password = os.getenv("SMTP_PASSWORD")
     mail_from = os.getenv("MAIL_FROM")
 
-    if not all([smtp_host, smtp_port, mail_from]):
-        raise RuntimeError("SMTP configuration missing: SMTP_HOST/SMTP_PORT/MAIL_FROM")
+    if not smtp_host or not mail_from:
+        raise RuntimeError("SMTP configuration missing: SMTP_HOST/MAIL_FROM")
+    if not to_addrs:
+        raise RuntimeError("No recipients provided to send_email")
 
     msg = EmailMessage()
     msg["Subject"] = subject
