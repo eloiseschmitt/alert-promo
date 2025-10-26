@@ -30,6 +30,7 @@ __all__ = [
 
 
 def build_session() -> requests.Session:
+    """Create a configured `requests.Session` with retries and headers."""
     session = requests.Session()
     retry = Retry(
         total=3,
@@ -49,6 +50,7 @@ def build_session() -> requests.Session:
 
 
 def normalize_text(text: str) -> str:
+    """Lowercase input text and append an ASCII-folded variant."""
     lowered = text.lower()
     ascii_folded = (
         unicodedata.normalize("NFKD", lowered)
@@ -59,6 +61,7 @@ def normalize_text(text: str) -> str:
 
 
 def extract_visible_text(html: str) -> str:
+    """Strip non-visual tags from HTML and return normalized text."""
     soup = BeautifulSoup(html, "html.parser")
     for tag in soup(["script", "style", "noscript", "template"]):
         tag.decompose()
@@ -67,6 +70,7 @@ def extract_visible_text(html: str) -> str:
 
 
 def find_keywords(text: str, keywords: List[str]) -> List[str]:
+    """Return unique keywords (and percentage hits) detected in text."""
     found: List[str] = []
     for kw in keywords:
         if kw.lower() in text:
@@ -78,6 +82,7 @@ def find_keywords(text: str, keywords: List[str]) -> List[str]:
 
 
 def read_urls(input_path: Path) -> List[str]:
+    """Load URLs from a text file, skipping blanks and comments."""
     if not input_path.exists():
         return []
     lines = input_path.read_text(encoding="utf-8").splitlines()
@@ -85,6 +90,7 @@ def read_urls(input_path: Path) -> List[str]:
 
 
 def _make_empty_result(url: str) -> ScanResult:
+    """Build an empty scan result for the provided URL."""
     return {
         "url": url,
         "status": None,
@@ -97,6 +103,7 @@ def _make_empty_result(url: str) -> ScanResult:
 
 
 def check_url(session: requests.Session, url: str, timeout: int = DEFAULT_TIMEOUT) -> ScanResult:
+    """Fetch an URL and report promotion-related findings."""
     original_url = url.strip()
     if not original_url:
         result = _make_empty_result(original_url)
@@ -136,6 +143,7 @@ def check_url(session: requests.Session, url: str, timeout: int = DEFAULT_TIMEOU
 
 
 def to_csv_bytes(rows: Iterable[ScanResult]) -> bytes:
+    """Serialize scan results into CSV and return the encoded bytes."""
     output = io.StringIO()
     fieldnames = ["url", "final_url", "http_status", "status", "has_promo", "found", "error"]
     writer = csv.DictWriter(output, fieldnames=fieldnames)
@@ -148,6 +156,7 @@ def to_csv_bytes(rows: Iterable[ScanResult]) -> bytes:
 
 
 def scan_urls(urls: Sequence[str], timeout: int = DEFAULT_TIMEOUT) -> List[ScanResult]:
+    """Run `check_url` on every URL using a shared session."""
     if not urls:
         return []
 
@@ -159,5 +168,6 @@ def scan_urls(urls: Sequence[str], timeout: int = DEFAULT_TIMEOUT) -> List[ScanR
 
 
 def run_batch_scan(timeout: int = DEFAULT_TIMEOUT) -> List[ScanResult]:
+    """Read URLs from disk and return scan results."""
     urls = read_urls(URLS_FILE)
     return scan_urls(urls, timeout=timeout)

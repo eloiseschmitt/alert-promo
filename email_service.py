@@ -22,6 +22,7 @@ def render_email_html(
     env: Environment,
     default_timeout: int = DEFAULT_TIMEOUT,
 ) -> str:
+    """Render the email report template using the provided Jinja environment."""
     template = env.get_template("email_report.html")
     return template.render(
         results=results,
@@ -31,10 +32,7 @@ def render_email_html(
 
 
 def send_email(subject: str, html_body: str, to_addrs: List[str]) -> None:
-    """
-    Uses ENV for SMTP settings:
-      SMTP_HOST, SMTP_PORT, SMTP_USER, SMTP_PASSWORD, MAIL_FROM
-    """
+    """Send an HTML email leveraging SMTP settings from environment variables."""
     smtp_host = os.getenv("SMTP_HOST")
     smtp_port = int(os.getenv("SMTP_PORT", "587"))
     smtp_user = os.getenv("SMTP_USER")

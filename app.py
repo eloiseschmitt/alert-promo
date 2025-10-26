@@ -3,7 +3,7 @@
 
 from pathlib import Path
 from typing import Sequence
-import datetime
+from datetime import datetime, timezone
 import io
 import os
 
@@ -52,11 +52,13 @@ __all__ = [
 
 @app.route("/")
 def index():
+    """Render the single-page dashboard that triggers scans."""
     return render_template("index.html", timeout=DEFAULT_TIMEOUT)
 
 
 @app.route("/scan", methods=["POST"])
 def scan():
+    """Trigger a scan for URLs listed in `websites.txt` and return JSON results."""
     urls = read_urls(URLS_FILE)
     promo_results = scan_urls(urls, timeout=DEFAULT_TIMEOUT)
     constants.LAST_RESULTS = list(promo_results)
@@ -65,8 +67,9 @@ def scan():
 
 @app.route("/download_csv", methods=["GET"])
 def download_csv():
+    """Stream the latest scan results as a CSV download."""
     csv_bytes = to_csv_bytes(LAST_RESULTS or [])
-    ts = datetime.datetime.utcnow().strftime("%Y%m%d_%H%M%S")
+    ts = datetime.now(timezone.utc).strftime("%Y%m%d_%H%M%S")
     mem = io.BytesIO(csv_bytes)
     mem.seek(0)
     return send_file(
@@ -78,6 +81,7 @@ def download_csv():
 
 
 def render_email_html(results: Sequence[ScanResult], generated_at: str) -> str:
+    """Render the HTML email using the app's Jinja environment."""
     return _render_email_html(results, generated_at, env=app.jinja_env)
 
 if __name__ == "__main__":
@@ -98,7 +102,7 @@ if __name__ == "__main__":
             raise SystemExit("No recipients provided. Use: python app.py --email you@example.com OR set MAIL_TO env.")
 
         results = run_batch_scan()
-        ts = datetime.datetime.utcnow().strftime("%Y-%m-%d %H:%M:%SZ")
+        ts = datetime.now(timezone.utc).strftime("%Y-%m-%d %H:%M:%SZ")
         html = render_email_html(results, generated_at=ts)
         send_email(subject=f"Check Promotions – Rapport {ts}", html_body=html, to_addrs=to_list)
         print(f"[OK] Email sent to: {', '.join(to_list)} ({len(results)} URLs)")
