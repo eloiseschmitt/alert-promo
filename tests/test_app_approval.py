@@ -7,7 +7,9 @@ from typing import List
 from approvaltests import verify_html
 from flask import render_template
 
-from app import DEFAULT_TIMEOUT, ScanResult, app as flask_app, render_email_html
+from constants import DEFAULT_TIMEOUT
+from models import ScanResult
+from app import app as flask_app, render_email_html
 
 
 def _sample_results() -> List[ScanResult]:

@@ -9,9 +9,9 @@ from typing import Iterable, List
 import pytest
 import requests
 
+from constants import KEYWORDS
+from models import ScanResult
 from app import (
-    KEYWORDS,
-    ScanResult,
     check_url,
     find_keywords,
     normalize_text,
@@ -135,7 +135,7 @@ def test_scan_urls_uses_custom_session(monkeypatch: pytest.MonkeyPatch) -> None:
     def _fake_build_session() -> _DummySession:
         return dummy_session
 
-    monkeypatch.setattr("app.build_session", _fake_build_session)
+    monkeypatch.setattr("scanner.build_session", _fake_build_session)
 
     results = scan_urls(["https://a.example", "https://b.example"], timeout=5)
 
