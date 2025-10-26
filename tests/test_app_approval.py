@@ -5,9 +5,9 @@ from __future__ import annotations
 from typing import List
 
 from approvaltests import verify_html
-from flask import render_template_string
+from flask import render_template
 
-from app import DEFAULT_TIMEOUT, TEMPLATE, ScanResult, app as flask_app, render_email_html
+from app import DEFAULT_TIMEOUT, ScanResult, app as flask_app, render_email_html
 
 
 def _sample_results() -> List[ScanResult]:
@@ -36,7 +36,7 @@ def _sample_results() -> List[ScanResult]:
 def _render_index_html() -> str:
     with flask_app.app_context():
         with flask_app.test_request_context("/"):
-            return render_template_string(TEMPLATE, timeout=DEFAULT_TIMEOUT)
+            return render_template("index.html", timeout=DEFAULT_TIMEOUT)
 
 
 def test_index_template_matches_snapshot() -> None:
