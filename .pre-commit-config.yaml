@@ -20,7 +20,7 @@ repos:
           - types-requests
 
   - repo: https://github.com/pre-commit/mirrors-pylint
-    rev: v3.2.0
+    rev: v3.0.0a5
     hooks:
       - id: pylint
-        files: "^(app.py|scanner.py|email_service.py|constants.py|models.py|tests/.*\.py)$"
+        files: "^(app.py|scanner.py|email_service.py|constants.py|models.py|tests/.*\\.py)$"
