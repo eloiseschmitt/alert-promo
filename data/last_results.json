@@ -9,7 +9,8 @@
       "soldes"
     ],
     "error": null,
-    "changed": true
+    "changed": false,
+    "category": "FEMMES"
   },
   {
     "url": "https://thinkingmu.com/fr",
@@ -22,7 +23,8 @@
       "réduction"
     ],
     "error": null,
-    "changed": true
+    "changed": false,
+    "category": "FEMMES"
   },
   {
     "url": "https://jaspebydiane.fr/",
@@ -34,7 +36,8 @@
       "remise"
     ],
     "error": null,
-    "changed": true
+    "changed": false,
+    "category": "FEMMES"
   },
   {
     "url": "https://minuitsurterre.com/",
@@ -44,7 +47,8 @@
     "has_promo": false,
     "found": [],
     "error": null,
-    "changed": true
+    "changed": false,
+    "category": "FEMMES"
   },
   {
     "url": "https://julesjenn.com/",
@@ -54,7 +58,8 @@
     "has_promo": false,
     "found": [],
     "error": null,
-    "changed": true
+    "changed": false,
+    "category": "FEMMES"
   },
   {
     "url": "https://www.wedressfair.fr/",
@@ -64,7 +69,8 @@
     "has_promo": false,
     "found": [],
     "error": null,
-    "changed": true
+    "changed": false,
+    "category": "FEMMES"
   },
   {
     "url": "https://www.balibaris.com/",
@@ -74,7 +80,8 @@
     "has_promo": false,
     "found": [],
     "error": null,
-    "changed": true
+    "changed": false,
+    "category": "FEMMES"
   },
   {
     "url": "https://noyoco.com/",
@@ -84,7 +91,8 @@
     "has_promo": false,
     "found": [],
     "error": null,
-    "changed": true
+    "changed": false,
+    "category": "FEMMES"
   },
   {
     "url": "https://bonnegueule.fr/",
@@ -94,7 +102,8 @@
     "has_promo": false,
     "found": [],
     "error": null,
-    "changed": true
+    "changed": false,
+    "category": "FEMMES"
   },
   {
     "url": "https://forlife-paris.com/",
@@ -106,7 +115,8 @@
       "discount"
     ],
     "error": null,
-    "changed": true
+    "changed": false,
+    "category": "FEMMES"
   },
   {
     "url": "https://www.hastparis.com/",
@@ -116,7 +126,8 @@
     "has_promo": false,
     "found": [],
     "error": null,
-    "changed": true
+    "changed": false,
+    "category": "FEMMES"
   },
   {
     "url": "https://www.asphalte.com/f",
@@ -126,7 +137,8 @@
     "has_promo": false,
     "found": [],
     "error": null,
-    "changed": true
+    "changed": false,
+    "category": "FEMMES"
   },
   {
     "url": "https://www.1083.fr/femme.html",
@@ -136,7 +148,8 @@
     "has_promo": false,
     "found": [],
     "error": null,
-    "changed": true
+    "changed": false,
+    "category": "FEMMES"
   },
   {
     "url": "https://www.montlimart.com/",
@@ -148,7 +161,8 @@
       "réduction"
     ],
     "error": null,
-    "changed": true
+    "changed": false,
+    "category": "FEMMES"
   },
   {
     "url": "https://www.loom.fr/",
@@ -161,6 +175,18 @@
       "promos"
     ],
     "error": null,
-    "changed": true
+    "changed": false,
+    "category": "FEMMES"
+  },
+  {
+    "url": "https://www.1083.fr/homme.html",
+    "status": "ok",
+    "http_status": 200,
+    "final_url": "https://www.1083.fr/homme.html",
+    "has_promo": false,
+    "found": [],
+    "error": null,
+    "changed": false,
+    "category": "HOMMES"
   }
 ]
