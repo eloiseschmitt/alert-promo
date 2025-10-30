@@ -49,7 +49,10 @@ def send_email(subject: str, html_body: str, to_addrs: List[str]) -> None:
     msg["From"] = mail_from
     msg["To"] = ", ".join(to_addrs)
 
-    msg.set_content("Votre client email ne supporte pas le HTML. Ouvrez ce message en HTML pour voir le rapport.")
+    msg.set_content(
+        "Votre client email ne supporte pas le HTML. "
+        "Ouvrez ce message en HTML pour voir le rapport."
+    )
     msg.add_alternative(html_body, subtype="html")
 
     with smtplib.SMTP(smtp_host, smtp_port, timeout=30) as server:

@@ -17,9 +17,25 @@ USER_AGENT = (
 )
 
 KEYWORDS: List[str] = [
-    "promo", "promos", "promotion", "promotions", "soldes", "remise", "réduction", "reductions",
-    "sale", "sales", "discount", "discounts", "deal", "deals", "clearance", "markdown",
-    "promotion", "promotions", "offers"
+    "promo",
+    "promos",
+    "promotion",
+    "promotions",
+    "soldes",
+    "remise",
+    "réduction",
+    "reductions",
+    "sale",
+    "sales",
+    "discount",
+    "discounts",
+    "deal",
+    "deals",
+    "clearance",
+    "markdown",
+    "promotion",
+    "promotions",
+    "offers",
 ]
 
 PERCENT_REGEX = re.compile(
@@ -30,7 +46,7 @@ LAST_RESULTS: List[ScanResult] = []
 LAST_URL_ENTRIES: List[UrlEntry] = []
 RESULT_HISTORY_FILE = Path("data/last_results.json")
 
-__all__ = [
+_EXPORTED_NAMES = (
     "DEFAULT_TIMEOUT",
     "URLS_FILE",
     "USER_AGENT",
@@ -39,4 +55,6 @@ __all__ = [
     "LAST_RESULTS",
     "LAST_URL_ENTRIES",
     "RESULT_HISTORY_FILE",
-]
+)
+
+__all__ = [name for name in _EXPORTED_NAMES if name in globals()]

@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
+"""Flask application exposing promotion scan utilities and endpoints."""
 
 from pathlib import Path
 from typing import Sequence
@@ -33,26 +34,19 @@ run_batch_scan = scanner.run_batch_scan
 
 app = Flask(__name__)
 
-__all__ = [
-    "DEFAULT_TIMEOUT",
-    "URLS_FILE",
-    "USER_AGENT",
-    "KEYWORDS",
-    "PERCENT_REGEX",
-    "ScanResult",
-    "build_session",
-    "normalize_text",
-    "extract_visible_text",
-    "find_keywords",
-    "read_urls",
-    "check_url",
-    "to_csv_bytes",
-    "scan_urls",
-    "run_batch_scan",
-    "render_email_html",
-    "send_email",
-    "app",
-]
+_CONSTANT_EXPORTS = list(getattr(constants, "__all__", []))
+_SCANNER_EXPORTS = list(getattr(scanner, "__all__", []))
+
+__all__ = (
+    _CONSTANT_EXPORTS
+    + _SCANNER_EXPORTS
+    + [
+        "ScanResult",
+        "render_email_html",
+        "send_email",
+        "app",
+    ]
+)
 
 
 @app.route("/")
@@ -72,23 +66,25 @@ def scan():
 def download_csv():
     """Stream the latest scan results as a CSV download."""
     csv_bytes = to_csv_bytes(LAST_RESULTS or [])
-    ts = datetime.now(timezone.utc).strftime("%Y%m%d_%H%M%S")
+    date_time = datetime.now(timezone.utc).strftime("%Y%m%d_%H%M%S")
     mem = io.BytesIO(csv_bytes)
     mem.seek(0)
     return send_file(
         mem,
         mimetype="text/csv; charset=utf-8",
         as_attachment=True,
-        download_name=f"results_{ts}.csv",
+        download_name=f"results_{date_time}.csv",
     )
 
 
-def render_email_html(results: Sequence[ScanResult], generated_at: str) -> str:
+def render_email_html(scan_results: Sequence[ScanResult], generated_at: str) -> str:
     """Render the HTML email using the app's Jinja environment."""
-    return _render_email_html(results, generated_at, env=app.jinja_env)
+    return _render_email_html(scan_results, generated_at, env=app.jinja_env)
+
 
 if __name__ == "__main__":
     import sys
+
     if len(sys.argv) > 1 and sys.argv[1] == "--batch":
         output = Path("data/results.csv")
         output.parent.mkdir(parents=True, exist_ok=True)
@@ -102,12 +98,17 @@ if __name__ == "__main__":
         to_arg = sys.argv[2] if len(sys.argv) > 2 else ""
         to_list = [e.strip() for e in (to_arg or to_env).split(",") if e.strip()]
         if not to_list:
-            raise SystemExit("No recipients provided. Use: python app.py --email you@example.com OR set MAIL_TO env.")
+            raise SystemExit(
+                "No recipients provided. Use: python app.py --email you@example.com "
+                "OR set MAIL_TO env."
+            )
 
         results = run_batch_scan()
         ts = datetime.now(timezone.utc).strftime("%Y-%m-%d %H:%M:%SZ")
         html = render_email_html(results, generated_at=ts)
-        send_email(subject=f"Check Promotions – Rapport {ts}", html_body=html, to_addrs=to_list)
+        send_email(
+            subject=f"Check Promotions – Rapport {ts}", html_body=html, to_addrs=to_list
+        )
         print(f"[OK] Email sent to: {', '.join(to_list)} ({len(results)} URLs)")
 
     else:

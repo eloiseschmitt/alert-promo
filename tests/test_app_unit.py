@@ -21,31 +21,44 @@ from app import (
 )
 
 
-class _DummyResponse:
+class _DummyResponse:  # pylint: disable=too-few-public-methods
+    """Minimal stub mimicking requests.Response for tests."""
+
     def __init__(self, *, status_code: int, url: str, text: str) -> None:
+        """Store attributes typically inspected by the code under test."""
         self.status_code = status_code
         self.url = url
         self.text = text
 
 
 class _DummySession:
-    def __init__(self, responses: Iterable[_DummyResponse], *, raise_exc: Exception | None = None) -> None:
+    """Small fixture emulating the subset of Session behaviour we need."""
+
+    def __init__(
+        self, responses: Iterable[_DummyResponse], *, raise_exc: Exception | None = None
+    ) -> None:
+        """Prepare to serve canned responses or raise a provided exception."""
         self._responses = iter(responses)
         self._exc = raise_exc
         self.get_calls: List[str] = []
         self.closed = False
 
-    def get(self, url: str, timeout: int, allow_redirects: bool) -> _DummyResponse:  # pragma: no cover - signature mirrors requests
+    def get(  # pragma: no cover - signature mirrors requests
+        self, url: str, **_: object
+    ) -> _DummyResponse:
+        """Return the next fake response while recording the URL."""
         if self._exc is not None:
             raise self._exc
         self.get_calls.append(url)
         return next(self._responses)
 
     def close(self) -> None:
+        """Mark the session as closed."""
         self.closed = True
 
 
 def test_find_keywords_detects_words_and_percentage() -> None:
+    """Ensure keyword lookup catches accents and percentage patterns."""
     text = normalize_text("Mega Réduction -60% sur tout !")
     found = find_keywords(text, KEYWORDS)
     assert "réduction" in found
@@ -53,6 +66,7 @@ def test_find_keywords_detects_words_and_percentage() -> None:
 
 
 def test_read_urls_filters_comments_and_blanks(tmp_path: Path) -> None:
+    """The reader skips comments and empty lines while keeping order."""
     content = """
     # comment
     https://example.com
@@ -71,10 +85,13 @@ def test_read_urls_filters_comments_and_blanks(tmp_path: Path) -> None:
 
 
 def test_check_url_success_detects_promo() -> None:
+    """Positive scan should flag promotions and keep metadata."""
     html = "<html><body>Grande promo! -50% sur tout.</body></html>"
-    session = _DummySession([
-        _DummyResponse(status_code=200, url="https://example.com/final", text=html),
-    ])
+    session = _DummySession(
+        [
+            _DummyResponse(status_code=200, url="https://example.com/final", text=html),
+        ]
+    )
 
     result = check_url(session, "https://example.com")
 
@@ -87,9 +104,14 @@ def test_check_url_success_detects_promo() -> None:
 
 
 def test_check_url_handles_http_error() -> None:
-    session = _DummySession([
-        _DummyResponse(status_code=503, url="https://example.com/final", text="maintenance"),
-    ])
+    """Non-200 responses should propagate HTTP status in the result."""
+    session = _DummySession(
+        [
+            _DummyResponse(
+                status_code=503, url="https://example.com/final", text="maintenance"
+            ),
+        ]
+    )
 
     result = check_url(session, "https://example.com")
 
@@ -99,6 +121,7 @@ def test_check_url_handles_http_error() -> None:
 
 
 def test_check_url_handles_timeout() -> None:
+    """Timeouts bubble up as a dedicated status with the error message."""
     session = _DummySession([], raise_exc=requests.exceptions.Timeout("timeout"))
 
     result = check_url(session, "https://example.com")
@@ -109,6 +132,7 @@ def test_check_url_handles_timeout() -> None:
 
 
 def test_to_csv_bytes_serialises_found_entries() -> None:
+    """CSV export flattens lists and keeps the changed flag."""
     rows: List[ScanResult] = [
         {
             "url": "https://example.com",
@@ -133,14 +157,20 @@ def test_to_csv_bytes_serialises_found_entries() -> None:
 
 
 def test_scan_urls_uses_custom_session(monkeypatch: pytest.MonkeyPatch) -> None:
+    """scan_urls must reuse the provided session and preserve categories."""
     responses = [
-        _DummyResponse(status_code=200, url="https://a.example/final", text="Promo -50%"),
-        _DummyResponse(status_code=404, url="https://b.example/final", text="not found"),
+        _DummyResponse(
+            status_code=200, url="https://a.example/final", text="Promo -50%"
+        ),
+        _DummyResponse(
+            status_code=404, url="https://b.example/final", text="not found"
+        ),
     ]
 
     dummy_session = _DummySession(responses)
 
     def _fake_build_session() -> _DummySession:
+        """Stub factory returning our dummy session."""
         return dummy_session
 
     monkeypatch.setattr("scanner.build_session", _fake_build_session)

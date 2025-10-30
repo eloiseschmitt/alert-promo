@@ -26,19 +26,6 @@ from constants import (
 )
 from models import ScanResult, UrlEntry
 
-__all__ = [
-    "build_session",
-    "normalize_text",
-    "extract_visible_text",
-    "find_keywords",
-    "read_urls",
-    "check_url",
-    "to_csv_bytes",
-    "scan_urls",
-    "run_batch_scan",
-    "apply_history",
-]
-
 
 def build_session() -> requests.Session:
     """Create a configured `requests.Session` with retries and headers."""
@@ -53,10 +40,12 @@ def build_session() -> requests.Session:
     adapter = HTTPAdapter(max_retries=retry)
     session.mount("http://", adapter)
     session.mount("https://", adapter)
-    session.headers.update({
-        "User-Agent": USER_AGENT,
-        "Accept-Language": "fr,fr-FR;q=0.9,en;q=0.8",
-    })
+    session.headers.update(
+        {
+            "User-Agent": USER_AGENT,
+            "Accept-Language": "fr,fr-FR;q=0.9,en;q=0.8",
+        }
+    )
     return session
 
 
@@ -64,9 +53,7 @@ def normalize_text(text: str) -> str:
     """Lowercase input text and append an ASCII-folded variant."""
     lowered = text.lower()
     ascii_folded = (
-        unicodedata.normalize("NFKD", lowered)
-        .encode("ascii", "ignore")
-        .decode("ascii")
+        unicodedata.normalize("NFKD", lowered).encode("ascii", "ignore").decode("ascii")
     )
     return lowered + "\n" + ascii_folded
 
@@ -124,7 +111,9 @@ def _make_empty_result(url: str) -> ScanResult:
     }
 
 
-def check_url(session: requests.Session, url: str, timeout: int = DEFAULT_TIMEOUT) -> ScanResult:
+def check_url(
+    session: requests.Session, url: str, timeout: int = DEFAULT_TIMEOUT
+) -> ScanResult:
     """Fetch an URL and report promotion-related findings."""
     original_url = url.strip()
     if not original_url:
@@ -132,7 +121,11 @@ def check_url(session: requests.Session, url: str, timeout: int = DEFAULT_TIMEOU
         result["status"] = "skipped"
         return result
 
-    request_url = original_url if original_url.startswith(("http://", "https://")) else f"https://{original_url}"
+    request_url = (
+        original_url
+        if original_url.startswith(("http://", "https://"))
+        else f"https://{original_url}"
+    )
     result = _make_empty_result(original_url)
 
     try:
@@ -187,7 +180,9 @@ def to_csv_bytes(rows: Iterable[ScanResult]) -> bytes:
     return output.getvalue().encode("utf-8")
 
 
-def scan_urls(urls: Sequence[UrlEntry], timeout: int = DEFAULT_TIMEOUT) -> List[ScanResult]:
+def scan_urls(
+    urls: Sequence[UrlEntry], timeout: int = DEFAULT_TIMEOUT
+) -> List[ScanResult]:
     """Run `check_url` on every URL using a shared session."""
     if not urls:
         return []
@@ -224,7 +219,7 @@ def _load_history(path: Path = RESULT_HISTORY_FILE) -> Dict[str, Dict[str, Any]]
     if isinstance(raw, list):
         for entry in raw:
             if isinstance(entry, dict) and "url" in entry:
-                history[str(entry["url"])]=entry
+                history[str(entry["url"])] = entry
     return history
 
 
@@ -232,7 +227,9 @@ def _store_history(results: List[ScanResult], path: Path = RESULT_HISTORY_FILE) 
     """Persist the latest scan results to disk for future comparisons."""
     path.parent.mkdir(parents=True, exist_ok=True)
     serializable: List[Dict[str, Any]] = [dict(res) for res in results]
-    path.write_text(json.dumps(serializable, ensure_ascii=False, indent=2), encoding="utf-8")
+    path.write_text(
+        json.dumps(serializable, ensure_ascii=False, indent=2), encoding="utf-8"
+    )
 
 
 _COMPARE_KEYS = ("status", "http_status", "final_url", "has_promo", "found", "error")
@@ -248,7 +245,9 @@ def _has_changes(current: ScanResult, previous: Dict[str, Any] | None) -> bool:
     return False
 
 
-def apply_history(results: List[ScanResult], path: Path = RESULT_HISTORY_FILE) -> List[ScanResult]:
+def apply_history(
+    results: List[ScanResult], path: Path = RESULT_HISTORY_FILE
+) -> List[ScanResult]:
     """Annotate results with change detection and update on-disk history."""
     previous = _load_history(path)
     for res in results:
@@ -256,3 +255,17 @@ def apply_history(results: List[ScanResult], path: Path = RESULT_HISTORY_FILE) -
     _store_history(results, path)
     LAST_RESULTS[:] = results
     return results
+
+
+__all__ = [
+    "build_session",
+    "normalize_text",
+    "extract_visible_text",
+    "find_keywords",
+    "read_urls",
+    "check_url",
+    "to_csv_bytes",
+    "scan_urls",
+    "run_batch_scan",
+    "apply_history",
+]

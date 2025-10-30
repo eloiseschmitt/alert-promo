@@ -42,10 +42,12 @@ def _render_index_html() -> str:
 
 
 def test_index_template_matches_snapshot() -> None:
+    """Rendered dashboard HTML should stay stable."""
     html = _render_index_html()
     verify_html(html)
 
 
 def test_email_template_matches_snapshot() -> None:
+    """Email rendering must keep expected markup structure."""
     html = render_email_html(_sample_results(), generated_at="2024-01-01T00:00:00Z")
     verify_html(html)

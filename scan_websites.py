@@ -16,13 +16,33 @@ USER_AGENT = (
     "Chrome/120.0.0.0 Safari/537.36"
 )
 
-KEYWORDS = ["promo", "promos", "promotion", "promotions", "soldes", "remise", "réduction", "reductions","sale", "sales", "discount", "discounts", "deal", "deals", "clearance", "markdown",
-    "promotion", "promotions", "offers"]
+KEYWORDS = [
+    "promo",
+    "promos",
+    "promotion",
+    "promotions",
+    "soldes",
+    "remise",
+    "réduction",
+    "reductions",
+    "sale",
+    "sales",
+    "discount",
+    "discounts",
+    "deal",
+    "deals",
+    "clearance",
+    "markdown",
+    "promotion",
+    "promotions",
+    "offers",
+]
 
 PERCENT_REGEX = re.compile(
     r"-?\s?(?:50|60|70)\s?%",
     flags=re.IGNORECASE,
 )
+
 
 def build_session() -> requests.Session:
     session = requests.Session()
@@ -36,8 +56,11 @@ def build_session() -> requests.Session:
     adapter = HTTPAdapter(max_retries=retry)
     session.mount("http://", adapter)
     session.mount("https://", adapter)
-    session.headers.update({"User-Agent": USER_AGENT, "Accept-Language": "fr,fr-FR;q=0.9,en;q=0.8"})
+    session.headers.update(
+        {"User-Agent": USER_AGENT, "Accept-Language": "fr,fr-FR;q=0.9,en;q=0.8"}
+    )
     return session
+
 
 def normalize_text(text: str) -> str:
     """Lowercase + strip + remove excessive spaces; keep accents for non-latin scripts,
@@ -45,12 +68,11 @@ def normalize_text(text: str) -> str:
     lowered = text.lower()
     # Version ASCII pour attraper les variantes sans accents
     ascii_folded = (
-        unicodedata.normalize("NFKD", lowered)
-        .encode("ascii", "ignore")
-        .decode("ascii")
+        unicodedata.normalize("NFKD", lowered).encode("ascii", "ignore").decode("ascii")
     )
     # On retourne les deux pour matcher plus largement
     return lowered + "\n" + ascii_folded
+
 
 def extract_visible_text(html: str) -> str:
     soup = BeautifulSoup(html, "html.parser")
@@ -59,6 +81,7 @@ def extract_visible_text(html: str) -> str:
         tag.decompose()
     text = soup.get_text(separator=" ", strip=True)
     return normalize_text(text)
+
 
 def find_keywords(text: str, keywords: List[str]) -> List[str]:
     found = []
@@ -74,11 +97,19 @@ def find_keywords(text: str, keywords: List[str]) -> List[str]:
     return sorted(set(found), key=str.lower)
 
 
-def check_url(session: requests.Session, url: str, timeout: int = DEFAULT_TIMEOUT) -> Dict[str, Optional[str]]:
+def check_url(
+    session: requests.Session, url: str, timeout: int = DEFAULT_TIMEOUT
+) -> Dict[str, Optional[str]]:
     original_url = url.strip()
     if not original_url:
-        return {"url": original_url, "status": "skipped", "http_status": None, "final_url": None,
-                "has_promo": False, "found": []}
+        return {
+            "url": original_url,
+            "status": "skipped",
+            "http_status": None,
+            "final_url": None,
+            "has_promo": False,
+            "found": [],
+        }
 
     if not original_url.startswith(("http://", "https://")):
         url = "https://" + original_url
@@ -130,9 +161,19 @@ def read_urls(input_path: Path) -> List[str]:
     # Filtrer les commentaires/vides
     return [ln.strip() for ln in lines if ln.strip() and not ln.strip().startswith("#")]
 
+
 def write_csv(output_path: Path, rows: List[Dict]):
     import csv
-    fieldnames = ["url", "final_url", "http_status", "status", "has_promo", "found", "error"]
+
+    fieldnames = [
+        "url",
+        "final_url",
+        "http_status",
+        "status",
+        "has_promo",
+        "found",
+        "error",
+    ]
     with output_path.open("w", encoding="utf-8", newline="") as f:
         writer = csv.DictWriter(f, fieldnames=fieldnames)
         writer.writeheader()
@@ -142,14 +183,23 @@ def write_csv(output_path: Path, rows: List[Dict]):
             row["found"] = ", ".join(r.get("found", [])) if r.get("found") else ""
             writer.writerow(row)
 
+
 def parse_args() -> argparse.Namespace:
     p = argparse.ArgumentParser(
         description="Vérifie la présence de mots-clés de promotions sur la page d'accueil d'une liste d'URLs."
     )
-    p.add_argument("--input", "-i", required=True, help="Fichier texte avec une URL par ligne.")
+    p.add_argument(
+        "--input", "-i", required=True, help="Fichier texte avec une URL par ligne."
+    )
     p.add_argument("--output", "-o", help="Fichier CSV de sortie (optionnel).")
-    p.add_argument("--timeout", type=int, default=DEFAULT_TIMEOUT, help="Timeout HTTP en secondes (défaut: 10).")
+    p.add_argument(
+        "--timeout",
+        type=int,
+        default=DEFAULT_TIMEOUT,
+        help="Timeout HTTP en secondes (défaut: 10).",
+    )
     return p.parse_args()
+
 
 def main():
     args = parse_args()
@@ -176,6 +226,7 @@ def main():
     if args.output:
         write_csv(Path(args.output), results)
         print(f"\nCSV écrit -> {args.output}")
+
 
 if __name__ == "__main__":
     main()
