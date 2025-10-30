@@ -49,8 +49,6 @@
               <tr>
                 <th>#</th>
                 <th>URL</th>
-                <th>Final URL</th>
-                <th>HTTP</th>
                 <th>Status</th>
                 <th>Promo?</th>
                 <th>Found</th>
@@ -95,8 +93,6 @@
           tr.innerHTML = `
             <td class="mono">${idx + 1}</td>
             <td class="mono">${escapeHtml(row.url)}</td>
-            <td class="mono">${escapeHtml(row.final_url || '')}</td>
-            <td>${escapeHtml(row.http_status ?? '')}</td>
             <td>${statusBadge(row)}</td>
             <td>${promoBadge(row)}</td>
             <td>${escapeHtml((row.found || []).join(', '))}</td>

@@ -36,8 +36,6 @@
               <tr>
                 <th>#</th>
                 <th>URL</th>
-                <th>Final URL</th>
-                <th>HTTP</th>
                 <th>Status</th>
                 <th>Promo?</th>
                 <th>Found</th>
@@ -49,8 +47,6 @@
               <tr>
                 <td class="mono">{{ loop.index }}</td>
                 <td class="mono">{{ row.url }}</td>
-                <td class="mono">{{ row.final_url or '' }}</td>
-                <td>{{ row.http_status or '' }}</td>
                 <td>
                   {% if row.status == 'ok' %}
                     <span class="badge ok">OK</span>
