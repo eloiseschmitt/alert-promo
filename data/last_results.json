@@ -1,29 +1,29 @@
 [
   {
-    "url": "https://www.armedangels.com/fr-fr",
+    "url": "https://www.armedangels.com/fr-fr/pages/femme-home",
     "status": "ok",
     "http_status": 200,
-    "final_url": "https://www.armedangels.com/fr-fr",
+    "final_url": "https://www.armedangels.com/fr-fr/pages/femme-home",
     "has_promo": true,
     "found": [
       "soldes"
     ],
     "error": null,
-    "changed": false,
+    "changed": true,
     "category": "FEMMES"
   },
   {
-    "url": "https://thinkingmu.com/fr",
+    "url": "https://thinkingmu.com/fr/collections/woman-clothing",
     "status": "ok",
     "http_status": 200,
-    "final_url": "https://thinkingmu.com/fr",
+    "final_url": "https://thinkingmu.com/fr/collections/woman-clothing",
     "has_promo": true,
     "found": [
       "promo",
       "réduction"
     ],
     "error": null,
-    "changed": false,
+    "changed": true,
     "category": "FEMMES"
   },
   {
@@ -40,17 +40,6 @@
     "category": "FEMMES"
   },
   {
-    "url": "https://minuitsurterre.com/",
-    "status": "ok",
-    "http_status": 200,
-    "final_url": "https://minuitsurterre.com/",
-    "has_promo": false,
-    "found": [],
-    "error": null,
-    "changed": false,
-    "category": "FEMMES"
-  },
-  {
     "url": "https://julesjenn.com/",
     "status": "ok",
     "http_status": 200,
@@ -62,71 +51,25 @@
     "category": "FEMMES"
   },
   {
-    "url": "https://www.wedressfair.fr/",
+    "url": "https://www.wedressfair.fr/accueil-femme?oc=nav",
     "status": "ok",
     "http_status": 200,
-    "final_url": "https://www.wedressfair.fr/",
+    "final_url": "https://www.wedressfair.fr/accueil-femme?oc=nav",
     "has_promo": false,
     "found": [],
     "error": null,
-    "changed": false,
+    "changed": true,
     "category": "FEMMES"
   },
   {
-    "url": "https://www.balibaris.com/",
+    "url": "https://noyoco.com/collections/femme-voir-tout",
     "status": "ok",
     "http_status": 200,
-    "final_url": "https://www.balibaris.com/",
+    "final_url": "https://noyoco.com/collections/femme-voir-tout",
     "has_promo": false,
     "found": [],
     "error": null,
-    "changed": false,
-    "category": "FEMMES"
-  },
-  {
-    "url": "https://noyoco.com/",
-    "status": "ok",
-    "http_status": 200,
-    "final_url": "https://noyoco.com/",
-    "has_promo": false,
-    "found": [],
-    "error": null,
-    "changed": false,
-    "category": "FEMMES"
-  },
-  {
-    "url": "https://bonnegueule.fr/",
-    "status": "ok",
-    "http_status": 200,
-    "final_url": "https://bonnegueule.fr/",
-    "has_promo": false,
-    "found": [],
-    "error": null,
-    "changed": false,
-    "category": "FEMMES"
-  },
-  {
-    "url": "https://forlife-paris.com/",
-    "status": "ok",
-    "http_status": 200,
-    "final_url": "https://forlife-paris.com/",
-    "has_promo": true,
-    "found": [
-      "discount"
-    ],
-    "error": null,
-    "changed": false,
-    "category": "FEMMES"
-  },
-  {
-    "url": "https://www.hastparis.com/",
-    "status": "ok",
-    "http_status": 200,
-    "final_url": "https://www.hastparis.com/",
-    "has_promo": false,
-    "found": [],
-    "error": null,
-    "changed": false,
+    "changed": true,
     "category": "FEMMES"
   },
   {
@@ -152,31 +95,45 @@
     "category": "FEMMES"
   },
   {
-    "url": "https://www.montlimart.com/",
+    "url": "https://www.loom.fr/collections/vestiaire-femme",
     "status": "ok",
     "http_status": 200,
-    "final_url": "https://www.montlimart.com/",
-    "has_promo": true,
-    "found": [
-      "réduction"
-    ],
-    "error": null,
-    "changed": false,
-    "category": "FEMMES"
-  },
-  {
-    "url": "https://www.loom.fr/",
-    "status": "ok",
-    "http_status": 200,
-    "final_url": "https://www.loom.fr/",
+    "final_url": "https://www.loom.fr/collections/vestiaire-femme",
     "has_promo": true,
     "found": [
       "promo",
       "promos"
     ],
     "error": null,
-    "changed": false,
+    "changed": true,
     "category": "FEMMES"
+  },
+  {
+    "url": "https://www.armedangels.com/fr-fr/pages/homme-home",
+    "status": "ok",
+    "http_status": 200,
+    "final_url": "https://www.armedangels.com/fr-fr/pages/homme-home",
+    "has_promo": true,
+    "found": [
+      "soldes"
+    ],
+    "error": null,
+    "changed": true,
+    "category": "HOMMES"
+  },
+  {
+    "url": "https://thinkingmu.com/fr/collections/man-clothing",
+    "status": "ok",
+    "http_status": 200,
+    "final_url": "https://thinkingmu.com/fr/collections/man-clothing",
+    "has_promo": true,
+    "found": [
+      "promo",
+      "réduction"
+    ],
+    "error": null,
+    "changed": true,
+    "category": "HOMMES"
   },
   {
     "url": "https://www.1083.fr/homme.html",
@@ -188,5 +145,133 @@
     "error": null,
     "changed": false,
     "category": "HOMMES"
+  },
+  {
+    "url": "https://www.wedressfair.fr/accueil-homme?oc=nav",
+    "status": "ok",
+    "http_status": 200,
+    "final_url": "https://www.wedressfair.fr/accueil-homme?oc=nav",
+    "has_promo": false,
+    "found": [],
+    "error": null,
+    "changed": true,
+    "category": "HOMMES"
+  },
+  {
+    "url": "https://www.balibaris.com/",
+    "status": "ok",
+    "http_status": 200,
+    "final_url": "https://www.balibaris.com/",
+    "has_promo": false,
+    "found": [],
+    "error": null,
+    "changed": false,
+    "category": "HOMMES"
+  },
+  {
+    "url": "https://noyoco.com/collections/homme-voir-tout",
+    "status": "ok",
+    "http_status": 200,
+    "final_url": "https://noyoco.com/collections/homme-voir-tout",
+    "has_promo": false,
+    "found": [],
+    "error": null,
+    "changed": true,
+    "category": "HOMMES"
+  },
+  {
+    "url": "https://bonnegueule.fr/",
+    "status": "ok",
+    "http_status": 200,
+    "final_url": "https://bonnegueule.fr/",
+    "has_promo": false,
+    "found": [],
+    "error": null,
+    "changed": false,
+    "category": "HOMMES"
+  },
+  {
+    "url": "https://forlife-paris.com/",
+    "status": "ok",
+    "http_status": 200,
+    "final_url": "https://forlife-paris.com/",
+    "has_promo": true,
+    "found": [
+      "discount"
+    ],
+    "error": null,
+    "changed": false,
+    "category": "HOMMES"
+  },
+  {
+    "url": "https://www.hastparis.com/",
+    "status": "ok",
+    "http_status": 200,
+    "final_url": "https://www.hastparis.com/",
+    "has_promo": false,
+    "found": [],
+    "error": null,
+    "changed": false,
+    "category": "HOMMES"
+  },
+  {
+    "url": "https://www.asphalte.com/h",
+    "status": "ok",
+    "http_status": 200,
+    "final_url": "https://www.asphalte.com/h",
+    "has_promo": false,
+    "found": [],
+    "error": null,
+    "changed": true,
+    "category": "HOMMES"
+  },
+  {
+    "url": "https://www.1083.fr/homme.html",
+    "status": "ok",
+    "http_status": 200,
+    "final_url": "https://www.1083.fr/homme.html",
+    "has_promo": false,
+    "found": [],
+    "error": null,
+    "changed": false,
+    "category": "HOMMES"
+  },
+  {
+    "url": "https://www.montlimart.com/",
+    "status": "ok",
+    "http_status": 200,
+    "final_url": "https://www.montlimart.com/",
+    "has_promo": true,
+    "found": [
+      "réduction"
+    ],
+    "error": null,
+    "changed": false,
+    "category": "HOMMES"
+  },
+  {
+    "url": "https://www.loom.fr/collections/vestiaire-homme",
+    "status": "ok",
+    "http_status": 200,
+    "final_url": "https://www.loom.fr/collections/vestiaire-homme",
+    "has_promo": true,
+    "found": [
+      "promo",
+      "promos"
+    ],
+    "error": null,
+    "changed": true,
+    "category": "HOMMES"
+  },
+  {
+    "url": "https://minuitsurterre.com/",
+    "status": "ok",
+    "http_status": 200,
+    "final_url": "https://minuitsurterre.com/",
+    "has_promo": false,
+    "found": [],
+    "error": null,
+    "changed": false,
+    "category": "CHAUSSURES"
   }
 ]
