@@ -14,6 +14,12 @@ class ScanResult(TypedDict):
     found: List[str]
     error: Optional[str]
     changed: bool
+    category: Optional[str]
+
+
+class UrlEntry(TypedDict):
+    url: str
+    category: Optional[str]
 
 
 __all__ = ["ScanResult"]

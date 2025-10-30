@@ -7,7 +7,7 @@ import io
 import json
 import unicodedata
 from pathlib import Path
-from typing import Any, Dict, Iterable, List, Sequence, cast
+from typing import Any, Dict, Iterable, List, Optional, Sequence, cast
 
 import requests
 from bs4 import BeautifulSoup
@@ -18,12 +18,13 @@ from constants import (
     DEFAULT_TIMEOUT,
     KEYWORDS,
     LAST_RESULTS,
+    LAST_URL_ENTRIES,
     PERCENT_REGEX,
     RESULT_HISTORY_FILE,
     URLS_FILE,
     USER_AGENT,
 )
-from models import ScanResult
+from models import ScanResult, UrlEntry
 
 __all__ = [
     "build_session",
@@ -91,12 +92,21 @@ def find_keywords(text: str, keywords: List[str]) -> List[str]:
     return sorted(set(found), key=str.lower)
 
 
-def read_urls(input_path: Path) -> List[str]:
-    """Load URLs from a text file, skipping blanks and comments."""
+def read_urls(input_path: Path) -> List[UrlEntry]:
+    """Load URLs with optional categories from a text file."""
+    entries: List[UrlEntry] = []
+    current_category: Optional[str] = None
     if not input_path.exists():
-        return []
-    lines = input_path.read_text(encoding="utf-8").splitlines()
-    return [ln.strip() for ln in lines if ln.strip() and not ln.strip().startswith("#")]
+        return entries
+    for raw_line in input_path.read_text(encoding="utf-8").splitlines():
+        line = raw_line.strip()
+        if not line or line.startswith("#"):
+            continue
+        if line.endswith(":") and len(line) > 1:
+            current_category = line[:-1].strip()
+            continue
+        entries.append({"url": line, "category": current_category})
+    return entries
 
 
 def _make_empty_result(url: str) -> ScanResult:
@@ -110,6 +120,7 @@ def _make_empty_result(url: str) -> ScanResult:
         "found": cast(List[str], []),
         "error": None,
         "changed": False,
+        "category": None,
     }
 
 
@@ -176,14 +187,19 @@ def to_csv_bytes(rows: Iterable[ScanResult]) -> bytes:
     return output.getvalue().encode("utf-8")
 
 
-def scan_urls(urls: Sequence[str], timeout: int = DEFAULT_TIMEOUT) -> List[ScanResult]:
+def scan_urls(urls: Sequence[UrlEntry], timeout: int = DEFAULT_TIMEOUT) -> List[ScanResult]:
     """Run `check_url` on every URL using a shared session."""
     if not urls:
         return []
 
     session = build_session()
     try:
-        return [check_url(session, candidate, timeout=timeout) for candidate in urls]
+        results: List[ScanResult] = []
+        for entry in urls:
+            res = check_url(session, entry["url"], timeout=timeout)
+            res["category"] = entry.get("category")
+            results.append(res)
+        return results
     finally:
         session.close()
 
@@ -192,6 +208,7 @@ def run_batch_scan(timeout: int = DEFAULT_TIMEOUT) -> List[ScanResult]:
     """Read URLs from disk, scan them, update history, and return results."""
     urls = read_urls(URLS_FILE)
     results = scan_urls(urls, timeout=timeout)
+    LAST_URL_ENTRIES[:] = urls
     return apply_history(results)
 
 

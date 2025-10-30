@@ -6,7 +6,7 @@ from pathlib import Path
 import re
 from typing import List
 
-from models import ScanResult
+from models import ScanResult, UrlEntry
 
 DEFAULT_TIMEOUT = 10
 URLS_FILE = Path("websites.txt")
@@ -27,6 +27,7 @@ PERCENT_REGEX = re.compile(
     flags=re.IGNORECASE,
 )
 LAST_RESULTS: List[ScanResult] = []
+LAST_URL_ENTRIES: List[UrlEntry] = []
 RESULT_HISTORY_FILE = Path("data/last_results.json")
 
 __all__ = [
@@ -36,5 +37,6 @@ __all__ = [
     "KEYWORDS",
     "PERCENT_REGEX",
     "LAST_RESULTS",
+    "LAST_URL_ENTRIES",
     "RESULT_HISTORY_FILE",
 ]

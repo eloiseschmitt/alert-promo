@@ -64,7 +64,10 @@ def test_read_urls_filters_comments_and_blanks(tmp_path: Path) -> None:
 
     urls = read_urls(file_path)
 
-    assert urls == ["https://example.com", "https://promo.test"]
+    assert urls == [
+        {"url": "https://example.com", "category": None},
+        {"url": "https://promo.test", "category": None},
+    ]
 
 
 def test_check_url_success_detects_promo() -> None:
@@ -142,9 +145,15 @@ def test_scan_urls_uses_custom_session(monkeypatch: pytest.MonkeyPatch) -> None:
 
     monkeypatch.setattr("scanner.build_session", _fake_build_session)
 
-    results = scan_urls(["https://a.example", "https://b.example"], timeout=5)
+    entries = [
+        {"url": "https://a.example", "category": "A"},
+        {"url": "https://b.example", "category": "B"},
+    ]
+
+    results = scan_urls(entries, timeout=5)
 
     assert len(results) == 2
     assert dummy_session.get_calls == ["https://a.example", "https://b.example"]
     assert dummy_session.closed is True
     assert all(res["changed"] is False for res in results)
+    assert [res["category"] for res in results] == ["A", "B"]

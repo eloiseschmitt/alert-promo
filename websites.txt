@@ -1,3 +1,4 @@
+FEMMES:
 https://www.armedangels.com/fr-fr
 https://thinkingmu.com/fr
 https://jaspebydiane.fr/
@@ -13,3 +14,5 @@ https://www.asphalte.com/f
 https://www.1083.fr/femme.html
 https://www.montlimart.com/
 https://www.loom.fr/
+HOMMES:
+https://www.1083.fr/homme.html

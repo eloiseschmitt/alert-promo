@@ -20,6 +20,7 @@
       th, td { padding: 10px 12px; border-bottom: 1px solid rgba(255,255,255,.06); text-align: left; font-size: 14px; }
       th { background: rgba(255,255,255,.03); }
       .mono { font-family: ui-monospace,SFMono-Regular,Menlo,Consolas,"Liberation Mono",monospace; font-size: 12px; }
+      .category-row td { font-weight: 700; text-transform: uppercase; letter-spacing: .06em; background: rgba(255,255,255,.05); }
       .footer { color: var(--muted); font-size: 12px; margin-top: 10px; }
       a { color: var(--accent); text-decoration: none; }
     </style>
@@ -44,7 +45,14 @@
               </tr>
             </thead>
             <tbody>
+              {% set current_category = None %}
               {% for row in results %}
+              {% if row.category and row.category != current_category %}
+              {% set current_category = row.category %}
+              <tr class="category-row">
+                <td class="mono" colspan="7">{{ current_category }}</td>
+              </tr>
+              {% endif %}
               <tr>
                 <td class="mono">{{ loop.index }}</td>
                 <td class="mono">{{ row.url }}</td>

@@ -27,6 +27,7 @@
       th { background: rgba(255,255,255,.03); position: sticky; top:0; }
       tr:hover td { background: rgba(255,255,255,.02); }
       .mono { font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace; }
+      .category-row td { font-weight: 700; text-transform: uppercase; letter-spacing: .06em; background: rgba(255,255,255,.05); }
       .loader { display:none; margin-left: 8px; width: 18px; height: 18px; border-radius:50%; border: 2px solid rgba(255,255,255,.2); border-top-color: var(--accent); animation: spin 0.8s linear infinite; }
       .loader.show { display:inline-block; }
       @keyframes spin { to { transform: rotate(360deg); } }
@@ -131,7 +132,15 @@
 
       function renderRows(data) {
         tableBody.innerHTML = '';
+        let currentCategory = null;
         data.forEach((row, idx) => {
+          if (row.category && row.category !== currentCategory) {
+            currentCategory = row.category;
+            const catTr = document.createElement('tr');
+            catTr.className = 'category-row';
+            catTr.innerHTML = `<td class="mono" colspan="7">${escapeHtml(currentCategory)}</td>`;
+            tableBody.appendChild(catTr);
+          }
           const tr = document.createElement('tr');
           tr.innerHTML = `
             <td class="mono">${idx + 1}</td>

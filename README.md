@@ -34,8 +34,27 @@ python scan_websites.py --input websites.txt --output results.csv
 
 ---
 
+## 🗂️ Format de `websites.txt`
+
+- Les lignes vides ou commentées (`# ...`) sont ignorées.
+- Pour regrouper des URLs, ajoute une ligne `NOM_DE_CATEGORIE:` puis les URLs associées.
+- Exemple :
+
+  ```text
+  FEMMES:
+  https://www.armedangels.com/fr-fr
+  https://thinkingmu.com/fr
+
+  HOMMES:
+  https://jaspebydiane.fr/
+  https://minuitsurterre.com/
+  ```
+
+- Les tableaux de l’interface et du rapport e-mail afficheront une ligne d’en-tête par catégorie et marqueront les différences avec le scan précédent.
+
+---
+
 ## ✅ Tests
 
 - `python3 -m pip install -r requirements.txt`
 - `python3 -m pytest tests/test_app_approval.py`
-
