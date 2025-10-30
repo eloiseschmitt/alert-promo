@@ -2,7 +2,7 @@ import argparse
 import re
 import unicodedata
 from pathlib import Path
-from typing import Dict, List, Optional, Union
+from typing import Dict, List, Union
 
 import requests
 from bs4 import BeautifulSoup
