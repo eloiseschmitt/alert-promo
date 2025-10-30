@@ -45,13 +45,12 @@
               </tr>
             </thead>
             <tbody>
-              {% set current_category = None %}
+              {% set ns = namespace(current=None) %}
               {% for row in results %}
-              {% set previous_category = current_category %}
-              {% set current_category = row.category %}
-              {% if current_category and current_category != previous_category %}
+              {% if row.category and row.category != ns.current %}
+              {% set ns.current = row.category %}
               <tr class="category-row">
-                <td class="mono" colspan="7">{{ current_category }}</td>
+                <td class="mono" colspan="7">{{ ns.current }}</td>
               </tr>
               {% endif %}
               <tr>
