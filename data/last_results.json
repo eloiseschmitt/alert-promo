@@ -1,0 +1,166 @@
+[
+  {
+    "url": "https://www.armedangels.com/fr-fr",
+    "status": "ok",
+    "http_status": 200,
+    "final_url": "https://www.armedangels.com/fr-fr",
+    "has_promo": true,
+    "found": [
+      "soldes"
+    ],
+    "error": null,
+    "changed": true
+  },
+  {
+    "url": "https://thinkingmu.com/fr",
+    "status": "ok",
+    "http_status": 200,
+    "final_url": "https://thinkingmu.com/fr",
+    "has_promo": true,
+    "found": [
+      "promo",
+      "réduction"
+    ],
+    "error": null,
+    "changed": true
+  },
+  {
+    "url": "https://jaspebydiane.fr/",
+    "status": "ok",
+    "http_status": 200,
+    "final_url": "https://jaspebydiane.fr/",
+    "has_promo": true,
+    "found": [
+      "remise"
+    ],
+    "error": null,
+    "changed": true
+  },
+  {
+    "url": "https://minuitsurterre.com/",
+    "status": "ok",
+    "http_status": 200,
+    "final_url": "https://minuitsurterre.com/",
+    "has_promo": false,
+    "found": [],
+    "error": null,
+    "changed": true
+  },
+  {
+    "url": "https://julesjenn.com/",
+    "status": "ok",
+    "http_status": 200,
+    "final_url": "https://julesjenn.com/",
+    "has_promo": false,
+    "found": [],
+    "error": null,
+    "changed": true
+  },
+  {
+    "url": "https://www.wedressfair.fr/",
+    "status": "ok",
+    "http_status": 200,
+    "final_url": "https://www.wedressfair.fr/",
+    "has_promo": false,
+    "found": [],
+    "error": null,
+    "changed": true
+  },
+  {
+    "url": "https://www.balibaris.com/",
+    "status": "ok",
+    "http_status": 200,
+    "final_url": "https://www.balibaris.com/",
+    "has_promo": false,
+    "found": [],
+    "error": null,
+    "changed": true
+  },
+  {
+    "url": "https://noyoco.com/",
+    "status": "ok",
+    "http_status": 200,
+    "final_url": "https://noyoco.com/",
+    "has_promo": false,
+    "found": [],
+    "error": null,
+    "changed": true
+  },
+  {
+    "url": "https://bonnegueule.fr/",
+    "status": "ok",
+    "http_status": 200,
+    "final_url": "https://bonnegueule.fr/",
+    "has_promo": false,
+    "found": [],
+    "error": null,
+    "changed": true
+  },
+  {
+    "url": "https://forlife-paris.com/",
+    "status": "ok",
+    "http_status": 200,
+    "final_url": "https://forlife-paris.com/",
+    "has_promo": true,
+    "found": [
+      "discount"
+    ],
+    "error": null,
+    "changed": true
+  },
+  {
+    "url": "https://www.hastparis.com/",
+    "status": "ok",
+    "http_status": 200,
+    "final_url": "https://www.hastparis.com/",
+    "has_promo": false,
+    "found": [],
+    "error": null,
+    "changed": true
+  },
+  {
+    "url": "https://www.asphalte.com/f",
+    "status": "ok",
+    "http_status": 200,
+    "final_url": "https://www.asphalte.com/f",
+    "has_promo": false,
+    "found": [],
+    "error": null,
+    "changed": true
+  },
+  {
+    "url": "https://www.1083.fr/femme.html",
+    "status": "ok",
+    "http_status": 200,
+    "final_url": "https://www.1083.fr/femme.html",
+    "has_promo": false,
+    "found": [],
+    "error": null,
+    "changed": true
+  },
+  {
+    "url": "https://www.montlimart.com/",
+    "status": "ok",
+    "http_status": 200,
+    "final_url": "https://www.montlimart.com/",
+    "has_promo": true,
+    "found": [
+      "réduction"
+    ],
+    "error": null,
+    "changed": true
+  },
+  {
+    "url": "https://www.loom.fr/",
+    "status": "ok",
+    "http_status": 200,
+    "final_url": "https://www.loom.fr/",
+    "has_promo": true,
+    "found": [
+      "promo",
+      "promos"
+    ],
+    "error": null,
+    "changed": true
+  }
+]

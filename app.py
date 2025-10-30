@@ -10,11 +10,16 @@ import os
 from flask import Flask, jsonify, render_template, send_file
 
 import constants
-from constants import DEFAULT_TIMEOUT, KEYWORDS, PERCENT_REGEX, URLS_FILE, USER_AGENT, LAST_RESULTS
+from constants import DEFAULT_TIMEOUT, LAST_RESULTS
 from models import ScanResult
 import scanner
 from email_service import render_email_html as _render_email_html, send_email
 
+
+KEYWORDS = constants.KEYWORDS
+PERCENT_REGEX = constants.PERCENT_REGEX
+URLS_FILE = constants.URLS_FILE
+USER_AGENT = constants.USER_AGENT
 
 build_session = scanner.build_session
 normalize_text = scanner.normalize_text
@@ -59,9 +64,7 @@ def index():
 @app.route("/scan", methods=["POST"])
 def scan():
     """Trigger a scan for URLs listed in `websites.txt` and return JSON results."""
-    urls = read_urls(URLS_FILE)
-    promo_results = scan_urls(urls, timeout=DEFAULT_TIMEOUT)
-    constants.LAST_RESULTS = list(promo_results)
+    promo_results = run_batch_scan(timeout=DEFAULT_TIMEOUT)
     return jsonify({"results": promo_results})
 
 

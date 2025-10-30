@@ -53,6 +53,7 @@
                 <th>Promo?</th>
                 <th>Found</th>
                 <th>Error</th>
+                <th>Changed</th>
               </tr>
             </thead>
             <tbody>
@@ -86,6 +87,10 @@
         return String(s).replace(/[&<>"']/g, (m) => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;','\'':'&#39;'}[m]));
       }
 
+      function changedBadge(row) {
+        return row.changed ? '<span class="badge http">CHANGED</span>' : '<span class="badge ok">Stable</span>';
+      }
+
       function renderRows(data) {
         tableBody.innerHTML = '';
         data.forEach((row, idx) => {
@@ -97,6 +102,7 @@
             <td>${promoBadge(row)}</td>
             <td>${escapeHtml((row.found || []).join(', '))}</td>
             <td class="mono">${escapeHtml(row.error || '')}</td>
+            <td>${changedBadge(row)}</td>
           `;
           tableBody.appendChild(tr);
         });

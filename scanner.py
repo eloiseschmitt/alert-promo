@@ -4,6 +4,7 @@ from __future__ import annotations
 
 import csv
 import io
+import json
 import unicodedata
 from pathlib import Path
 from typing import Any, Dict, Iterable, List, Sequence, cast
@@ -13,7 +14,15 @@ from bs4 import BeautifulSoup
 from requests.adapters import HTTPAdapter
 from urllib3.util.retry import Retry
 
-from constants import DEFAULT_TIMEOUT, KEYWORDS, PERCENT_REGEX, URLS_FILE, USER_AGENT
+from constants import (
+    DEFAULT_TIMEOUT,
+    KEYWORDS,
+    LAST_RESULTS,
+    PERCENT_REGEX,
+    RESULT_HISTORY_FILE,
+    URLS_FILE,
+    USER_AGENT,
+)
 from models import ScanResult
 
 __all__ = [
@@ -26,6 +35,7 @@ __all__ = [
     "to_csv_bytes",
     "scan_urls",
     "run_batch_scan",
+    "apply_history",
 ]
 
 
@@ -99,6 +109,7 @@ def _make_empty_result(url: str) -> ScanResult:
         "has_promo": False,
         "found": cast(List[str], []),
         "error": None,
+        "changed": False,
     }
 
 
@@ -145,12 +156,22 @@ def check_url(session: requests.Session, url: str, timeout: int = DEFAULT_TIMEOU
 def to_csv_bytes(rows: Iterable[ScanResult]) -> bytes:
     """Serialize scan results into CSV and return the encoded bytes."""
     output = io.StringIO()
-    fieldnames = ["url", "final_url", "http_status", "status", "has_promo", "found", "error"]
+    fieldnames = [
+        "url",
+        "final_url",
+        "http_status",
+        "status",
+        "has_promo",
+        "found",
+        "error",
+        "changed",
+    ]
     writer = csv.DictWriter(output, fieldnames=fieldnames)
     writer.writeheader()
     for r in rows:
         row: Dict[str, Any] = dict(r)
         row["found"] = ", ".join(r["found"]) if r["found"] else ""
+        row.setdefault("changed", False)
         writer.writerow(row)
     return output.getvalue().encode("utf-8")
 
@@ -168,6 +189,53 @@ def scan_urls(urls: Sequence[str], timeout: int = DEFAULT_TIMEOUT) -> List[ScanR
 
 
 def run_batch_scan(timeout: int = DEFAULT_TIMEOUT) -> List[ScanResult]:
-    """Read URLs from disk and return scan results."""
+    """Read URLs from disk, scan them, update history, and return results."""
     urls = read_urls(URLS_FILE)
-    return scan_urls(urls, timeout=timeout)
+    results = scan_urls(urls, timeout=timeout)
+    return apply_history(results)
+
+
+def _load_history(path: Path = RESULT_HISTORY_FILE) -> Dict[str, Dict[str, Any]]:
+    """Load previous scan results from disk keyed by URL."""
+    if not path.exists():
+        return {}
+    try:
+        raw = json.loads(path.read_text(encoding="utf-8"))
+    except (OSError, json.JSONDecodeError):
+        return {}
+    history: Dict[str, Dict[str, Any]] = {}
+    if isinstance(raw, list):
+        for entry in raw:
+            if isinstance(entry, dict) and "url" in entry:
+                history[str(entry["url"])]=entry
+    return history
+
+
+def _store_history(results: List[ScanResult], path: Path = RESULT_HISTORY_FILE) -> None:
+    """Persist the latest scan results to disk for future comparisons."""
+    path.parent.mkdir(parents=True, exist_ok=True)
+    serializable: List[Dict[str, Any]] = [dict(res) for res in results]
+    path.write_text(json.dumps(serializable, ensure_ascii=False, indent=2), encoding="utf-8")
+
+
+_COMPARE_KEYS = ("status", "http_status", "final_url", "has_promo", "found", "error")
+
+
+def _has_changes(current: ScanResult, previous: Dict[str, Any] | None) -> bool:
+    """Return True if the current result differs from the previous snapshot."""
+    if not previous:
+        return True
+    for key in _COMPARE_KEYS:
+        if current.get(key) != previous.get(key):
+            return True
+    return False
+
+
+def apply_history(results: List[ScanResult], path: Path = RESULT_HISTORY_FILE) -> List[ScanResult]:
+    """Annotate results with change detection and update on-disk history."""
+    previous = _load_history(path)
+    for res in results:
+        res["changed"] = _has_changes(res, previous.get(res["url"]))
+    _store_history(results, path)
+    LAST_RESULTS[:] = results
+    return results

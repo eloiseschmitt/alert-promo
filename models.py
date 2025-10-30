@@ -13,6 +13,7 @@ class ScanResult(TypedDict):
     has_promo: bool
     found: List[str]
     error: Optional[str]
+    changed: bool
 
 
 __all__ = ["ScanResult"]

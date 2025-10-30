@@ -80,6 +80,7 @@ def test_check_url_success_detects_promo() -> None:
     assert result["final_url"] == "https://example.com/final"
     assert result["has_promo"] is True
     assert "promo" in result["found"]
+    assert result["changed"] is False
 
 
 def test_check_url_handles_http_error() -> None:
@@ -91,6 +92,7 @@ def test_check_url_handles_http_error() -> None:
 
     assert result["status"] == "http_503"
     assert result["has_promo"] is False
+    assert result["changed"] is False
 
 
 def test_check_url_handles_timeout() -> None:
@@ -100,6 +102,7 @@ def test_check_url_handles_timeout() -> None:
 
     assert result["status"] == "timeout"
     assert "timeout" in (result["error"] or "")
+    assert result["changed"] is False
 
 
 def test_to_csv_bytes_serialises_found_entries() -> None:
@@ -112,6 +115,7 @@ def test_to_csv_bytes_serialises_found_entries() -> None:
             "has_promo": True,
             "found": ["promo", "-50%"],
             "error": None,
+            "changed": True,
         }
     ]
 
@@ -122,6 +126,7 @@ def test_to_csv_bytes_serialises_found_entries() -> None:
     row = next(reader)
     assert row["found"] == "promo, -50%"
     assert row["has_promo"] == "True"
+    assert row["changed"] == "True"
 
 
 def test_scan_urls_uses_custom_session(monkeypatch: pytest.MonkeyPatch) -> None:
@@ -142,3 +147,4 @@ def test_scan_urls_uses_custom_session(monkeypatch: pytest.MonkeyPatch) -> None:
     assert len(results) == 2
     assert dummy_session.get_calls == ["https://a.example", "https://b.example"]
     assert dummy_session.closed is True
+    assert all(res["changed"] is False for res in results)

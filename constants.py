@@ -27,6 +27,7 @@ PERCENT_REGEX = re.compile(
     flags=re.IGNORECASE,
 )
 LAST_RESULTS: List[ScanResult] = []
+RESULT_HISTORY_FILE = Path("data/last_results.json")
 
 __all__ = [
     "DEFAULT_TIMEOUT",
@@ -34,5 +35,6 @@ __all__ = [
     "USER_AGENT",
     "KEYWORDS",
     "PERCENT_REGEX",
-    "LAST_RESULTS"
+    "LAST_RESULTS",
+    "RESULT_HISTORY_FILE",
 ]
