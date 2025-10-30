@@ -22,7 +22,15 @@ jobs:
         run: |
           python -m pip install --upgrade pip
           python -m pip install -r requirements.txt
-          python -m pip install pylint coverage mypy
+          python -m pip install pylint coverage mypy black ruff
+
+      - name: Run ruff
+        run: |
+          ruff check
+
+      - name: Run black (check mode)
+        run: |
+          black --check .
 
       - name: Run pylint
         run: |
