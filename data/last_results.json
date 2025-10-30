@@ -9,7 +9,7 @@
       "soldes"
     ],
     "error": null,
-    "changed": true,
+    "changed": false,
     "category": "FEMMES"
   },
   {
@@ -23,7 +23,7 @@
       "réduction"
     ],
     "error": null,
-    "changed": true,
+    "changed": false,
     "category": "FEMMES"
   },
   {
@@ -58,7 +58,7 @@
     "has_promo": false,
     "found": [],
     "error": null,
-    "changed": true,
+    "changed": false,
     "category": "FEMMES"
   },
   {
@@ -69,7 +69,7 @@
     "has_promo": false,
     "found": [],
     "error": null,
-    "changed": true,
+    "changed": false,
     "category": "FEMMES"
   },
   {
@@ -105,6 +105,42 @@
       "promos"
     ],
     "error": null,
+    "changed": false,
+    "category": "FEMMES"
+  },
+  {
+    "url": "https://sevenlie.com/",
+    "status": "ok",
+    "http_status": 200,
+    "final_url": "https://sevenlie.com/",
+    "has_promo": true,
+    "found": [
+      "promo",
+      "promotion"
+    ],
+    "error": null,
+    "changed": true,
+    "category": "FEMMES"
+  },
+  {
+    "url": "https://atelierorion.com/",
+    "status": "ok",
+    "http_status": 200,
+    "final_url": "https://atelierorion.com/",
+    "has_promo": false,
+    "found": [],
+    "error": null,
+    "changed": true,
+    "category": "FEMMES"
+  },
+  {
+    "url": "https://www.apimoe.com/",
+    "status": "ok",
+    "http_status": 200,
+    "final_url": "https://www.apimoe.com/",
+    "has_promo": false,
+    "found": [],
+    "error": null,
     "changed": true,
     "category": "FEMMES"
   },
@@ -118,7 +154,7 @@
       "soldes"
     ],
     "error": null,
-    "changed": true,
+    "changed": false,
     "category": "HOMMES"
   },
   {
@@ -132,7 +168,7 @@
       "réduction"
     ],
     "error": null,
-    "changed": true,
+    "changed": false,
     "category": "HOMMES"
   },
   {
@@ -154,7 +190,7 @@
     "has_promo": false,
     "found": [],
     "error": null,
-    "changed": true,
+    "changed": false,
     "category": "HOMMES"
   },
   {
@@ -176,7 +212,7 @@
     "has_promo": false,
     "found": [],
     "error": null,
-    "changed": true,
+    "changed": false,
     "category": "HOMMES"
   },
   {
@@ -222,7 +258,7 @@
     "has_promo": false,
     "found": [],
     "error": null,
-    "changed": true,
+    "changed": false,
     "category": "HOMMES"
   },
   {
@@ -260,7 +296,7 @@
       "promos"
     ],
     "error": null,
-    "changed": true,
+    "changed": false,
     "category": "HOMMES"
   },
   {

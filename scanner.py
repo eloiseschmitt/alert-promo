@@ -169,6 +169,7 @@ def to_csv_bytes(rows: Iterable[ScanResult]) -> bytes:
         "found",
         "error",
         "changed",
+        "category",
     ]
     writer = csv.DictWriter(output, fieldnames=fieldnames)
     writer.writeheader()
@@ -176,6 +177,7 @@ def to_csv_bytes(rows: Iterable[ScanResult]) -> bytes:
         row: Dict[str, Any] = dict(r)
         row["found"] = ", ".join(r["found"]) if r["found"] else ""
         row.setdefault("changed", False)
+        row.setdefault("category", None)
         writer.writerow(row)
     return output.getvalue().encode("utf-8")
 

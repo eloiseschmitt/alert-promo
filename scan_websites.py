@@ -2,7 +2,7 @@ import argparse
 import re
 import unicodedata
 from pathlib import Path
-from typing import Dict, List, Optional
+from typing import Dict, List, Optional, Union
 
 import requests
 from bs4 import BeautifulSoup
@@ -97,9 +97,12 @@ def find_keywords(text: str, keywords: List[str]) -> List[str]:
     return sorted(set(found), key=str.lower)
 
 
+ScanResult = Dict[str, Union[str, int, bool, List[str], None]]
+
+
 def check_url(
     session: requests.Session, url: str, timeout: int = DEFAULT_TIMEOUT
-) -> Dict[str, Optional[str]]:
+) -> ScanResult:
     original_url = url.strip()
     if not original_url:
         return {
@@ -116,7 +119,7 @@ def check_url(
     else:
         url = original_url
 
-    result: Dict[str, Optional[str] or int or bool or List[str]] = {
+    result: ScanResult = {
         "url": original_url,
         "status": None,
         "http_status": None,
@@ -124,6 +127,8 @@ def check_url(
         "has_promo": False,
         "found": [],
         "error": None,
+        "changed": False,
+        "category": None,
     }
 
     try:
@@ -173,6 +178,8 @@ def write_csv(output_path: Path, rows: List[Dict]):
         "has_promo",
         "found",
         "error",
+        "changed",
+        "category",
     ]
     with output_path.open("w", encoding="utf-8", newline="") as f:
         writer = csv.DictWriter(f, fieldnames=fieldnames)
@@ -181,6 +188,8 @@ def write_csv(output_path: Path, rows: List[Dict]):
             row = r.copy()
             # 'found' en chaîne lisible
             row["found"] = ", ".join(r.get("found", [])) if r.get("found") else ""
+            row.setdefault("changed", False)
+            row.setdefault("category", None)
             writer.writerow(row)
 
 

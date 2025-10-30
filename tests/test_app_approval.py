@@ -22,6 +22,8 @@ def _sample_results() -> List[ScanResult]:
             "has_promo": True,
             "found": ["promo", "50%"],
             "error": None,
+            "changed": True,
+            "category": "FEMMES",
         },
         {
             "url": "https://slow-shop.test",
@@ -31,6 +33,8 @@ def _sample_results() -> List[ScanResult]:
             "has_promo": False,
             "found": [],
             "error": "Timeout of 10s exceeded",
+            "changed": False,
+            "category": "HOMMES",
         },
     ]
 

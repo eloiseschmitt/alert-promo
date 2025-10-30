@@ -4,13 +4,13 @@ from __future__ import annotations
 
 import csv
 from pathlib import Path
-from typing import Iterable, List
+from typing import Any, Iterable, List
 
 import pytest
 import requests
 
 from constants import KEYWORDS
-from models import ScanResult
+from models import ScanResult, UrlEntry
 from app import (
     check_url,
     find_keywords,
@@ -31,29 +31,30 @@ class _DummyResponse:  # pylint: disable=too-few-public-methods
         self.text = text
 
 
-class _DummySession:
+class _DummySession(requests.Session):
     """Small fixture emulating the subset of Session behaviour we need."""
 
     def __init__(
         self, responses: Iterable[_DummyResponse], *, raise_exc: Exception | None = None
     ) -> None:
-        """Prepare to serve canned responses or raise a provided exception."""
+        super().__init__()
         self._responses = iter(responses)
         self._exc = raise_exc
         self.get_calls: List[str] = []
         self.closed = False
 
-    def get(  # pragma: no cover - signature mirrors requests
-        self, url: str, **_: object
+    def get(  # type: ignore[override]  # pragma: no cover - signature mirrors requests
+        self, url: str, **kwargs: Any
     ) -> _DummyResponse:
         """Return the next fake response while recording the URL."""
+        del kwargs
         if self._exc is not None:
             raise self._exc
         self.get_calls.append(url)
         return next(self._responses)
 
-    def close(self) -> None:
-        """Mark the session as closed."""
+    def close(self) -> None:  # pragma: no cover - mirror close contract
+        """Record that the session would have been closed."""
         self.closed = True
 
 
@@ -101,6 +102,7 @@ def test_check_url_success_detects_promo() -> None:
     assert result["has_promo"] is True
     assert "promo" in result["found"]
     assert result["changed"] is False
+    assert result["category"] is None
 
 
 def test_check_url_handles_http_error() -> None:
@@ -118,6 +120,7 @@ def test_check_url_handles_http_error() -> None:
     assert result["status"] == "http_503"
     assert result["has_promo"] is False
     assert result["changed"] is False
+    assert result["category"] is None
 
 
 def test_check_url_handles_timeout() -> None:
@@ -129,6 +132,7 @@ def test_check_url_handles_timeout() -> None:
     assert result["status"] == "timeout"
     assert "timeout" in (result["error"] or "")
     assert result["changed"] is False
+    assert result["category"] is None
 
 
 def test_to_csv_bytes_serialises_found_entries() -> None:
@@ -143,6 +147,7 @@ def test_to_csv_bytes_serialises_found_entries() -> None:
             "found": ["promo", "-50%"],
             "error": None,
             "changed": True,
+            "category": None,
         }
     ]
 
@@ -175,7 +180,7 @@ def test_scan_urls_uses_custom_session(monkeypatch: pytest.MonkeyPatch) -> None:
 
     monkeypatch.setattr("scanner.build_session", _fake_build_session)
 
-    entries = [
+    entries: List[UrlEntry] = [
         {"url": "https://a.example", "category": "A"},
         {"url": "https://b.example", "category": "B"},
     ]
