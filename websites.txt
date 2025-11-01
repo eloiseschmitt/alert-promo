@@ -11,6 +11,7 @@ https://www.loom.fr/collections/vestiaire-femme
 https://sevenlie.com/
 https://atelierorion.com/
 https://www.apimoe.com/
+https://www.figaret.com/collections/chemises-femme
 HOMMES:
 https://www.armedangels.com/fr-fr/pages/homme-home
 https://thinkingmu.com/fr/collections/man-clothing
@@ -22,8 +23,8 @@ https://bonnegueule.fr/
 https://forlife-paris.com/
 https://www.hastparis.com/
 https://www.asphalte.com/h
-https://www.1083.fr/homme.html
 https://www.montlimart.com/
 https://www.loom.fr/collections/vestiaire-homme
+https://www.figaret.com/collections/chemises-homme
 CHAUSSURES:
 https://minuitsurterre.com/

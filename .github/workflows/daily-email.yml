@@ -9,7 +9,7 @@ jobs:
   email-report:
     runs-on: ubuntu-latest
     permissions:
-      contents: read
+      contents: write
     env:
       SMTP_HOST: ${{ secrets.SMTP_HOST }}
       SMTP_PORT: ${{ secrets.SMTP_PORT }}
@@ -34,3 +34,15 @@ jobs:
       - name: Run batch and send email
         run: |
           python app.py --email
+
+      - name: Commit updated last_results.json
+        run: |
+          if git diff --quiet -- data/last_results.json; then
+            echo "No changes detected in last_results.json"
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add data/last_results.json
+          git commit -m "chore: update last_results.json"
+          git push
