@@ -113,8 +113,11 @@
     "status": "ok",
     "http_status": 200,
     "final_url": "https://sevenlie.com/",
-    "has_promo": false,
-    "found": [],
+    "has_promo": true,
+    "found": [
+      "promo",
+      "promotion"
+    ],
     "error": null,
     "changed": true,
     "category": "FEMMES"
