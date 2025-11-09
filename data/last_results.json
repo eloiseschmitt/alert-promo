@@ -40,17 +40,6 @@
     "category": "FEMMES"
   },
   {
-    "url": "https://julesjenn.com/",
-    "status": "ok",
-    "http_status": 200,
-    "final_url": "https://julesjenn.com/",
-    "has_promo": false,
-    "found": [],
-    "error": null,
-    "changed": false,
-    "category": "FEMMES"
-  },
-  {
     "url": "https://www.wedressfair.fr/accueil-femme?oc=nav",
     "status": "ok",
     "http_status": 200,
@@ -119,7 +108,7 @@
       "promotion"
     ],
     "error": null,
-    "changed": true,
+    "changed": false,
     "category": "FEMMES"
   },
   {
@@ -155,6 +144,32 @@
     ],
     "error": null,
     "changed": false,
+    "category": "FEMMES"
+  },
+  {
+    "url": "https://ecoalf.com/fr/collections/mujer",
+    "status": "ok",
+    "http_status": 200,
+    "final_url": "https://ecoalf.com/en-us/collections/mujer",
+    "has_promo": true,
+    "found": [
+      "deal"
+    ],
+    "error": null,
+    "changed": true,
+    "category": "FEMMES"
+  },
+  {
+    "url": "https://www.flotte.fr/collections/femme",
+    "status": "ok",
+    "http_status": 200,
+    "final_url": "https://www.flotte.fr/fr-int/collections/femme",
+    "has_promo": true,
+    "found": [
+      "deal"
+    ],
+    "error": null,
+    "changed": true,
     "category": "FEMMES"
   },
   {
@@ -313,6 +328,32 @@
     "category": "HOMMES"
   },
   {
+    "url": "https://ecoalf.com/fr/collections/hombre",
+    "status": "ok",
+    "http_status": 200,
+    "final_url": "https://ecoalf.com/fr/collections/hombre",
+    "has_promo": true,
+    "found": [
+      "deal"
+    ],
+    "error": null,
+    "changed": true,
+    "category": "HOMMES"
+  },
+  {
+    "url": "https://www.flotte.fr/collections/homme",
+    "status": "ok",
+    "http_status": 200,
+    "final_url": "https://www.flotte.fr/collections/homme",
+    "has_promo": true,
+    "found": [
+      "deal"
+    ],
+    "error": null,
+    "changed": true,
+    "category": "HOMMES"
+  },
+  {
     "url": "https://minuitsurterre.com/",
     "status": "ok",
     "http_status": 200,
@@ -322,5 +363,127 @@
     "error": null,
     "changed": false,
     "category": "CHAUSSURES"
+  },
+  {
+    "url": "https://julesjenn.com/",
+    "status": "ok",
+    "http_status": 200,
+    "final_url": "https://julesjenn.com/",
+    "has_promo": false,
+    "found": [],
+    "error": null,
+    "changed": false,
+    "category": "CHAUSSURES"
+  },
+  {
+    "url": "https://www.zeta-shoes.com/",
+    "status": "ok",
+    "http_status": 200,
+    "final_url": "https://www.zeta-shoes.com/fr-us",
+    "has_promo": true,
+    "found": [
+      "-50%",
+      "promo",
+      "promotion",
+      "reductions",
+      "réduction"
+    ],
+    "error": null,
+    "changed": true,
+    "category": "CHAUSSURES"
+  },
+  {
+    "url": "https://alohas.com/fr",
+    "status": "ok",
+    "http_status": 200,
+    "final_url": "https://alohas.com/en-us",
+    "has_promo": true,
+    "found": [
+      "discount",
+      "promo",
+      "promotion",
+      "promotions",
+      "sale"
+    ],
+    "error": null,
+    "changed": true,
+    "category": "CHAUSSURES"
+  },
+  {
+    "url": "https://caval.fr/",
+    "status": "ok",
+    "http_status": 200,
+    "final_url": "https://caval.fr/",
+    "has_promo": false,
+    "found": [],
+    "error": null,
+    "changed": true,
+    "category": "CHAUSSURES"
+  },
+  {
+    "url": "https://moea.io/fr/",
+    "status": "ok",
+    "http_status": 200,
+    "final_url": "https://moea.io/fr/",
+    "has_promo": true,
+    "found": [
+      "promo",
+      "promotion",
+      "promotions"
+    ],
+    "error": null,
+    "changed": true,
+    "category": "CHAUSSURES"
+  },
+  {
+    "url": "https://www.greige.fr/",
+    "status": "ok",
+    "http_status": 200,
+    "final_url": "https://www.greige.fr/",
+    "has_promo": false,
+    "found": [],
+    "error": null,
+    "changed": true,
+    "category": "LINGE DE MAISON"
+  },
+  {
+    "url": "https://le-drap-francais.com/pages/linge-de-lit",
+    "status": "ok",
+    "http_status": 200,
+    "final_url": "https://le-drap-francais.com/pages/linge-de-lit",
+    "has_promo": true,
+    "found": [
+      "deal"
+    ],
+    "error": null,
+    "changed": true,
+    "category": "LINGE DE MAISON"
+  },
+  {
+    "url": "https://www.bonsoirs.com/fr-fr",
+    "status": "ok",
+    "http_status": 200,
+    "final_url": "https://www.bonsoirs.com/fr-fr",
+    "has_promo": true,
+    "found": [
+      "promo",
+      "promos"
+    ],
+    "error": null,
+    "changed": true,
+    "category": "LINGE DE MAISON"
+  },
+  {
+    "url": "https://www.pulpehome.com/collections/all",
+    "status": "ok",
+    "http_status": 200,
+    "final_url": "https://www.pulpehome.com/collections/all",
+    "has_promo": true,
+    "found": [
+      "promo"
+    ],
+    "error": null,
+    "changed": true,
+    "category": "LINGE DE MAISON"
   }
 ]
