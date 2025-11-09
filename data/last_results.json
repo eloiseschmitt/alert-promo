@@ -3,10 +3,10 @@
     "url": "https://www.armedangels.com/fr-fr/pages/femme-home",
     "status": "ok",
     "http_status": 200,
-    "final_url": "https://www.armedangels.com/fr-fr/pages/femme-home",
+    "final_url": "https://www.armedangels.com/en-wo/pages/women-home",
     "has_promo": true,
     "found": [
-      "soldes"
+      "discount"
     ],
     "error": null,
     "changed": false,
@@ -130,7 +130,7 @@
     "has_promo": false,
     "found": [],
     "error": null,
-    "changed": true,
+    "changed": false,
     "category": "FEMMES"
   },
   {
@@ -141,7 +141,20 @@
     "has_promo": false,
     "found": [],
     "error": null,
-    "changed": true,
+    "changed": false,
+    "category": "FEMMES"
+  },
+  {
+    "url": "https://www.figaret.com/collections/chemises-femme",
+    "status": "ok",
+    "http_status": 200,
+    "final_url": "https://www.figaret.com/collections/chemises-femme",
+    "has_promo": true,
+    "found": [
+      "deal"
+    ],
+    "error": null,
+    "changed": false,
     "category": "FEMMES"
   },
   {
@@ -219,7 +232,7 @@
     "url": "https://bonnegueule.fr/",
     "status": "ok",
     "http_status": 200,
-    "final_url": "https://bonnegueule.fr/",
+    "final_url": "https://bonnegueule.fr/fr-usa",
     "has_promo": false,
     "found": [],
     "error": null,
@@ -262,17 +275,6 @@
     "category": "HOMMES"
   },
   {
-    "url": "https://www.1083.fr/homme.html",
-    "status": "ok",
-    "http_status": 200,
-    "final_url": "https://www.1083.fr/homme.html",
-    "has_promo": false,
-    "found": [],
-    "error": null,
-    "changed": false,
-    "category": "HOMMES"
-  },
-  {
     "url": "https://www.montlimart.com/",
     "status": "ok",
     "http_status": 200,
@@ -295,6 +297,17 @@
       "promo",
       "promos"
     ],
+    "error": null,
+    "changed": false,
+    "category": "HOMMES"
+  },
+  {
+    "url": "https://www.figaret.com/collections/chemises-homme",
+    "status": "ok",
+    "http_status": 200,
+    "final_url": "https://www.figaret.com/collections/chemises-homme",
+    "has_promo": false,
+    "found": [],
     "error": null,
     "changed": false,
     "category": "HOMMES"
