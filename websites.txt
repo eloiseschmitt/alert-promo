@@ -2,7 +2,6 @@ FEMMES:
 https://www.armedangels.com/fr-fr/pages/femme-home
 https://thinkingmu.com/fr/collections/woman-clothing
 https://jaspebydiane.fr/
-https://julesjenn.com/
 https://www.wedressfair.fr/accueil-femme?oc=nav
 https://noyoco.com/collections/femme-voir-tout
 https://www.asphalte.com/f
@@ -12,6 +11,8 @@ https://sevenlie.com/
 https://atelierorion.com/
 https://www.apimoe.com/
 https://www.figaret.com/collections/chemises-femme
+https://ecoalf.com/fr/collections/mujer
+https://www.flotte.fr/collections/femme
 HOMMES:
 https://www.armedangels.com/fr-fr/pages/homme-home
 https://thinkingmu.com/fr/collections/man-clothing
@@ -26,5 +27,17 @@ https://www.asphalte.com/h
 https://www.montlimart.com/
 https://www.loom.fr/collections/vestiaire-homme
 https://www.figaret.com/collections/chemises-homme
+https://ecoalf.com/fr/collections/hombre
+https://www.flotte.fr/collections/homme
 CHAUSSURES:
 https://minuitsurterre.com/
+https://julesjenn.com/
+https://www.zeta-shoes.com/
+https://alohas.com/fr
+https://caval.fr/
+https://moea.io/fr/
+LINGE DE MAISON:
+https://www.greige.fr/
+https://le-drap-francais.com/pages/linge-de-lit
+https://www.bonsoirs.com/fr-fr
+https://www.pulpehome.com/collections/all
