@@ -156,7 +156,7 @@
       "deal"
     ],
     "error": null,
-    "changed": true,
+    "changed": false,
     "category": "FEMMES"
   },
   {
@@ -169,7 +169,7 @@
       "deal"
     ],
     "error": null,
-    "changed": true,
+    "changed": false,
     "category": "FEMMES"
   },
   {
@@ -337,7 +337,7 @@
       "deal"
     ],
     "error": null,
-    "changed": true,
+    "changed": false,
     "category": "HOMMES"
   },
   {
@@ -350,7 +350,7 @@
       "deal"
     ],
     "error": null,
-    "changed": true,
+    "changed": false,
     "category": "HOMMES"
   },
   {
@@ -389,7 +389,7 @@
       "réduction"
     ],
     "error": null,
-    "changed": true,
+    "changed": false,
     "category": "CHAUSSURES"
   },
   {
@@ -406,7 +406,7 @@
       "sale"
     ],
     "error": null,
-    "changed": true,
+    "changed": false,
     "category": "CHAUSSURES"
   },
   {
@@ -417,7 +417,7 @@
     "has_promo": false,
     "found": [],
     "error": null,
-    "changed": true,
+    "changed": false,
     "category": "CHAUSSURES"
   },
   {
@@ -432,7 +432,7 @@
       "promotions"
     ],
     "error": null,
-    "changed": true,
+    "changed": false,
     "category": "CHAUSSURES"
   },
   {
@@ -443,7 +443,7 @@
     "has_promo": false,
     "found": [],
     "error": null,
-    "changed": true,
+    "changed": false,
     "category": "LINGE DE MAISON"
   },
   {
@@ -456,7 +456,7 @@
       "deal"
     ],
     "error": null,
-    "changed": true,
+    "changed": false,
     "category": "LINGE DE MAISON"
   },
   {
@@ -470,7 +470,7 @@
       "promos"
     ],
     "error": null,
-    "changed": true,
+    "changed": false,
     "category": "LINGE DE MAISON"
   },
   {
@@ -483,7 +483,7 @@
       "promo"
     ],
     "error": null,
-    "changed": true,
+    "changed": false,
     "category": "LINGE DE MAISON"
   }
 ]
