@@ -399,6 +399,7 @@
     "final_url": "https://alohas.com/en-us",
     "has_promo": true,
     "found": [
+      "50%",
       "discount",
       "promo",
       "promotion",
@@ -406,7 +407,7 @@
       "sale"
     ],
     "error": null,
-    "changed": false,
+    "changed": true,
     "category": "CHAUSSURES"
   },
   {
