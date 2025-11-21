@@ -6,10 +6,12 @@
     "final_url": "https://www.armedangels.com/en-wo/pages/women-home",
     "has_promo": true,
     "found": [
+      "deal",
+      "deals",
       "discount"
     ],
     "error": null,
-    "changed": false,
+    "changed": true,
     "category": "FEMMES"
   },
   {
@@ -55,10 +57,12 @@
     "status": "ok",
     "http_status": 200,
     "final_url": "https://noyoco.com/collections/femme-voir-tout",
-    "has_promo": false,
-    "found": [],
+    "has_promo": true,
+    "found": [
+      "sale"
+    ],
     "error": null,
-    "changed": false,
+    "changed": true,
     "category": "FEMMES"
   },
   {
