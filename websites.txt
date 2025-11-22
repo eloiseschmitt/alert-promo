@@ -13,6 +13,12 @@ https://www.apimoe.com/
 https://www.figaret.com/collections/chemises-femme
 https://ecoalf.com/fr/collections/mujer
 https://www.flotte.fr/collections/femme
+https://eu.theory.com/femmes/voir-tout/?lang=fr_FR
+https://www.fromfuture.com/collections/toute-la-collection-femme
+https://minastorm.com/
+https://www.yade-paris.fr/
+https://organicbasics.com/collections/all-womens-products
+https://yvoetmoi.com/
 HOMMES:
 https://www.armedangels.com/fr-fr/pages/homme-home
 https://thinkingmu.com/fr/collections/man-clothing
@@ -29,6 +35,9 @@ https://www.loom.fr/collections/vestiaire-homme
 https://www.figaret.com/collections/chemises-homme
 https://ecoalf.com/fr/collections/hombre
 https://www.flotte.fr/collections/homme
+https://eu.theory.com/hommes/voir-tout/?lang=fr_FR
+https://www.fromfuture.com/collections/toute-la-collection-homme
+https://organicbasics.com/collections/all-mens-products
 CHAUSSURES:
 https://minuitsurterre.com/
 https://julesjenn.com/
