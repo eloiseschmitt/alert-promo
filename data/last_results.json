@@ -103,16 +103,13 @@
   },
   {
     "url": "https://sevenlie.com/",
-    "status": "ok",
-    "http_status": 200,
-    "final_url": "https://sevenlie.com/",
-    "has_promo": true,
-    "found": [
-      "promo",
-      "promotion"
-    ],
-    "error": null,
-    "changed": false,
+    "status": "request_error",
+    "http_status": null,
+    "final_url": null,
+    "has_promo": false,
+    "found": [],
+    "error": "HTTPSConnectionPool(host='sevenlie.com', port=443): Max retries exceeded with url: / (Caused by ReadTimeoutError(\"HTTPSConnectionPool(host='sevenlie.com', port=443): Read timed out. (read timeout=10)\"))",
+    "changed": true,
     "category": "FEMMES"
   },
   {
@@ -174,6 +171,83 @@
     ],
     "error": null,
     "changed": false,
+    "category": "FEMMES"
+  },
+  {
+    "url": "https://eu.theory.com/femmes/voir-tout/?lang=fr_FR",
+    "status": "http_403",
+    "http_status": 403,
+    "final_url": "https://eu.theory.com/femmes/voir-tout/?lang=fr_FR",
+    "has_promo": false,
+    "found": [],
+    "error": null,
+    "changed": true,
+    "category": "FEMMES"
+  },
+  {
+    "url": "https://www.fromfuture.com/collections/toute-la-collection-femme",
+    "status": "ok",
+    "http_status": 200,
+    "final_url": "https://www.fromfuture.com/collections/toute-la-collection-femme",
+    "has_promo": false,
+    "found": [],
+    "error": null,
+    "changed": true,
+    "category": "FEMMES"
+  },
+  {
+    "url": "https://minastorm.com/",
+    "status": "ok",
+    "http_status": 200,
+    "final_url": "https://minastorm.com/",
+    "has_promo": true,
+    "found": [
+      "discount"
+    ],
+    "error": null,
+    "changed": true,
+    "category": "FEMMES"
+  },
+  {
+    "url": "https://www.yade-paris.fr/",
+    "status": "ok",
+    "http_status": 200,
+    "final_url": "https://www.yade-paris.com/fr?shpxid=a8adadd6-7709-4761-a02a-c0c95da6776e",
+    "has_promo": true,
+    "found": [
+      "promo",
+      "promotion"
+    ],
+    "error": null,
+    "changed": true,
+    "category": "FEMMES"
+  },
+  {
+    "url": "https://organicbasics.com/collections/all-womens-products",
+    "status": "ok",
+    "http_status": 200,
+    "final_url": "https://organicbasics.com/collections/all-womens-products",
+    "has_promo": true,
+    "found": [
+      "60%",
+      "discount",
+      "offers",
+      "sale",
+      "sales"
+    ],
+    "error": null,
+    "changed": true,
+    "category": "FEMMES"
+  },
+  {
+    "url": "https://yvoetmoi.com/",
+    "status": "ok",
+    "http_status": 200,
+    "final_url": "https://yvoetmoi.com/",
+    "has_promo": false,
+    "found": [],
+    "error": null,
+    "changed": true,
     "category": "FEMMES"
   },
   {
@@ -355,6 +429,46 @@
     ],
     "error": null,
     "changed": false,
+    "category": "HOMMES"
+  },
+  {
+    "url": "https://eu.theory.com/hommes/voir-tout/?lang=fr_FR",
+    "status": "http_403",
+    "http_status": 403,
+    "final_url": "https://eu.theory.com/hommes/voir-tout/?lang=fr_FR",
+    "has_promo": false,
+    "found": [],
+    "error": null,
+    "changed": true,
+    "category": "HOMMES"
+  },
+  {
+    "url": "https://www.fromfuture.com/collections/toute-la-collection-homme",
+    "status": "ok",
+    "http_status": 200,
+    "final_url": "https://www.fromfuture.com/collections/toute-la-collection-homme",
+    "has_promo": false,
+    "found": [],
+    "error": null,
+    "changed": true,
+    "category": "HOMMES"
+  },
+  {
+    "url": "https://organicbasics.com/collections/all-mens-products",
+    "status": "ok",
+    "http_status": 200,
+    "final_url": "https://organicbasics.com/collections/all-mens-products",
+    "has_promo": true,
+    "found": [
+      "60%",
+      "deal",
+      "discount",
+      "offers",
+      "sale",
+      "sales"
+    ],
+    "error": null,
+    "changed": true,
     "category": "HOMMES"
   },
   {
