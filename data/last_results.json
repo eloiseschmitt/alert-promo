@@ -103,12 +103,15 @@
   },
   {
     "url": "https://sevenlie.com/",
-    "status": "request_error",
-    "http_status": null,
-    "final_url": null,
-    "has_promo": false,
-    "found": [],
-    "error": "HTTPSConnectionPool(host='sevenlie.com', port=443): Max retries exceeded with url: / (Caused by ReadTimeoutError(\"HTTPSConnectionPool(host='sevenlie.com', port=443): Read timed out. (read timeout=10)\"))",
+    "status": "ok",
+    "http_status": 200,
+    "final_url": "https://sevenlie.com/",
+    "has_promo": true,
+    "found": [
+      "promo",
+      "promotion"
+    ],
+    "error": null,
     "changed": true,
     "category": "FEMMES"
   },
@@ -181,7 +184,7 @@
     "has_promo": false,
     "found": [],
     "error": null,
-    "changed": true,
+    "changed": false,
     "category": "FEMMES"
   },
   {
@@ -192,7 +195,7 @@
     "has_promo": false,
     "found": [],
     "error": null,
-    "changed": true,
+    "changed": false,
     "category": "FEMMES"
   },
   {
@@ -205,14 +208,14 @@
       "discount"
     ],
     "error": null,
-    "changed": true,
+    "changed": false,
     "category": "FEMMES"
   },
   {
     "url": "https://www.yade-paris.fr/",
     "status": "ok",
     "http_status": 200,
-    "final_url": "https://www.yade-paris.com/fr?shpxid=a8adadd6-7709-4761-a02a-c0c95da6776e",
+    "final_url": "https://www.yade-paris.com/fr?shpxid=9d6ce2a4-b31d-4e03-b8c7-c15195d7aac0",
     "has_promo": true,
     "found": [
       "promo",
@@ -236,7 +239,7 @@
       "sales"
     ],
     "error": null,
-    "changed": true,
+    "changed": false,
     "category": "FEMMES"
   },
   {
@@ -247,7 +250,7 @@
     "has_promo": false,
     "found": [],
     "error": null,
-    "changed": true,
+    "changed": false,
     "category": "FEMMES"
   },
   {
@@ -439,7 +442,7 @@
     "has_promo": false,
     "found": [],
     "error": null,
-    "changed": true,
+    "changed": false,
     "category": "HOMMES"
   },
   {
@@ -450,7 +453,7 @@
     "has_promo": false,
     "found": [],
     "error": null,
-    "changed": true,
+    "changed": false,
     "category": "HOMMES"
   },
   {
@@ -468,7 +471,7 @@
       "sales"
     ],
     "error": null,
-    "changed": true,
+    "changed": false,
     "category": "HOMMES"
   },
   {
