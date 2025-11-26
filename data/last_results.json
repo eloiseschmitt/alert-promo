@@ -177,14 +177,14 @@
     "category": "FEMMES"
   },
   {
-    "url": "https://eu.theory.com/femmes/voir-tout/?lang=fr_FR",
+    "url": "https://eu.theory.com/femmes",
     "status": "http_403",
     "http_status": 403,
-    "final_url": "https://eu.theory.com/femmes/voir-tout/?lang=fr_FR",
+    "final_url": "https://eu.theory.com/femmes",
     "has_promo": false,
     "found": [],
     "error": null,
-    "changed": false,
+    "changed": true,
     "category": "FEMMES"
   },
   {
@@ -215,7 +215,7 @@
     "url": "https://www.yade-paris.fr/",
     "status": "ok",
     "http_status": 200,
-    "final_url": "https://www.yade-paris.com/fr?shpxid=70c6d94f-8028-45bb-90d6-0ce10ce95fcf",
+    "final_url": "https://www.yade-paris.com/fr?shpxid=5807e284-24d3-4788-8dbd-613be3436281",
     "has_promo": true,
     "found": [
       "promo",
@@ -435,14 +435,14 @@
     "category": "HOMMES"
   },
   {
-    "url": "https://eu.theory.com/hommes/voir-tout/?lang=fr_FR",
+    "url": "https://eu.theory.com/hommes",
     "status": "http_403",
     "http_status": 403,
-    "final_url": "https://eu.theory.com/hommes/voir-tout/?lang=fr_FR",
+    "final_url": "https://eu.theory.com/hommes",
     "has_promo": false,
     "found": [],
     "error": null,
-    "changed": false,
+    "changed": true,
     "category": "HOMMES"
   },
   {
