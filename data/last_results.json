@@ -149,7 +149,7 @@
       "remise"
     ],
     "error": null,
-    "changed": true,
+    "changed": false,
     "category": "FEMMES"
   },
   {
@@ -217,7 +217,7 @@
     "url": "https://www.yade-paris.fr/",
     "status": "ok",
     "http_status": 200,
-    "final_url": "https://www.yade-paris.com/fr?shpxid=21e2c757-d942-4611-bb4f-07a572ce3330",
+    "final_url": "https://www.yade-paris.com/fr?shpxid=150dc6b7-6ae1-4e98-8b40-d6792923aadc",
     "has_promo": true,
     "found": [
       "promo",
@@ -410,7 +410,7 @@
       "remise"
     ],
     "error": null,
-    "changed": true,
+    "changed": false,
     "category": "HOMMES"
   },
   {
@@ -561,7 +561,7 @@
       "réduction"
     ],
     "error": null,
-    "changed": true,
+    "changed": false,
     "category": "CHAUSSURES"
   },
   {
