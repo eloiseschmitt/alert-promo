@@ -21,10 +21,11 @@
     "final_url": "https://thinkingmu.com/fr/collections/woman-clothing",
     "has_promo": true,
     "found": [
+      "promo",
       "réduction"
     ],
     "error": null,
-    "changed": false,
+    "changed": true,
     "category": "FEMMES"
   },
   {
@@ -179,14 +180,14 @@
     "category": "FEMMES"
   },
   {
-    "url": "https://eu.theory.com/femmes",
+    "url": "https://eu.theory.com/",
     "status": "http_403",
     "http_status": 403,
-    "final_url": "https://eu.theory.com/femmes",
+    "final_url": "https://eu.theory.com/",
     "has_promo": false,
     "found": [],
     "error": null,
-    "changed": false,
+    "changed": true,
     "category": "FEMMES"
   },
   {
@@ -217,7 +218,7 @@
     "url": "https://www.yade-paris.fr/",
     "status": "ok",
     "http_status": 200,
-    "final_url": "https://www.yade-paris.com/fr?shpxid=7e5e1d95-ea2f-453b-a5cc-dbc6130995ae",
+    "final_url": "https://www.yade-paris.com/fr?shpxid=319befb7-214a-4414-891a-0b0a437824e5",
     "has_promo": true,
     "found": [
       "promo",
@@ -275,10 +276,11 @@
     "final_url": "https://thinkingmu.com/fr/collections/man-clothing",
     "has_promo": true,
     "found": [
+      "promo",
       "réduction"
     ],
     "error": null,
-    "changed": false,
+    "changed": true,
     "category": "HOMMES"
   },
   {
@@ -484,10 +486,14 @@
     "status": "ok",
     "http_status": 200,
     "final_url": "https://minuitsurterre.com/",
-    "has_promo": false,
-    "found": [],
+    "has_promo": true,
+    "found": [
+      "promo",
+      "promotion",
+      "promotions"
+    ],
     "error": null,
-    "changed": false,
+    "changed": true,
     "category": "CHAUSSURES"
   },
   {
