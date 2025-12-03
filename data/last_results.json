@@ -9,7 +9,7 @@
       "discount"
     ],
     "error": null,
-    "changed": true,
+    "changed": false,
     "category": "FEMMES"
   },
   {
@@ -147,7 +147,7 @@
       "deal"
     ],
     "error": null,
-    "changed": true,
+    "changed": false,
     "category": "FEMMES"
   },
   {
@@ -215,7 +215,7 @@
     "url": "https://www.yade-paris.fr/",
     "status": "ok",
     "http_status": 200,
-    "final_url": "https://www.yade-paris.com/fr?shpxid=c095f6a9-14f0-4985-8387-67750b513d70",
+    "final_url": "https://www.yade-paris.com/fr?shpxid=6da289b1-7cbd-4384-8380-4bb7c13f5f8c",
     "has_promo": true,
     "found": [
       "promo",
@@ -355,10 +355,12 @@
     "status": "ok",
     "http_status": 200,
     "final_url": "https://www.hastparis.com/",
-    "has_promo": false,
-    "found": [],
+    "has_promo": true,
+    "found": [
+      "deal"
+    ],
     "error": null,
-    "changed": false,
+    "changed": true,
     "category": "HOMMES"
   },
   {
@@ -407,7 +409,7 @@
     "has_promo": false,
     "found": [],
     "error": null,
-    "changed": true,
+    "changed": false,
     "category": "HOMMES"
   },
   {
@@ -481,14 +483,10 @@
     "status": "ok",
     "http_status": 200,
     "final_url": "https://minuitsurterre.com/",
-    "has_promo": true,
-    "found": [
-      "promo",
-      "promotion",
-      "promotions"
-    ],
+    "has_promo": false,
+    "found": [],
     "error": null,
-    "changed": false,
+    "changed": true,
     "category": "CHAUSSURES"
   },
   {
@@ -526,7 +524,6 @@
     "final_url": "https://alohas.com/en-us",
     "has_promo": true,
     "found": [
-      "50%",
       "discount",
       "discounts",
       "promo",
@@ -535,7 +532,7 @@
       "sale"
     ],
     "error": null,
-    "changed": false,
+    "changed": true,
     "category": "CHAUSSURES"
   },
   {
@@ -561,7 +558,7 @@
       "promotions"
     ],
     "error": null,
-    "changed": true,
+    "changed": false,
     "category": "CHAUSSURES"
   },
   {
