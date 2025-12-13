@@ -215,7 +215,7 @@
     "url": "https://www.yade-paris.fr/",
     "status": "ok",
     "http_status": 200,
-    "final_url": "https://www.yade-paris.com/fr?shpxid=27d822a5-913c-4db0-9751-241b5460565c",
+    "final_url": "https://www.yade-paris.com/fr?shpxid=93cb5ef1-8165-4f0c-9dc8-442c5bb2352b",
     "has_promo": true,
     "found": [
       "promo",
@@ -378,12 +378,10 @@
     "status": "ok",
     "http_status": 200,
     "final_url": "https://www.montlimart.com/",
-    "has_promo": true,
-    "found": [
-      "réduction"
-    ],
+    "has_promo": false,
+    "found": [],
     "error": null,
-    "changed": false,
+    "changed": true,
     "category": "HOMMES"
   },
   {
