@@ -215,7 +215,7 @@
     "url": "https://www.yade-paris.fr/",
     "status": "ok",
     "http_status": 200,
-    "final_url": "https://www.yade-paris.com/fr?shpxid=93cb5ef1-8165-4f0c-9dc8-442c5bb2352b",
+    "final_url": "https://www.yade-paris.com/fr?shpxid=9ac90be1-2141-49ec-808b-fe0b8c2c52bd",
     "has_promo": true,
     "found": [
       "promo",
@@ -381,7 +381,7 @@
     "has_promo": false,
     "found": [],
     "error": null,
-    "changed": true,
+    "changed": false,
     "category": "HOMMES"
   },
   {
