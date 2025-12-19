@@ -215,7 +215,7 @@
     "url": "https://www.yade-paris.fr/",
     "status": "ok",
     "http_status": 200,
-    "final_url": "https://www.yade-paris.com/fr?shpxid=4659b364-1a91-4eae-b4b2-4f571b432e68",
+    "final_url": "https://www.yade-paris.com/fr?shpxid=86663a7b-70a3-4e6c-9c2c-401c458967dd",
     "has_promo": true,
     "found": [
       "promo",
@@ -521,15 +521,17 @@
     "final_url": "https://alohas.com/en-us",
     "has_promo": true,
     "found": [
+      "50%",
       "discount",
       "discounts",
       "promo",
       "promotion",
       "promotions",
-      "sale"
+      "sale",
+      "sales"
     ],
     "error": null,
-    "changed": false,
+    "changed": true,
     "category": "CHAUSSURES"
   },
   {
