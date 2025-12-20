@@ -215,7 +215,7 @@
     "url": "https://www.yade-paris.fr/",
     "status": "ok",
     "http_status": 200,
-    "final_url": "https://www.yade-paris.com/fr?shpxid=86663a7b-70a3-4e6c-9c2c-401c458967dd",
+    "final_url": "https://www.yade-paris.com/fr?shpxid=4fa819cf-5afe-4e54-89b5-a4bcc09e1ad5",
     "has_promo": true,
     "found": [
       "promo",
@@ -531,7 +531,7 @@
       "sales"
     ],
     "error": null,
-    "changed": true,
+    "changed": false,
     "category": "CHAUSSURES"
   },
   {
