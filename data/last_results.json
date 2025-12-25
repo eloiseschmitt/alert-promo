@@ -23,7 +23,7 @@
     "has_promo": true,
     "found": [
       "promo",
-      "réduction"
+      "promotion"
     ],
     "error": null,
     "changed": true,
@@ -218,7 +218,7 @@
     "url": "https://www.yade-paris.fr/",
     "status": "ok",
     "http_status": 200,
-    "final_url": "https://www.yade-paris.com/fr?shpxid=eaedde83-fa3e-406f-ac00-426d1283ce5e",
+    "final_url": "https://www.yade-paris.com/fr?shpxid=967f4ddc-e95d-4f85-b9bf-5ed1f9752539",
     "has_promo": true,
     "found": [
       "promo",
@@ -242,7 +242,7 @@
       "sales"
     ],
     "error": null,
-    "changed": true,
+    "changed": false,
     "category": "FEMMES"
   },
   {
@@ -280,7 +280,7 @@
     "has_promo": true,
     "found": [
       "promo",
-      "réduction"
+      "promotion"
     ],
     "error": null,
     "changed": true,
@@ -559,13 +559,12 @@
     "final_url": "https://moea.io/fr/",
     "has_promo": true,
     "found": [
-      "deal",
       "promo",
       "promotion",
       "promotions"
     ],
     "error": null,
-    "changed": false,
+    "changed": true,
     "category": "CHAUSSURES"
   },
   {
