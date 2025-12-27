@@ -23,10 +23,11 @@
     "has_promo": true,
     "found": [
       "promo",
-      "promotion"
+      "promotion",
+      "sale"
     ],
     "error": null,
-    "changed": false,
+    "changed": true,
     "category": "FEMMES"
   },
   {
@@ -87,7 +88,7 @@
     "has_promo": false,
     "found": [],
     "error": null,
-    "changed": true,
+    "changed": false,
     "category": "FEMMES"
   },
   {
@@ -218,7 +219,7 @@
     "url": "https://www.yade-paris.fr/",
     "status": "ok",
     "http_status": 200,
-    "final_url": "https://www.yade-paris.com/fr?shpxid=8dd929be-7073-46cc-90c6-d0978460c6cf",
+    "final_url": "https://www.yade-paris.com/fr?shpxid=edcc3b04-a251-460c-966f-6bb81e3344be",
     "has_promo": true,
     "found": [
       "promo",
@@ -280,10 +281,11 @@
     "has_promo": true,
     "found": [
       "promo",
-      "promotion"
+      "promotion",
+      "sale"
     ],
     "error": null,
-    "changed": false,
+    "changed": true,
     "category": "HOMMES"
   },
   {
@@ -315,10 +317,12 @@
     "status": "ok",
     "http_status": 200,
     "final_url": "https://www.balibaris.com/",
-    "has_promo": false,
-    "found": [],
+    "has_promo": true,
+    "found": [
+      "-50%"
+    ],
     "error": null,
-    "changed": false,
+    "changed": true,
     "category": "HOMMES"
   },
   {
