@@ -42,7 +42,7 @@
       "remise"
     ],
     "error": null,
-    "changed": true,
+    "changed": false,
     "category": "FEMMES"
   },
   {
@@ -221,7 +221,7 @@
     "url": "https://www.yade-paris.fr/",
     "status": "ok",
     "http_status": 200,
-    "final_url": "https://www.yade-paris.com/fr?shpxid=a65c02e1-b1e5-4a06-81bf-928cea7caad8",
+    "final_url": "https://www.yade-paris.com/fr?shpxid=3fc01892-e517-42a2-b902-693468b9fb3c",
     "has_promo": true,
     "found": [
       "promo",
@@ -391,10 +391,12 @@
     "status": "ok",
     "http_status": 200,
     "final_url": "https://www.montlimart.com/",
-    "has_promo": false,
-    "found": [],
+    "has_promo": true,
+    "found": [
+      "deal"
+    ],
     "error": null,
-    "changed": false,
+    "changed": true,
     "category": "HOMMES"
   },
   {
@@ -552,10 +554,12 @@
     "status": "ok",
     "http_status": 200,
     "final_url": "https://caval.fr/",
-    "has_promo": false,
-    "found": [],
+    "has_promo": true,
+    "found": [
+      "-60%"
+    ],
     "error": null,
-    "changed": false,
+    "changed": true,
     "category": "CHAUSSURES"
   },
   {
