@@ -28,7 +28,7 @@
       "soldes"
     ],
     "error": null,
-    "changed": true,
+    "changed": false,
     "category": "FEMMES"
   },
   {
@@ -222,7 +222,7 @@
     "url": "https://www.yade-paris.fr/",
     "status": "ok",
     "http_status": 200,
-    "final_url": "https://www.yade-paris.com/fr?shpxid=3856d1bc-33cd-45e2-ac96-ad86dbd0773c",
+    "final_url": "https://www.yade-paris.com/fr?shpxid=69f70157-0b85-46e3-8422-41611fc46a42",
     "has_promo": true,
     "found": [
       "-50%",
@@ -290,7 +290,7 @@
       "soldes"
     ],
     "error": null,
-    "changed": true,
+    "changed": false,
     "category": "HOMMES"
   },
   {
