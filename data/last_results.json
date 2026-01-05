@@ -164,10 +164,12 @@
     "final_url": "https://ecoalf.com/en-us/collections/mujer",
     "has_promo": true,
     "found": [
-      "deal"
+      "deal",
+      "sale",
+      "sales"
     ],
     "error": null,
-    "changed": false,
+    "changed": true,
     "category": "FEMMES"
   },
   {
@@ -222,7 +224,7 @@
     "url": "https://www.yade-paris.fr/",
     "status": "ok",
     "http_status": 200,
-    "final_url": "https://www.yade-paris.com/fr?shpxid=69f70157-0b85-46e3-8422-41611fc46a42",
+    "final_url": "https://www.yade-paris.com/fr?shpxid=0be81905-29e6-4536-9316-36700b2319f4",
     "has_promo": true,
     "found": [
       "-50%",
