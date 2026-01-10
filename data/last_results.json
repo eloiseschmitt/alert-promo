@@ -233,7 +233,7 @@
     "url": "https://www.yade-paris.fr/",
     "status": "ok",
     "http_status": 200,
-    "final_url": "https://www.yade-paris.com/fr?shpxid=a08e7b05-787c-41ea-ba2d-84ab3b7e4754",
+    "final_url": "https://www.yade-paris.com/fr?shpxid=53229f71-aa5e-47a3-a689-fbf2d24d6e40",
     "has_promo": true,
     "found": [
       "-50%",
@@ -532,10 +532,11 @@
     "final_url": "https://julesjenn.com/",
     "has_promo": true,
     "found": [
+      "remise",
       "soldes"
     ],
     "error": null,
-    "changed": false,
+    "changed": true,
     "category": "CHAUSSURES"
   },
   {
