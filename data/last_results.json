@@ -233,7 +233,7 @@
     "url": "https://www.yade-paris.fr/",
     "status": "ok",
     "http_status": 200,
-    "final_url": "https://www.yade-paris.com/fr?shpxid=53229f71-aa5e-47a3-a689-fbf2d24d6e40",
+    "final_url": "https://www.yade-paris.com/fr?shpxid=a4d46e2f-d357-44ed-83dc-517344172618",
     "has_promo": true,
     "found": [
       "-50%",
@@ -519,10 +519,13 @@
     "status": "ok",
     "http_status": 200,
     "final_url": "https://minuitsurterre.com/",
-    "has_promo": false,
-    "found": [],
+    "has_promo": true,
+    "found": [
+      "60%",
+      "réduction"
+    ],
     "error": null,
-    "changed": false,
+    "changed": true,
     "category": "CHAUSSURES"
   },
   {
@@ -536,7 +539,7 @@
       "soldes"
     ],
     "error": null,
-    "changed": true,
+    "changed": false,
     "category": "CHAUSSURES"
   },
   {
