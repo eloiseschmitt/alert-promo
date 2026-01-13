@@ -7,14 +7,15 @@
     "has_promo": true,
     "found": [
       "-60 %",
-      "60 %",
+      "60%",
       "promo",
       "promotion",
       "promotions",
+      "réduction",
       "soldes"
     ],
     "error": null,
-    "changed": false,
+    "changed": true,
     "category": "FEMMES"
   },
   {
@@ -233,7 +234,7 @@
     "url": "https://www.yade-paris.fr/",
     "status": "ok",
     "http_status": 200,
-    "final_url": "https://www.yade-paris.com/fr?shpxid=b81a6f14-e094-4759-a0cd-11fcc272ef42",
+    "final_url": "https://www.yade-paris.com/fr?shpxid=3adaf879-68c3-4a5f-8a74-e940c5bf62a8",
     "has_promo": true,
     "found": [
       "-50%",
@@ -280,14 +281,15 @@
     "has_promo": true,
     "found": [
       "-60 %",
-      "60 %",
+      "60%",
       "promo",
       "promotion",
       "promotions",
+      "réduction",
       "soldes"
     ],
     "error": null,
-    "changed": false,
+    "changed": true,
     "category": "HOMMES"
   },
   {
@@ -438,10 +440,11 @@
     "final_url": "https://www.figaret.com/collections/chemises-homme",
     "has_promo": true,
     "found": [
+      "-50%",
       "soldes"
     ],
     "error": null,
-    "changed": false,
+    "changed": true,
     "category": "HOMMES"
   },
   {
