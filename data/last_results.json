@@ -234,10 +234,9 @@
     "url": "https://www.yade-paris.fr/",
     "status": "ok",
     "http_status": 200,
-    "final_url": "https://www.yade-paris.com/fr?shpxid=9a4f2833-6d9d-417d-a6d8-d2de8f335454",
+    "final_url": "https://www.yade-paris.com/fr?shpxid=0bfae013-0aa2-4434-b87a-90e602df9f3f",
     "has_promo": true,
     "found": [
-      "-50%",
       "promo",
       "promotion"
     ],
