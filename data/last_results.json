@@ -7,6 +7,7 @@
     "has_promo": true,
     "found": [
       "-60 %",
+      "60 %",
       "60%",
       "promo",
       "promotion",
@@ -15,7 +16,7 @@
       "soldes"
     ],
     "error": null,
-    "changed": false,
+    "changed": true,
     "category": "FEMMES"
   },
   {
@@ -234,7 +235,7 @@
     "url": "https://www.yade-paris.fr/",
     "status": "ok",
     "http_status": 200,
-    "final_url": "https://www.yade-paris.com/fr?shpxid=d96d42e6-5ebe-4c80-b1b0-0ebe9786679a",
+    "final_url": "https://www.yade-paris.com/fr?shpxid=9dec10b8-fc27-465f-b9a3-b1cec1012bfe",
     "has_promo": true,
     "found": [
       "promo",
