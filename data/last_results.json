@@ -233,9 +233,10 @@
     "url": "https://www.yade-paris.fr/",
     "status": "ok",
     "http_status": 200,
-    "final_url": "https://www.yade-paris.com/fr?shpxid=87123fe8-c0c6-4761-86c1-a9f63eb7d9ab",
+    "final_url": "https://www.yade-paris.com/fr?shpxid=a7b18d07-780e-4a7e-9337-6123582d5623",
     "has_promo": true,
     "found": [
+      "-50%",
       "promo",
       "promotion"
     ],
@@ -414,7 +415,7 @@
       "deal"
     ],
     "error": null,
-    "changed": true,
+    "changed": false,
     "category": "HOMMES"
   },
   {
@@ -601,12 +602,15 @@
     "final_url": "https://moea.io/fr/",
     "has_promo": true,
     "found": [
+      "-60%",
       "promo",
       "promotion",
-      "promotions"
+      "promotions",
+      "sale",
+      "sales"
     ],
     "error": null,
-    "changed": false,
+    "changed": true,
     "category": "CHAUSSURES"
   },
   {
