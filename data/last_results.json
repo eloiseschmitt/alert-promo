@@ -233,7 +233,7 @@
     "url": "https://www.yade-paris.fr/",
     "status": "ok",
     "http_status": 200,
-    "final_url": "https://www.yade-paris.com/fr?shpxid=a7b18d07-780e-4a7e-9337-6123582d5623",
+    "final_url": "https://www.yade-paris.com/fr?shpxid=97603a3e-67a0-4f16-b20c-29d470abf9bc",
     "has_promo": true,
     "found": [
       "-50%",
@@ -338,11 +338,10 @@
     "final_url": "https://www.balibaris.com/",
     "has_promo": true,
     "found": [
-      "-50%",
       "soldes"
     ],
     "error": null,
-    "changed": false,
+    "changed": true,
     "category": "HOMMES"
   },
   {
@@ -610,7 +609,7 @@
       "sales"
     ],
     "error": null,
-    "changed": true,
+    "changed": false,
     "category": "CHAUSSURES"
   },
   {
