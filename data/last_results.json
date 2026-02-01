@@ -161,7 +161,7 @@
       "soldes"
     ],
     "error": null,
-    "changed": true,
+    "changed": false,
     "category": "FEMMES"
   },
   {
@@ -233,7 +233,7 @@
     "url": "https://www.yade-paris.fr/",
     "status": "ok",
     "http_status": 200,
-    "final_url": "https://www.yade-paris.com/fr?shpxid=961f1dcf-7c75-42f2-b7ae-ab7680e30b92",
+    "final_url": "https://www.yade-paris.com/fr?shpxid=b39ee00d-0312-435c-a943-26527be3573e",
     "has_promo": true,
     "found": [
       "-50%",
@@ -443,7 +443,7 @@
       "soldes"
     ],
     "error": null,
-    "changed": true,
+    "changed": false,
     "category": "HOMMES"
   },
   {
@@ -523,11 +523,10 @@
     "final_url": "https://minuitsurterre.com/",
     "has_promo": true,
     "found": [
-      "60%",
       "réduction"
     ],
     "error": null,
-    "changed": false,
+    "changed": true,
     "category": "CHAUSSURES"
   },
   {
@@ -618,12 +617,10 @@
     "status": "ok",
     "http_status": 200,
     "final_url": "https://www.greige.fr/",
-    "has_promo": true,
-    "found": [
-      "remise"
-    ],
+    "has_promo": false,
+    "found": [],
     "error": null,
-    "changed": false,
+    "changed": true,
     "category": "LINGE DE MAISON"
   },
   {
