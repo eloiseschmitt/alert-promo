@@ -6,15 +6,11 @@
     "final_url": "https://www.armedangels.com/fr-fr/pages/femme-home",
     "has_promo": true,
     "found": [
-      "-60 %",
-      "promo",
-      "promotion",
-      "promotions",
       "sale",
       "soldes"
     ],
     "error": null,
-    "changed": false,
+    "changed": true,
     "category": "FEMMES"
   },
   {
@@ -155,13 +151,10 @@
     "final_url": "https://www.figaret.com/collections/chemises-femme",
     "has_promo": true,
     "found": [
-      "-50%",
-      "deal",
-      "remise",
-      "soldes"
+      "deal"
     ],
     "error": null,
-    "changed": false,
+    "changed": true,
     "category": "FEMMES"
   },
   {
@@ -233,7 +226,7 @@
     "url": "https://www.yade-paris.fr/",
     "status": "ok",
     "http_status": 200,
-    "final_url": "https://www.yade-paris.com/fr?shpxid=1094098b-4ae6-4c42-9908-cb0d30e3a647",
+    "final_url": "https://www.yade-paris.com/fr?shpxid=9b33c677-7e02-4adc-9b82-2ce75852dabd",
     "has_promo": true,
     "found": [
       "-50%",
@@ -258,7 +251,7 @@
       "sales"
     ],
     "error": null,
-    "changed": true,
+    "changed": false,
     "category": "FEMMES"
   },
   {
@@ -279,15 +272,11 @@
     "final_url": "https://www.armedangels.com/fr-fr/pages/homme-home",
     "has_promo": true,
     "found": [
-      "-60 %",
-      "promo",
-      "promotion",
-      "promotions",
       "sale",
       "soldes"
     ],
     "error": null,
-    "changed": false,
+    "changed": true,
     "category": "HOMMES"
   },
   {
@@ -338,10 +327,10 @@
     "final_url": "https://www.balibaris.com/",
     "has_promo": true,
     "found": [
-      "soldes"
+      "-50%"
     ],
     "error": null,
-    "changed": false,
+    "changed": true,
     "category": "HOMMES"
   },
   {
@@ -436,14 +425,10 @@
     "status": "ok",
     "http_status": 200,
     "final_url": "https://www.figaret.com/collections/chemises-homme",
-    "has_promo": true,
-    "found": [
-      "-50%",
-      "remise",
-      "soldes"
-    ],
+    "has_promo": false,
+    "found": [],
     "error": null,
-    "changed": false,
+    "changed": true,
     "category": "HOMMES"
   },
   {
@@ -601,6 +586,7 @@
     "final_url": "https://moea.io/fr/",
     "has_promo": true,
     "found": [
+      "-50%",
       "-60%",
       "promo",
       "promotion",
@@ -609,7 +595,7 @@
       "sales"
     ],
     "error": null,
-    "changed": false,
+    "changed": true,
     "category": "CHAUSSURES"
   },
   {
