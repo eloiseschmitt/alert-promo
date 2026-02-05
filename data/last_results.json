@@ -10,7 +10,7 @@
       "soldes"
     ],
     "error": null,
-    "changed": true,
+    "changed": false,
     "category": "FEMMES"
   },
   {
@@ -51,11 +51,10 @@
     "final_url": "https://www.wedressfair.fr/accueil-femme?oc=nav",
     "has_promo": true,
     "found": [
-      "remise",
-      "soldes"
+      "remise"
     ],
     "error": null,
-    "changed": false,
+    "changed": true,
     "category": "FEMMES"
   },
   {
@@ -154,7 +153,7 @@
       "deal"
     ],
     "error": null,
-    "changed": true,
+    "changed": false,
     "category": "FEMMES"
   },
   {
@@ -200,13 +199,10 @@
     "status": "ok",
     "http_status": 200,
     "final_url": "https://www.fromfuture.com/collections/toute-la-collection-femme",
-    "has_promo": true,
-    "found": [
-      "-50%",
-      "soldes"
-    ],
+    "has_promo": false,
+    "found": [],
     "error": null,
-    "changed": false,
+    "changed": true,
     "category": "FEMMES"
   },
   {
@@ -226,7 +222,7 @@
     "url": "https://www.yade-paris.fr/",
     "status": "ok",
     "http_status": 200,
-    "final_url": "https://www.yade-paris.com/fr?shpxid=9b33c677-7e02-4adc-9b82-2ce75852dabd",
+    "final_url": "https://www.yade-paris.com/fr?shpxid=38e41b54-c4ff-41d7-9d1f-4eb8b65d6f4b",
     "has_promo": true,
     "found": [
       "-50%",
@@ -276,7 +272,7 @@
       "soldes"
     ],
     "error": null,
-    "changed": true,
+    "changed": false,
     "category": "HOMMES"
   },
   {
@@ -313,11 +309,10 @@
     "final_url": "https://www.wedressfair.fr/accueil-homme?oc=nav",
     "has_promo": true,
     "found": [
-      "remise",
-      "soldes"
+      "remise"
     ],
     "error": null,
-    "changed": false,
+    "changed": true,
     "category": "HOMMES"
   },
   {
@@ -330,7 +325,7 @@
       "-50%"
     ],
     "error": null,
-    "changed": true,
+    "changed": false,
     "category": "HOMMES"
   },
   {
@@ -397,13 +392,10 @@
     "status": "ok",
     "http_status": 200,
     "final_url": "https://www.montlimart.com/",
-    "has_promo": true,
-    "found": [
-      "-50%",
-      "deal"
-    ],
+    "has_promo": false,
+    "found": [],
     "error": null,
-    "changed": false,
+    "changed": true,
     "category": "HOMMES"
   },
   {
@@ -428,7 +420,7 @@
     "has_promo": false,
     "found": [],
     "error": null,
-    "changed": true,
+    "changed": false,
     "category": "HOMMES"
   },
   {
@@ -474,13 +466,10 @@
     "status": "ok",
     "http_status": 200,
     "final_url": "https://www.fromfuture.com/collections/toute-la-collection-homme",
-    "has_promo": true,
-    "found": [
-      "-50%",
-      "soldes"
-    ],
+    "has_promo": false,
+    "found": [],
     "error": null,
-    "changed": false,
+    "changed": true,
     "category": "HOMMES"
   },
   {
@@ -519,13 +508,10 @@
     "status": "ok",
     "http_status": 200,
     "final_url": "https://julesjenn.com/",
-    "has_promo": true,
-    "found": [
-      "remise",
-      "soldes"
-    ],
+    "has_promo": false,
+    "found": [],
     "error": null,
-    "changed": false,
+    "changed": true,
     "category": "CHAUSSURES"
   },
   {
@@ -595,7 +581,7 @@
       "sales"
     ],
     "error": null,
-    "changed": true,
+    "changed": false,
     "category": "CHAUSSURES"
   },
   {
