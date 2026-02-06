@@ -54,7 +54,7 @@
       "remise"
     ],
     "error": null,
-    "changed": true,
+    "changed": false,
     "category": "FEMMES"
   },
   {
@@ -202,7 +202,7 @@
     "has_promo": false,
     "found": [],
     "error": null,
-    "changed": true,
+    "changed": false,
     "category": "FEMMES"
   },
   {
@@ -222,7 +222,7 @@
     "url": "https://www.yade-paris.fr/",
     "status": "ok",
     "http_status": 200,
-    "final_url": "https://www.yade-paris.com/fr?shpxid=38e41b54-c4ff-41d7-9d1f-4eb8b65d6f4b",
+    "final_url": "https://www.yade-paris.com/fr?shpxid=3188ea6c-9fdc-4a1a-99e5-57c2b6100c53",
     "has_promo": true,
     "found": [
       "-50%",
@@ -240,14 +240,13 @@
     "final_url": "https://organicbasics.com/collections/all-womens-products",
     "has_promo": true,
     "found": [
-      "50%",
       "discount",
       "offers",
       "sale",
       "sales"
     ],
     "error": null,
-    "changed": false,
+    "changed": true,
     "category": "FEMMES"
   },
   {
@@ -312,7 +311,7 @@
       "remise"
     ],
     "error": null,
-    "changed": true,
+    "changed": false,
     "category": "HOMMES"
   },
   {
@@ -395,7 +394,7 @@
     "has_promo": false,
     "found": [],
     "error": null,
-    "changed": true,
+    "changed": false,
     "category": "HOMMES"
   },
   {
@@ -469,7 +468,7 @@
     "has_promo": false,
     "found": [],
     "error": null,
-    "changed": true,
+    "changed": false,
     "category": "HOMMES"
   },
   {
@@ -495,12 +494,10 @@
     "status": "ok",
     "http_status": 200,
     "final_url": "https://minuitsurterre.com/",
-    "has_promo": true,
-    "found": [
-      "réduction"
-    ],
+    "has_promo": false,
+    "found": [],
     "error": null,
-    "changed": false,
+    "changed": true,
     "category": "CHAUSSURES"
   },
   {
@@ -511,7 +508,7 @@
     "has_promo": false,
     "found": [],
     "error": null,
-    "changed": true,
+    "changed": false,
     "category": "CHAUSSURES"
   },
   {
@@ -572,7 +569,6 @@
     "final_url": "https://moea.io/fr/",
     "has_promo": true,
     "found": [
-      "-50%",
       "-60%",
       "promo",
       "promotion",
@@ -581,7 +577,7 @@
       "sales"
     ],
     "error": null,
-    "changed": false,
+    "changed": true,
     "category": "CHAUSSURES"
   },
   {
