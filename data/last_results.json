@@ -222,7 +222,7 @@
     "url": "https://www.yade-paris.fr/",
     "status": "ok",
     "http_status": 200,
-    "final_url": "https://www.yade-paris.com/fr?shpxid=3188ea6c-9fdc-4a1a-99e5-57c2b6100c53",
+    "final_url": "https://www.yade-paris.com/fr?shpxid=acfdba25-114e-49b0-9960-08e43fe7b4dd",
     "has_promo": true,
     "found": [
       "-50%",
@@ -240,6 +240,7 @@
     "final_url": "https://organicbasics.com/collections/all-womens-products",
     "has_promo": true,
     "found": [
+      "50%",
       "discount",
       "offers",
       "sale",
@@ -497,7 +498,7 @@
     "has_promo": false,
     "found": [],
     "error": null,
-    "changed": true,
+    "changed": false,
     "category": "CHAUSSURES"
   },
   {
@@ -569,6 +570,7 @@
     "final_url": "https://moea.io/fr/",
     "has_promo": true,
     "found": [
+      "-50%",
       "-60%",
       "promo",
       "promotion",
