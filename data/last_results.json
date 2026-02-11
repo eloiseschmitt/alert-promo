@@ -222,7 +222,7 @@
     "url": "https://www.yade-paris.fr/",
     "status": "ok",
     "http_status": 200,
-    "final_url": "https://www.yade-paris.com/fr?shpxid=c63e7c20-2c53-4cca-98c2-c7d4f38588b8",
+    "final_url": "https://www.yade-paris.com/fr?shpxid=450c3f24-acce-4a5a-82e7-45631ecee8a4",
     "has_promo": true,
     "found": [
       "-50%",
@@ -345,11 +345,11 @@
     "url": "https://bonnegueule.fr/",
     "status": "ok",
     "http_status": 200,
-    "final_url": "https://bonnegueule.fr/fr-usa",
+    "final_url": "https://bonnegueule.fr/fr-us",
     "has_promo": false,
     "found": [],
     "error": null,
-    "changed": false,
+    "changed": true,
     "category": "HOMMES"
   },
   {
