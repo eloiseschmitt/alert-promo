@@ -64,11 +64,10 @@
     "final_url": "https://noyoco.com/collections/femme-voir-tout",
     "has_promo": true,
     "found": [
-      "sale",
       "soldes"
     ],
     "error": null,
-    "changed": false,
+    "changed": true,
     "category": "FEMMES"
   },
   {
@@ -222,7 +221,7 @@
     "url": "https://www.yade-paris.fr/",
     "status": "ok",
     "http_status": 200,
-    "final_url": "https://www.yade-paris.com/fr?shpxid=8a6df6e0-7f53-4c0b-8c43-e74459f7e6c5",
+    "final_url": "https://www.yade-paris.com/fr?shpxid=7d1b8e7a-623b-4ae4-ab44-94b1da7d04fd",
     "has_promo": true,
     "found": [
       "-50%",
