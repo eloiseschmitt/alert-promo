@@ -36,12 +36,10 @@
     "final_url": "https://jaspebydiane.fr/",
     "has_promo": true,
     "found": [
-      "-50%",
-      "-60%",
       "remise"
     ],
     "error": null,
-    "changed": false,
+    "changed": true,
     "category": "FEMMES"
   },
   {
@@ -67,7 +65,7 @@
       "soldes"
     ],
     "error": null,
-    "changed": true,
+    "changed": false,
     "category": "FEMMES"
   },
   {
@@ -221,7 +219,7 @@
     "url": "https://www.yade-paris.fr/",
     "status": "ok",
     "http_status": 200,
-    "final_url": "https://www.yade-paris.com/fr?shpxid=7d1b8e7a-623b-4ae4-ab44-94b1da7d04fd",
+    "final_url": "https://www.yade-paris.com/fr?shpxid=49e48d59-b79e-4860-ad0d-347e06cadd10",
     "has_promo": true,
     "found": [
       "-50%",
