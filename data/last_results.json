@@ -39,7 +39,7 @@
       "remise"
     ],
     "error": null,
-    "changed": true,
+    "changed": false,
     "category": "FEMMES"
   },
   {
@@ -219,7 +219,7 @@
     "url": "https://www.yade-paris.fr/",
     "status": "ok",
     "http_status": 200,
-    "final_url": "https://www.yade-paris.com/fr?shpxid=49e48d59-b79e-4860-ad0d-347e06cadd10",
+    "final_url": "https://www.yade-paris.com/fr?shpxid=41295e95-d88b-4246-a16b-c6b0f23c666d",
     "has_promo": true,
     "found": [
       "-50%",
@@ -232,19 +232,13 @@
   },
   {
     "url": "https://organicbasics.com/collections/all-womens-products",
-    "status": "ok",
-    "http_status": 200,
-    "final_url": "https://organicbasics.com/collections/all-womens-products",
-    "has_promo": true,
-    "found": [
-      "50%",
-      "discount",
-      "offers",
-      "sale",
-      "sales"
-    ],
-    "error": null,
-    "changed": false,
+    "status": "timeout",
+    "http_status": null,
+    "final_url": null,
+    "has_promo": false,
+    "found": [],
+    "error": "HTTPSConnectionPool(host='organicbasics.com', port=443): Max retries exceeded with url: /collections/all-womens-products (Caused by ConnectTimeoutError(<HTTPSConnection(host='organicbasics.com', port=443) at 0x7f8629bf2ed0>, 'Connection to organicbasics.com timed out. (connect timeout=10)'))",
+    "changed": true,
     "category": "FEMMES"
   },
   {
@@ -471,20 +465,13 @@
   },
   {
     "url": "https://organicbasics.com/collections/all-mens-products",
-    "status": "ok",
-    "http_status": 200,
-    "final_url": "https://organicbasics.com/collections/all-mens-products",
-    "has_promo": true,
-    "found": [
-      "50%",
-      "deal",
-      "discount",
-      "offers",
-      "sale",
-      "sales"
-    ],
-    "error": null,
-    "changed": false,
+    "status": "timeout",
+    "http_status": null,
+    "final_url": null,
+    "has_promo": false,
+    "found": [],
+    "error": "HTTPSConnectionPool(host='organicbasics.com', port=443): Max retries exceeded with url: /collections/all-mens-products (Caused by ConnectTimeoutError(<HTTPSConnection(host='organicbasics.com', port=443) at 0x7f862a296210>, 'Connection to organicbasics.com timed out. (connect timeout=10)'))",
+    "changed": true,
     "category": "HOMMES"
   },
   {
