@@ -219,7 +219,7 @@
     "url": "https://www.yade-paris.fr/",
     "status": "ok",
     "http_status": 200,
-    "final_url": "https://www.yade-paris.com/fr?shpxid=41295e95-d88b-4246-a16b-c6b0f23c666d",
+    "final_url": "https://www.yade-paris.com/fr?shpxid=d3754078-df61-449a-bfcb-c5903bf3d527",
     "has_promo": true,
     "found": [
       "-50%",
@@ -232,12 +232,18 @@
   },
   {
     "url": "https://organicbasics.com/collections/all-womens-products",
-    "status": "timeout",
-    "http_status": null,
-    "final_url": null,
-    "has_promo": false,
-    "found": [],
-    "error": "HTTPSConnectionPool(host='organicbasics.com', port=443): Max retries exceeded with url: /collections/all-womens-products (Caused by ConnectTimeoutError(<HTTPSConnection(host='organicbasics.com', port=443) at 0x7f8629bf2ed0>, 'Connection to organicbasics.com timed out. (connect timeout=10)'))",
+    "status": "ok",
+    "http_status": 200,
+    "final_url": "https://organicbasics.com/collections/all-womens-products",
+    "has_promo": true,
+    "found": [
+      "50%",
+      "discount",
+      "offers",
+      "sale",
+      "sales"
+    ],
+    "error": null,
     "changed": true,
     "category": "FEMMES"
   },
@@ -465,12 +471,19 @@
   },
   {
     "url": "https://organicbasics.com/collections/all-mens-products",
-    "status": "timeout",
-    "http_status": null,
-    "final_url": null,
-    "has_promo": false,
-    "found": [],
-    "error": "HTTPSConnectionPool(host='organicbasics.com', port=443): Max retries exceeded with url: /collections/all-mens-products (Caused by ConnectTimeoutError(<HTTPSConnection(host='organicbasics.com', port=443) at 0x7f862a296210>, 'Connection to organicbasics.com timed out. (connect timeout=10)'))",
+    "status": "ok",
+    "http_status": 200,
+    "final_url": "https://organicbasics.com/collections/all-mens-products",
+    "has_promo": true,
+    "found": [
+      "50%",
+      "deal",
+      "discount",
+      "offers",
+      "sale",
+      "sales"
+    ],
+    "error": null,
     "changed": true,
     "category": "HOMMES"
   },
