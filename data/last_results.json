@@ -6,11 +6,10 @@
     "final_url": "https://www.armedangels.com/fr-fr/pages/femme-home",
     "has_promo": true,
     "found": [
-      "sale",
       "soldes"
     ],
     "error": null,
-    "changed": false,
+    "changed": true,
     "category": "FEMMES"
   },
   {
@@ -219,7 +218,7 @@
     "url": "https://www.yade-paris.fr/",
     "status": "ok",
     "http_status": 200,
-    "final_url": "https://www.yade-paris.com/fr?shpxid=9b59ae5b-5ed2-4fbc-b444-322f0af0a6dc",
+    "final_url": "https://www.yade-paris.com/fr?shpxid=8ebd8624-41e4-49ea-bdc3-ed4d0fbc2643",
     "has_promo": true,
     "found": [
       "-50%",
@@ -265,11 +264,10 @@
     "final_url": "https://www.armedangels.com/fr-fr/pages/homme-home",
     "has_promo": true,
     "found": [
-      "sale",
       "soldes"
     ],
     "error": null,
-    "changed": false,
+    "changed": true,
     "category": "HOMMES"
   },
   {
@@ -541,7 +539,7 @@
       "sale"
     ],
     "error": null,
-    "changed": true,
+    "changed": false,
     "category": "CHAUSSURES"
   },
   {
