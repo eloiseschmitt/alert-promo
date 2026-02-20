@@ -218,7 +218,7 @@
     "url": "https://www.yade-paris.fr/",
     "status": "ok",
     "http_status": 200,
-    "final_url": "https://www.yade-paris.com/fr?shpxid=5be8c855-4340-4551-acc4-b4d8db5ae2f2",
+    "final_url": "https://www.yade-paris.com/fr?shpxid=098b7d86-5611-42e0-9728-4b68db0c646e",
     "has_promo": true,
     "found": [
       "-50%",
@@ -547,13 +547,10 @@
     "status": "ok",
     "http_status": 200,
     "final_url": "https://caval.fr/",
-    "has_promo": true,
-    "found": [
-      "-60%",
-      "soldes"
-    ],
+    "has_promo": false,
+    "found": [],
     "error": null,
-    "changed": false,
+    "changed": true,
     "category": "CHAUSSURES"
   },
   {
