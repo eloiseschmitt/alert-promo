@@ -208,17 +208,18 @@
     "final_url": "https://minastorm.com/",
     "has_promo": true,
     "found": [
+      "deal",
       "discount"
     ],
     "error": null,
-    "changed": false,
+    "changed": true,
     "category": "FEMMES"
   },
   {
     "url": "https://www.yade-paris.fr/",
     "status": "ok",
     "http_status": 200,
-    "final_url": "https://www.yade-paris.com/fr?shpxid=f075a255-f82f-4c2e-a714-783d277230af",
+    "final_url": "https://www.yade-paris.com/fr?shpxid=97f90c7f-425f-44c1-abeb-cb41bda8c715",
     "has_promo": true,
     "found": [
       "-50%",
@@ -282,7 +283,7 @@
       "réduction"
     ],
     "error": null,
-    "changed": true,
+    "changed": false,
     "category": "HOMMES"
   },
   {
