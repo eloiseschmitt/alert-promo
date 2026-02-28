@@ -219,7 +219,7 @@
     "url": "https://www.yade-paris.fr/",
     "status": "ok",
     "http_status": 200,
-    "final_url": "https://www.yade-paris.com/fr?shpxid=d5533efb-f321-4b23-81da-d55705ba28e5",
+    "final_url": "https://www.yade-paris.com/fr?shpxid=cbc46af4-b4c7-4436-bc6f-d6d18eaabd16",
     "has_promo": true,
     "found": [
       "promo",
@@ -242,7 +242,7 @@
       "sales"
     ],
     "error": null,
-    "changed": true,
+    "changed": false,
     "category": "FEMMES"
   },
   {
