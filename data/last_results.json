@@ -21,11 +21,10 @@
     "found": [
       "promo",
       "promotion",
-      "réduction",
-      "soldes"
+      "réduction"
     ],
     "error": null,
-    "changed": false,
+    "changed": true,
     "category": "FEMMES"
   },
   {
@@ -59,12 +58,10 @@
     "status": "ok",
     "http_status": 200,
     "final_url": "https://noyoco.com/collections/femme-voir-tout",
-    "has_promo": true,
-    "found": [
-      "soldes"
-    ],
+    "has_promo": false,
+    "found": [],
     "error": null,
-    "changed": false,
+    "changed": true,
     "category": "FEMMES"
   },
   {
@@ -219,7 +216,7 @@
     "url": "https://www.yade-paris.fr/",
     "status": "ok",
     "http_status": 200,
-    "final_url": "https://www.yade-paris.com/fr?shpxid=b18063d6-eeff-4bcf-bfbe-11961663073c",
+    "final_url": "https://www.yade-paris.com/fr?shpxid=06a1cb94-0938-47b7-8273-e0b395102832",
     "has_promo": true,
     "found": [
       "promo",
@@ -279,8 +276,7 @@
     "found": [
       "promo",
       "promotion",
-      "réduction",
-      "soldes"
+      "réduction"
     ],
     "error": null,
     "changed": true,
@@ -328,12 +324,10 @@
     "status": "ok",
     "http_status": 200,
     "final_url": "https://noyoco.com/collections/homme-voir-tout",
-    "has_promo": true,
-    "found": [
-      "soldes"
-    ],
+    "has_promo": false,
+    "found": [],
     "error": null,
-    "changed": false,
+    "changed": true,
     "category": "HOMMES"
   },
   {
@@ -384,13 +378,13 @@
   },
   {
     "url": "https://www.montlimart.com/",
-    "status": "ok",
-    "http_status": 200,
+    "status": "http_503",
+    "http_status": 503,
     "final_url": "https://www.montlimart.com/",
     "has_promo": false,
     "found": [],
     "error": null,
-    "changed": false,
+    "changed": true,
     "category": "HOMMES"
   },
   {
@@ -422,27 +416,26 @@
     "url": "https://ecoalf.com/fr/collections/hombre",
     "status": "ok",
     "http_status": 200,
-    "final_url": "https://ecoalf.com/fr/collections/hombre",
+    "final_url": "https://ecoalf.com/en-us/collections/hombre",
     "has_promo": true,
     "found": [
-      "deal",
-      "soldes"
+      "deal"
     ],
     "error": null,
-    "changed": false,
+    "changed": true,
     "category": "HOMMES"
   },
   {
     "url": "https://www.flotte.fr/collections/homme",
     "status": "ok",
     "http_status": 200,
-    "final_url": "https://www.flotte.fr/collections/homme",
+    "final_url": "https://www.flotte.fr/fr-int/collections/homme",
     "has_promo": true,
     "found": [
       "deal"
     ],
     "error": null,
-    "changed": false,
+    "changed": true,
     "category": "HOMMES"
   },
   {
@@ -547,10 +540,12 @@
     "status": "ok",
     "http_status": 200,
     "final_url": "https://caval.fr/",
-    "has_promo": false,
-    "found": [],
+    "has_promo": true,
+    "found": [
+      "deal"
+    ],
     "error": null,
-    "changed": false,
+    "changed": true,
     "category": "CHAUSSURES"
   },
   {
