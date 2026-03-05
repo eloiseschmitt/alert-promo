@@ -159,7 +159,7 @@
       "deal"
     ],
     "error": null,
-    "changed": true,
+    "changed": false,
     "category": "FEMMES"
   },
   {
@@ -215,7 +215,7 @@
     "url": "https://www.yade-paris.fr/",
     "status": "ok",
     "http_status": 200,
-    "final_url": "https://www.yade-paris.com/fr?shpxid=4eb10319-3e3e-4e50-945c-64716f2b0336",
+    "final_url": "https://www.yade-paris.com/fr?shpxid=52564c6c-23ab-4da3-861e-fc8287774e69",
     "has_promo": true,
     "found": [
       "promo",
@@ -232,14 +232,13 @@
     "final_url": "https://organicbasics.com/collections/all-womens-products",
     "has_promo": true,
     "found": [
-      "50%",
       "discount",
       "offers",
       "sale",
       "sales"
     ],
     "error": null,
-    "changed": false,
+    "changed": true,
     "category": "FEMMES"
   },
   {
@@ -377,13 +376,13 @@
   },
   {
     "url": "https://www.montlimart.com/",
-    "status": "http_503",
-    "http_status": 503,
+    "status": "ok",
+    "http_status": 200,
     "final_url": "https://www.montlimart.com/",
     "has_promo": false,
     "found": [],
     "error": null,
-    "changed": false,
+    "changed": true,
     "category": "HOMMES"
   },
   {
@@ -415,26 +414,26 @@
     "url": "https://ecoalf.com/fr/collections/hombre",
     "status": "ok",
     "http_status": 200,
-    "final_url": "https://ecoalf.com/en-us/collections/hombre",
+    "final_url": "https://ecoalf.com/fr/collections/hombre",
     "has_promo": true,
     "found": [
       "deal"
     ],
     "error": null,
-    "changed": false,
+    "changed": true,
     "category": "HOMMES"
   },
   {
     "url": "https://www.flotte.fr/collections/homme",
     "status": "ok",
     "http_status": 200,
-    "final_url": "https://www.flotte.fr/fr-int/collections/homme",
+    "final_url": "https://www.flotte.fr/collections/homme",
     "has_promo": true,
     "found": [
       "deal"
     ],
     "error": null,
-    "changed": false,
+    "changed": true,
     "category": "HOMMES"
   },
   {
