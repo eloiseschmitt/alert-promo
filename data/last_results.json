@@ -21,10 +21,11 @@
     "found": [
       "promo",
       "promotion",
-      "réduction"
+      "réduction",
+      "soldes"
     ],
     "error": null,
-    "changed": false,
+    "changed": true,
     "category": "FEMMES"
   },
   {
@@ -215,7 +216,7 @@
     "url": "https://www.yade-paris.fr/",
     "status": "ok",
     "http_status": 200,
-    "final_url": "https://www.yade-paris.com/fr?shpxid=52564c6c-23ab-4da3-861e-fc8287774e69",
+    "final_url": "https://www.yade-paris.com/fr?shpxid=129bd1f2-8b84-4277-b9b5-af9827484330",
     "has_promo": true,
     "found": [
       "promo",
@@ -238,7 +239,7 @@
       "sales"
     ],
     "error": null,
-    "changed": true,
+    "changed": false,
     "category": "FEMMES"
   },
   {
@@ -376,8 +377,8 @@
   },
   {
     "url": "https://www.montlimart.com/",
-    "status": "ok",
-    "http_status": 200,
+    "status": "http_503",
+    "http_status": 503,
     "final_url": "https://www.montlimart.com/",
     "has_promo": false,
     "found": [],
@@ -420,7 +421,7 @@
       "deal"
     ],
     "error": null,
-    "changed": true,
+    "changed": false,
     "category": "HOMMES"
   },
   {
@@ -433,7 +434,7 @@
       "deal"
     ],
     "error": null,
-    "changed": true,
+    "changed": false,
     "category": "HOMMES"
   },
   {
