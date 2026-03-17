@@ -215,7 +215,7 @@
     "url": "https://www.yade-paris.fr/",
     "status": "ok",
     "http_status": 200,
-    "final_url": "https://www.yade-paris.com/fr?shpxid=f569209b-a81c-4d1f-866b-7117d1537091",
+    "final_url": "https://www.yade-paris.com/fr?shpxid=0a8c7f4d-d1be-4adc-b592-44526a76b46d",
     "has_promo": true,
     "found": [
       "-50%",
@@ -233,7 +233,6 @@
     "final_url": "https://organicbasics.com/collections/all-womens-products",
     "has_promo": true,
     "found": [
-      "50%",
       "discount",
       "offers",
       "sale",
@@ -311,13 +310,10 @@
     "status": "ok",
     "http_status": 200,
     "final_url": "https://www.balibaris.com/",
-    "has_promo": true,
-    "found": [
-      "- 60%",
-      "-60%"
-    ],
+    "has_promo": false,
+    "found": [],
     "error": null,
-    "changed": false,
+    "changed": true,
     "category": "HOMMES"
   },
   {
@@ -470,6 +466,7 @@
     "final_url": "https://organicbasics.com/collections/all-mens-products",
     "has_promo": true,
     "found": [
+      "50%",
       "deal",
       "discount",
       "offers",
@@ -557,12 +554,13 @@
     "final_url": "https://moea.io/fr/",
     "has_promo": true,
     "found": [
+      "-50%",
       "promo",
       "promotion",
       "promotions"
     ],
     "error": null,
-    "changed": false,
+    "changed": true,
     "category": "CHAUSSURES"
   },
   {
