@@ -6,10 +6,12 @@
     "final_url": "https://www.armedangels.com/en-wo/pages/women-home",
     "has_promo": true,
     "found": [
-      "discount"
+      "-60%",
+      "discount",
+      "sale"
     ],
     "error": null,
-    "changed": false,
+    "changed": true,
     "category": "FEMMES"
   },
   {
@@ -103,13 +105,16 @@
   },
   {
     "url": "https://sevenlie.com/",
-    "status": "request_error",
-    "http_status": null,
-    "final_url": null,
-    "has_promo": false,
-    "found": [],
-    "error": "HTTPSConnectionPool(host='sevenlie.com', port=443): Max retries exceeded with url: / (Caused by ReadTimeoutError(\"HTTPSConnectionPool(host='sevenlie.com', port=443): Read timed out. (read timeout=10)\"))",
-    "changed": false,
+    "status": "ok",
+    "http_status": 200,
+    "final_url": "https://sevenlie.com/",
+    "has_promo": true,
+    "found": [
+      "promo",
+      "promotion"
+    ],
+    "error": null,
+    "changed": true,
     "category": "FEMMES"
   },
   {
@@ -213,7 +218,7 @@
     "url": "https://www.yade-paris.fr/",
     "status": "ok",
     "http_status": 200,
-    "final_url": "https://www.yade-paris.com/fr?shpxid=b075785e-3e7d-4772-8209-c6fec18a48e2",
+    "final_url": "https://www.yade-paris.com/fr?shpxid=d8b90236-6bd5-4099-aad0-4aa77bc2b1ac",
     "has_promo": true,
     "found": [
       "promo",
@@ -236,7 +241,7 @@
       "sales"
     ],
     "error": null,
-    "changed": true,
+    "changed": false,
     "category": "FEMMES"
   },
   {
@@ -257,10 +262,13 @@
     "final_url": "https://www.armedangels.com/fr-fr/pages/homme-home",
     "has_promo": true,
     "found": [
+      "promo",
+      "promotion",
+      "promotions",
       "soldes"
     ],
     "error": null,
-    "changed": false,
+    "changed": true,
     "category": "HOMMES"
   },
   {
@@ -551,10 +559,12 @@
     "status": "ok",
     "http_status": 200,
     "final_url": "https://moea.io/fr/",
-    "has_promo": false,
-    "found": [],
+    "has_promo": true,
+    "found": [
+      "offers"
+    ],
     "error": null,
-    "changed": false,
+    "changed": true,
     "category": "CHAUSSURES"
   },
   {
