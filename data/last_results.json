@@ -11,7 +11,7 @@
       "sale"
     ],
     "error": null,
-    "changed": true,
+    "changed": false,
     "category": "FEMMES"
   },
   {
@@ -114,7 +114,7 @@
       "promotion"
     ],
     "error": null,
-    "changed": true,
+    "changed": false,
     "category": "FEMMES"
   },
   {
@@ -218,7 +218,7 @@
     "url": "https://www.yade-paris.fr/",
     "status": "ok",
     "http_status": 200,
-    "final_url": "https://www.yade-paris.com/fr?shpxid=d8b90236-6bd5-4099-aad0-4aa77bc2b1ac",
+    "final_url": "https://www.yade-paris.com/fr?shpxid=ba181db8-7948-49e6-9156-1e5e7fe7b5ca",
     "has_promo": true,
     "found": [
       "promo",
@@ -268,7 +268,7 @@
       "soldes"
     ],
     "error": null,
-    "changed": true,
+    "changed": false,
     "category": "HOMMES"
   },
   {
@@ -564,7 +564,7 @@
       "offers"
     ],
     "error": null,
-    "changed": true,
+    "changed": false,
     "category": "CHAUSSURES"
   },
   {
