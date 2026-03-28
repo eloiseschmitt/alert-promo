@@ -108,13 +108,10 @@
     "status": "ok",
     "http_status": 200,
     "final_url": "https://sevenlie.com/",
-    "has_promo": true,
-    "found": [
-      "promo",
-      "promotion"
-    ],
+    "has_promo": false,
+    "found": [],
     "error": null,
-    "changed": false,
+    "changed": true,
     "category": "FEMMES"
   },
   {
@@ -218,9 +215,10 @@
     "url": "https://www.yade-paris.fr/",
     "status": "ok",
     "http_status": 200,
-    "final_url": "https://www.yade-paris.com/fr?shpxid=ba181db8-7948-49e6-9156-1e5e7fe7b5ca",
+    "final_url": "https://www.yade-paris.com/fr?shpxid=255b2f85-bf0c-46bf-b5b8-70078ea89101",
     "has_promo": true,
     "found": [
+      "-50%",
       "promo",
       "promotion"
     ],
@@ -235,13 +233,14 @@
     "final_url": "https://organicbasics.com/collections/all-womens-products",
     "has_promo": true,
     "found": [
+      "50%",
       "discount",
       "offers",
       "sale",
       "sales"
     ],
     "error": null,
-    "changed": false,
+    "changed": true,
     "category": "FEMMES"
   },
   {
