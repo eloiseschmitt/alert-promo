@@ -215,7 +215,7 @@
     "url": "https://www.yade-paris.fr/",
     "status": "ok",
     "http_status": 200,
-    "final_url": "https://www.yade-paris.com/fr?shpxid=cf482266-c792-479f-b5da-09b9e2b4c486",
+    "final_url": "https://www.yade-paris.com/fr?shpxid=144d306b-2198-4b7b-84f6-ed5394c5218a",
     "has_promo": true,
     "found": [
       "-50%",
@@ -233,14 +233,13 @@
     "final_url": "https://organicbasics.com/collections/all-womens-products",
     "has_promo": true,
     "found": [
-      "50%",
       "discount",
       "offers",
       "sale",
       "sales"
     ],
     "error": null,
-    "changed": false,
+    "changed": true,
     "category": "FEMMES"
   },
   {
@@ -384,12 +383,10 @@
     "status": "ok",
     "http_status": 200,
     "final_url": "https://www.montlimart.com/",
-    "has_promo": true,
-    "found": [
-      "deal"
-    ],
+    "has_promo": false,
+    "found": [],
     "error": null,
-    "changed": false,
+    "changed": true,
     "category": "HOMMES"
   },
   {
@@ -474,7 +471,6 @@
     "final_url": "https://organicbasics.com/collections/all-mens-products",
     "has_promo": true,
     "found": [
-      "50%",
       "deal",
       "discount",
       "offers",
