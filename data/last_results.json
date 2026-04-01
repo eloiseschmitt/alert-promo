@@ -3,15 +3,16 @@
     "url": "https://www.armedangels.com/fr-fr/pages/femme-home",
     "status": "ok",
     "http_status": 200,
-    "final_url": "https://www.armedangels.com/en-wo/pages/women-home",
+    "final_url": "https://www.armedangels.com/fr-fr/pages/femme-home",
     "has_promo": true,
     "found": [
-      "-60%",
-      "discount",
-      "sale"
+      "promo",
+      "promotion",
+      "promotions",
+      "soldes"
     ],
     "error": null,
-    "changed": false,
+    "changed": true,
     "category": "FEMMES"
   },
   {
@@ -114,7 +115,7 @@
       "promotion"
     ],
     "error": null,
-    "changed": true,
+    "changed": false,
     "category": "FEMMES"
   },
   {
@@ -218,10 +219,9 @@
     "url": "https://www.yade-paris.fr/",
     "status": "ok",
     "http_status": 200,
-    "final_url": "https://www.yade-paris.com/fr?shpxid=4e7793cb-c13d-47ef-a6f5-54819afe8fe2",
+    "final_url": "https://www.yade-paris.com/fr?shpxid=8e3f0789-38dc-4247-806d-2452d88ec247",
     "has_promo": true,
     "found": [
-      "-50%",
       "promo",
       "promotion"
     ],
@@ -316,12 +316,10 @@
     "status": "ok",
     "http_status": 200,
     "final_url": "https://www.balibaris.com/",
-    "has_promo": true,
-    "found": [
-      "-50%"
-    ],
+    "has_promo": false,
+    "found": [],
     "error": null,
-    "changed": false,
+    "changed": true,
     "category": "HOMMES"
   },
   {
@@ -482,7 +480,7 @@
       "sales"
     ],
     "error": null,
-    "changed": true,
+    "changed": false,
     "category": "HOMMES"
   },
   {
