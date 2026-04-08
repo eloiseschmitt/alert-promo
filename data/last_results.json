@@ -219,7 +219,7 @@
     "url": "https://www.yade-paris.fr/",
     "status": "ok",
     "http_status": 200,
-    "final_url": "https://www.yade-paris.com/fr?shpxid=2d294e47-c55e-4199-9383-78aef9b02425",
+    "final_url": "https://www.yade-paris.com/fr?shpxid=2d6e73c3-3dd6-450d-bec1-a596cd248b27",
     "has_promo": true,
     "found": [
       "promo",
@@ -430,11 +430,13 @@
   },
   {
     "url": "https://www.flotte.fr/collections/homme",
-    "status": "http_429",
-    "http_status": 429,
+    "status": "ok",
+    "http_status": 200,
     "final_url": "https://www.flotte.fr/collections/homme",
-    "has_promo": false,
-    "found": [],
+    "has_promo": true,
+    "found": [
+      "deal"
+    ],
     "error": null,
     "changed": true,
     "category": "HOMMES"
@@ -452,30 +454,38 @@
   },
   {
     "url": "https://www.fromfuture.com/collections/toute-la-collection-homme",
-    "status": "http_429",
-    "http_status": 429,
+    "status": "ok",
+    "http_status": 200,
     "final_url": "https://www.fromfuture.com/collections/toute-la-collection-homme",
-    "has_promo": false,
-    "found": [],
+    "has_promo": true,
+    "found": [
+      "deal"
+    ],
     "error": null,
     "changed": true,
     "category": "HOMMES"
   },
   {
     "url": "https://organicbasics.com/collections/all-mens-products",
-    "status": "http_429",
-    "http_status": 429,
+    "status": "ok",
+    "http_status": 200,
     "final_url": "https://organicbasics.com/collections/all-mens-products",
-    "has_promo": false,
-    "found": [],
+    "has_promo": true,
+    "found": [
+      "deal",
+      "discount",
+      "offers",
+      "sale",
+      "sales"
+    ],
     "error": null,
     "changed": true,
     "category": "HOMMES"
   },
   {
     "url": "https://minuitsurterre.com/",
-    "status": "http_429",
-    "http_status": 429,
+    "status": "ok",
+    "http_status": 200,
     "final_url": "https://minuitsurterre.com/",
     "has_promo": false,
     "found": [],
@@ -485,8 +495,8 @@
   },
   {
     "url": "https://julesjenn.com/",
-    "status": "http_429",
-    "http_status": 429,
+    "status": "ok",
+    "http_status": 200,
     "final_url": "https://julesjenn.com/",
     "has_promo": false,
     "found": [],
@@ -496,52 +506,70 @@
   },
   {
     "url": "https://www.zeta-shoes.com/",
-    "status": "http_429",
-    "http_status": 429,
-    "final_url": "https://www.zeta-shoes.com/",
-    "has_promo": false,
-    "found": [],
+    "status": "ok",
+    "http_status": 200,
+    "final_url": "https://www.zeta-shoes.com/fr-us",
+    "has_promo": true,
+    "found": [
+      "-50%",
+      "promo",
+      "promotion",
+      "reductions",
+      "réduction"
+    ],
     "error": null,
     "changed": true,
     "category": "CHAUSSURES"
   },
   {
     "url": "https://alohas.com/fr",
-    "status": "http_429",
-    "http_status": 429,
-    "final_url": "https://alohas.com/fr",
-    "has_promo": false,
-    "found": [],
+    "status": "ok",
+    "http_status": 200,
+    "final_url": "https://alohas.com/en-us",
+    "has_promo": true,
+    "found": [
+      "discount",
+      "promo",
+      "promotion",
+      "promotions",
+      "sale"
+    ],
     "error": null,
     "changed": true,
     "category": "CHAUSSURES"
   },
   {
     "url": "https://caval.fr/",
-    "status": "http_429",
-    "http_status": 429,
+    "status": "ok",
+    "http_status": 200,
     "final_url": "https://caval.fr/",
-    "has_promo": false,
-    "found": [],
+    "has_promo": true,
+    "found": [
+      "deal"
+    ],
     "error": null,
     "changed": true,
     "category": "CHAUSSURES"
   },
   {
     "url": "https://moea.io/fr/",
-    "status": "http_429",
-    "http_status": 429,
+    "status": "ok",
+    "http_status": 200,
     "final_url": "https://moea.io/fr/",
-    "has_promo": false,
-    "found": [],
+    "has_promo": true,
+    "found": [
+      "deal",
+      "deals",
+      "offers"
+    ],
     "error": null,
     "changed": true,
     "category": "CHAUSSURES"
   },
   {
     "url": "https://www.greige.fr/",
-    "status": "http_429",
-    "http_status": 429,
+    "status": "ok",
+    "http_status": 200,
     "final_url": "https://www.greige.fr/",
     "has_promo": false,
     "found": [],
@@ -551,11 +579,13 @@
   },
   {
     "url": "https://le-drap-francais.com/pages/linge-de-lit",
-    "status": "http_429",
-    "http_status": 429,
+    "status": "ok",
+    "http_status": 200,
     "final_url": "https://le-drap-francais.com/pages/linge-de-lit",
-    "has_promo": false,
-    "found": [],
+    "has_promo": true,
+    "found": [
+      "deal"
+    ],
     "error": null,
     "changed": true,
     "category": "LINGE DE MAISON"
@@ -576,11 +606,13 @@
   },
   {
     "url": "https://www.pulpehome.com/collections/all",
-    "status": "http_429",
-    "http_status": 429,
+    "status": "ok",
+    "http_status": 200,
     "final_url": "https://www.pulpehome.com/collections/all",
-    "has_promo": false,
-    "found": [],
+    "has_promo": true,
+    "found": [
+      "promo"
+    ],
     "error": null,
     "changed": true,
     "category": "LINGE DE MAISON"
