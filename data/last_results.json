@@ -104,16 +104,13 @@
   },
   {
     "url": "https://sevenlie.com/",
-    "status": "ok",
-    "http_status": 200,
-    "final_url": "https://sevenlie.com/",
-    "has_promo": true,
-    "found": [
-      "promo",
-      "promotion"
-    ],
-    "error": null,
-    "changed": false,
+    "status": "request_error",
+    "http_status": null,
+    "final_url": null,
+    "has_promo": false,
+    "found": [],
+    "error": "HTTPSConnectionPool(host='sevenlie.com', port=443): Max retries exceeded with url: / (Caused by ReadTimeoutError(\"HTTPSConnectionPool(host='sevenlie.com', port=443): Read timed out. (read timeout=10)\"))",
+    "changed": true,
     "category": "FEMMES"
   },
   {
@@ -217,7 +214,7 @@
     "url": "https://www.yade-paris.fr/",
     "status": "ok",
     "http_status": 200,
-    "final_url": "https://www.yade-paris.com/fr?shpxid=1f5aec13-02f9-4283-87d3-99e651157df3",
+    "final_url": "https://www.yade-paris.com/fr?shpxid=cfa9a31c-ab40-4a66-ad9e-9e78278ec72f",
     "has_promo": true,
     "found": [
       "promo",
@@ -234,13 +231,14 @@
     "final_url": "https://organicbasics.com/collections/all-womens-products",
     "has_promo": true,
     "found": [
+      "50%",
       "discount",
       "offers",
       "sale",
       "sales"
     ],
     "error": null,
-    "changed": false,
+    "changed": true,
     "category": "FEMMES"
   },
   {
@@ -470,6 +468,7 @@
     "final_url": "https://organicbasics.com/collections/all-mens-products",
     "has_promo": true,
     "found": [
+      "50%",
       "deal",
       "discount",
       "offers",
@@ -477,7 +476,7 @@
       "sales"
     ],
     "error": null,
-    "changed": false,
+    "changed": true,
     "category": "HOMMES"
   },
   {
