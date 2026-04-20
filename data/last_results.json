@@ -104,12 +104,15 @@
   },
   {
     "url": "https://sevenlie.com/",
-    "status": "request_error",
-    "http_status": null,
-    "final_url": null,
-    "has_promo": false,
-    "found": [],
-    "error": "HTTPSConnectionPool(host='sevenlie.com', port=443): Max retries exceeded with url: / (Caused by ReadTimeoutError(\"HTTPSConnectionPool(host='sevenlie.com', port=443): Read timed out. (read timeout=10)\"))",
+    "status": "ok",
+    "http_status": 200,
+    "final_url": "https://sevenlie.com/",
+    "has_promo": true,
+    "found": [
+      "promo",
+      "promotion"
+    ],
+    "error": null,
     "changed": true,
     "category": "FEMMES"
   },
@@ -214,7 +217,7 @@
     "url": "https://www.yade-paris.fr/",
     "status": "ok",
     "http_status": 200,
-    "final_url": "https://www.yade-paris.com/fr?shpxid=cfa9a31c-ab40-4a66-ad9e-9e78278ec72f",
+    "final_url": "https://www.yade-paris.com/fr?shpxid=0680fe90-1fc2-4926-ba61-c0998844ff67",
     "has_promo": true,
     "found": [
       "promo",
@@ -231,7 +234,6 @@
     "final_url": "https://organicbasics.com/collections/all-womens-products",
     "has_promo": true,
     "found": [
-      "50%",
       "discount",
       "offers",
       "sale",
@@ -426,15 +428,13 @@
   },
   {
     "url": "https://www.flotte.fr/collections/homme",
-    "status": "ok",
-    "http_status": 200,
+    "status": "http_429",
+    "http_status": 429,
     "final_url": "https://www.flotte.fr/collections/homme",
-    "has_promo": true,
-    "found": [
-      "deal"
-    ],
+    "has_promo": false,
+    "found": [],
     "error": null,
-    "changed": false,
+    "changed": true,
     "category": "HOMMES"
   },
   {
@@ -450,31 +450,22 @@
   },
   {
     "url": "https://www.fromfuture.com/collections/toute-la-collection-homme",
-    "status": "ok",
-    "http_status": 200,
+    "status": "http_429",
+    "http_status": 429,
     "final_url": "https://www.fromfuture.com/collections/toute-la-collection-homme",
-    "has_promo": true,
-    "found": [
-      "deal"
-    ],
+    "has_promo": false,
+    "found": [],
     "error": null,
-    "changed": false,
+    "changed": true,
     "category": "HOMMES"
   },
   {
     "url": "https://organicbasics.com/collections/all-mens-products",
-    "status": "ok",
-    "http_status": 200,
+    "status": "http_429",
+    "http_status": 429,
     "final_url": "https://organicbasics.com/collections/all-mens-products",
-    "has_promo": true,
-    "found": [
-      "50%",
-      "deal",
-      "discount",
-      "offers",
-      "sale",
-      "sales"
-    ],
+    "has_promo": false,
+    "found": [],
     "error": null,
     "changed": true,
     "category": "HOMMES"
@@ -603,15 +594,13 @@
   },
   {
     "url": "https://www.pulpehome.com/collections/all",
-    "status": "ok",
-    "http_status": 200,
+    "status": "http_429",
+    "http_status": 429,
     "final_url": "https://www.pulpehome.com/collections/all",
-    "has_promo": true,
-    "found": [
-      "promo"
-    ],
+    "has_promo": false,
+    "found": [],
     "error": null,
-    "changed": false,
+    "changed": true,
     "category": "LINGE DE MAISON"
   }
 ]
