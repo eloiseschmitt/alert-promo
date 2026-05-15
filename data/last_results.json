@@ -216,7 +216,7 @@
     "url": "https://www.yade-paris.fr/",
     "status": "ok",
     "http_status": 200,
-    "final_url": "https://www.yade-paris.com/fr?shpxid=44bd5fcb-3258-45aa-ab3c-888dd3db8409",
+    "final_url": "https://www.yade-paris.com/fr?shpxid=02ed7669-5237-4619-bf54-0bb713fe0cc1",
     "has_promo": true,
     "found": [
       "promo",
@@ -233,14 +233,13 @@
     "final_url": "https://organicbasics.com/collections/all-womens-products",
     "has_promo": true,
     "found": [
-      "50%",
       "discount",
       "offers",
       "sale",
       "sales"
     ],
     "error": null,
-    "changed": false,
+    "changed": true,
     "category": "FEMMES"
   },
   {
@@ -334,10 +333,12 @@
     "status": "ok",
     "http_status": 200,
     "final_url": "https://bonnegueule.fr/fr-us",
-    "has_promo": false,
-    "found": [],
+    "has_promo": true,
+    "found": [
+      "réduction"
+    ],
     "error": null,
-    "changed": false,
+    "changed": true,
     "category": "HOMMES"
   },
   {
