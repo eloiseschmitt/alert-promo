@@ -216,7 +216,7 @@
     "url": "https://www.yade-paris.fr/",
     "status": "ok",
     "http_status": 200,
-    "final_url": "https://www.yade-paris.com/fr?shpxid=e12c0902-6766-41aa-b02e-9e0d27c0d87b",
+    "final_url": "https://www.yade-paris.com/fr?shpxid=62d093c8-21e9-4dfe-8d76-0a38f2dad804",
     "has_promo": true,
     "found": [
       "promo",
@@ -469,7 +469,6 @@
     "final_url": "https://organicbasics.com/collections/all-mens-products",
     "has_promo": true,
     "found": [
-      "50%",
       "deal",
       "discount",
       "offers",
