@@ -78,13 +78,13 @@
   },
   {
     "url": "https://www.1083.fr/",
-    "status": "ok",
-    "http_status": 200,
+    "status": "http_403",
+    "http_status": 403,
     "final_url": "https://www.1083.fr/",
     "has_promo": false,
     "found": [],
     "error": null,
-    "changed": false,
+    "changed": true,
     "category": "FEMMES"
   },
   {
@@ -215,7 +215,7 @@
     "url": "https://www.yade-paris.fr/",
     "status": "ok",
     "http_status": 200,
-    "final_url": "https://www.yade-paris.com/fr?shpxid=54288d2e-c4c0-4c29-8202-19bf52fcca61",
+    "final_url": "https://www.yade-paris.com/fr?shpxid=fea776f2-f0e5-47d1-9db0-cde949ed4672",
     "has_promo": true,
     "found": [
       "promo",
@@ -232,6 +232,7 @@
     "final_url": "https://organicbasics.com/collections/all-womens-products",
     "has_promo": true,
     "found": [
+      "50%",
       "discount",
       "offers",
       "sale",
@@ -283,13 +284,13 @@
   },
   {
     "url": "https://www.1083.fr/homme.html",
-    "status": "ok",
-    "http_status": 200,
+    "status": "http_403",
+    "http_status": 403,
     "final_url": "https://www.1083.fr/homme.html",
     "has_promo": false,
     "found": [],
     "error": null,
-    "changed": false,
+    "changed": true,
     "category": "HOMMES"
   },
   {
