@@ -48,10 +48,11 @@
     "final_url": "https://www.wedressfair.fr/accueil-femme?oc=nav",
     "has_promo": true,
     "found": [
-      "remise"
+      "remise",
+      "soldes"
     ],
     "error": null,
-    "changed": false,
+    "changed": true,
     "category": "FEMMES"
   },
   {
@@ -78,8 +79,8 @@
   },
   {
     "url": "https://www.1083.fr/",
-    "status": "http_403",
-    "http_status": 403,
+    "status": "ok",
+    "http_status": 200,
     "final_url": "https://www.1083.fr/",
     "has_promo": false,
     "found": [],
@@ -215,7 +216,7 @@
     "url": "https://www.yade-paris.fr/",
     "status": "ok",
     "http_status": 200,
-    "final_url": "https://www.yade-paris.com/fr?shpxid=fea776f2-f0e5-47d1-9db0-cde949ed4672",
+    "final_url": "https://www.yade-paris.com/fr?shpxid=97b8f8b8-09d0-48b4-ac6a-f6731f909515",
     "has_promo": true,
     "found": [
       "promo",
@@ -232,7 +233,7 @@
     "final_url": "https://organicbasics.com/collections/all-womens-products",
     "has_promo": true,
     "found": [
-      "50%",
+      "70%",
       "discount",
       "offers",
       "sale",
@@ -284,8 +285,8 @@
   },
   {
     "url": "https://www.1083.fr/homme.html",
-    "status": "http_403",
-    "http_status": 403,
+    "status": "ok",
+    "http_status": 200,
     "final_url": "https://www.1083.fr/homme.html",
     "has_promo": false,
     "found": [],
@@ -300,10 +301,11 @@
     "final_url": "https://www.wedressfair.fr/accueil-homme?oc=nav",
     "has_promo": true,
     "found": [
-      "remise"
+      "remise",
+      "soldes"
     ],
     "error": null,
-    "changed": false,
+    "changed": true,
     "category": "HOMMES"
   },
   {
@@ -417,26 +419,27 @@
     "url": "https://ecoalf.com/fr/collections/hombre",
     "status": "ok",
     "http_status": 200,
-    "final_url": "https://ecoalf.com/fr/collections/hombre",
+    "final_url": "https://ecoalf.com/en-us/collections/hombre",
     "has_promo": true,
     "found": [
-      "deal"
+      "deal",
+      "sale"
     ],
     "error": null,
-    "changed": false,
+    "changed": true,
     "category": "HOMMES"
   },
   {
     "url": "https://www.flotte.fr/collections/homme",
     "status": "ok",
     "http_status": 200,
-    "final_url": "https://www.flotte.fr/collections/homme",
+    "final_url": "https://www.flotte.fr/fr-int/collections/homme",
     "has_promo": true,
     "found": [
       "deal"
     ],
     "error": null,
-    "changed": false,
+    "changed": true,
     "category": "HOMMES"
   },
   {
@@ -470,6 +473,7 @@
     "final_url": "https://organicbasics.com/collections/all-mens-products",
     "has_promo": true,
     "found": [
+      "70%",
       "deal",
       "discount",
       "offers",
@@ -477,7 +481,7 @@
       "sales"
     ],
     "error": null,
-    "changed": false,
+    "changed": true,
     "category": "HOMMES"
   },
   {
@@ -485,10 +489,13 @@
     "status": "ok",
     "http_status": 200,
     "final_url": "https://minuitsurterre.com/",
-    "has_promo": false,
-    "found": [],
+    "has_promo": true,
+    "found": [
+      "60%",
+      "réduction"
+    ],
     "error": null,
-    "changed": false,
+    "changed": true,
     "category": "CHAUSSURES"
   },
   {
