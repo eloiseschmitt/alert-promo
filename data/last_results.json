@@ -52,7 +52,7 @@
       "soldes"
     ],
     "error": null,
-    "changed": true,
+    "changed": false,
     "category": "FEMMES"
   },
   {
@@ -85,7 +85,7 @@
     "has_promo": false,
     "found": [],
     "error": null,
-    "changed": true,
+    "changed": false,
     "category": "FEMMES"
   },
   {
@@ -216,7 +216,7 @@
     "url": "https://www.yade-paris.fr/",
     "status": "ok",
     "http_status": 200,
-    "final_url": "https://www.yade-paris.com/fr?shpxid=97b8f8b8-09d0-48b4-ac6a-f6731f909515",
+    "final_url": "https://www.yade-paris.com/fr?shpxid=d7da3e81-f3da-43fe-8dcb-aae1bc4cef69",
     "has_promo": true,
     "found": [
       "promo",
@@ -240,7 +240,7 @@
       "sales"
     ],
     "error": null,
-    "changed": true,
+    "changed": false,
     "category": "FEMMES"
   },
   {
@@ -291,7 +291,7 @@
     "has_promo": false,
     "found": [],
     "error": null,
-    "changed": true,
+    "changed": false,
     "category": "HOMMES"
   },
   {
@@ -305,7 +305,7 @@
       "soldes"
     ],
     "error": null,
-    "changed": true,
+    "changed": false,
     "category": "HOMMES"
   },
   {
@@ -419,11 +419,10 @@
     "url": "https://ecoalf.com/fr/collections/hombre",
     "status": "ok",
     "http_status": 200,
-    "final_url": "https://ecoalf.com/en-us/collections/hombre",
+    "final_url": "https://ecoalf.com/fr/collections/hombre",
     "has_promo": true,
     "found": [
-      "deal",
-      "sale"
+      "deal"
     ],
     "error": null,
     "changed": true,
@@ -433,7 +432,7 @@
     "url": "https://www.flotte.fr/collections/homme",
     "status": "ok",
     "http_status": 200,
-    "final_url": "https://www.flotte.fr/fr-int/collections/homme",
+    "final_url": "https://www.flotte.fr/collections/homme",
     "has_promo": true,
     "found": [
       "deal"
@@ -481,7 +480,7 @@
       "sales"
     ],
     "error": null,
-    "changed": true,
+    "changed": false,
     "category": "HOMMES"
   },
   {
@@ -495,7 +494,7 @@
       "réduction"
     ],
     "error": null,
-    "changed": true,
+    "changed": false,
     "category": "CHAUSSURES"
   },
   {
