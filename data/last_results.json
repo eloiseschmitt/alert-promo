@@ -21,11 +21,14 @@
     "found": [
       "promo",
       "promotion",
+      "reductions",
       "réduction",
+      "sale",
+      "sales",
       "soldes"
     ],
     "error": null,
-    "changed": false,
+    "changed": true,
     "category": "FEMMES"
   },
   {
@@ -216,7 +219,7 @@
     "url": "https://www.yade-paris.fr/",
     "status": "ok",
     "http_status": 200,
-    "final_url": "https://www.yade-paris.com/fr?shpxid=d7da3e81-f3da-43fe-8dcb-aae1bc4cef69",
+    "final_url": "https://www.yade-paris.com/fr?shpxid=d7a2c76f-f6f2-4dfe-8ed9-a20b83a81669",
     "has_promo": true,
     "found": [
       "promo",
@@ -276,11 +279,14 @@
     "found": [
       "promo",
       "promotion",
+      "reductions",
       "réduction",
+      "sale",
+      "sales",
       "soldes"
     ],
     "error": null,
-    "changed": false,
+    "changed": true,
     "category": "HOMMES"
   },
   {
@@ -339,11 +345,10 @@
     "final_url": "https://bonnegueule.fr/fr-us",
     "has_promo": true,
     "found": [
-      "réduction",
-      "sale"
+      "réduction"
     ],
     "error": null,
-    "changed": false,
+    "changed": true,
     "category": "HOMMES"
   },
   {
@@ -425,7 +430,7 @@
       "deal"
     ],
     "error": null,
-    "changed": true,
+    "changed": false,
     "category": "HOMMES"
   },
   {
@@ -438,7 +443,7 @@
       "deal"
     ],
     "error": null,
-    "changed": true,
+    "changed": false,
     "category": "HOMMES"
   },
   {
@@ -472,6 +477,7 @@
     "final_url": "https://organicbasics.com/collections/all-mens-products",
     "has_promo": true,
     "found": [
+      "50%",
       "70%",
       "deal",
       "discount",
@@ -480,7 +486,7 @@
       "sales"
     ],
     "error": null,
-    "changed": false,
+    "changed": true,
     "category": "HOMMES"
   },
   {
