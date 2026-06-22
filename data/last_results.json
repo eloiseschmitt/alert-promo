@@ -82,13 +82,15 @@
   },
   {
     "url": "https://www.1083.fr/",
-    "status": "http_403",
-    "http_status": 403,
+    "status": "ok",
+    "http_status": 200,
     "final_url": "https://www.1083.fr/",
-    "has_promo": false,
-    "found": [],
+    "has_promo": true,
+    "found": [
+      "-50%"
+    ],
     "error": null,
-    "changed": false,
+    "changed": true,
     "category": "FEMMES"
   },
   {
@@ -219,7 +221,7 @@
     "url": "https://www.yade-paris.fr/",
     "status": "ok",
     "http_status": 200,
-    "final_url": "https://www.yade-paris.com/fr?shpxid=e2ecf332-2220-4913-af6d-23f15f1761da",
+    "final_url": "https://www.yade-paris.com/fr?shpxid=0892b7ac-2a87-49d1-9b3f-036769f92e1b",
     "has_promo": true,
     "found": [
       "promo",
@@ -236,6 +238,7 @@
     "final_url": "https://organicbasics.com/collections/all-womens-products",
     "has_promo": true,
     "found": [
+      "50%",
       "70%",
       "discount",
       "offers",
@@ -291,13 +294,13 @@
   },
   {
     "url": "https://www.1083.fr/homme.html",
-    "status": "http_403",
-    "http_status": 403,
+    "status": "ok",
+    "http_status": 200,
     "final_url": "https://www.1083.fr/homme.html",
     "has_promo": false,
     "found": [],
     "error": null,
-    "changed": false,
+    "changed": true,
     "category": "HOMMES"
   },
   {
@@ -427,10 +430,12 @@
     "final_url": "https://ecoalf.com/fr/collections/hombre",
     "has_promo": true,
     "found": [
-      "deal"
+      "deal",
+      "remise",
+      "soldes"
     ],
     "error": null,
-    "changed": false,
+    "changed": true,
     "category": "HOMMES"
   },
   {
@@ -486,7 +491,7 @@
       "sales"
     ],
     "error": null,
-    "changed": true,
+    "changed": false,
     "category": "HOMMES"
   },
   {
@@ -500,7 +505,7 @@
       "réduction"
     ],
     "error": null,
-    "changed": true,
+    "changed": false,
     "category": "CHAUSSURES"
   },
   {
@@ -511,7 +516,7 @@
     "has_promo": false,
     "found": [],
     "error": null,
-    "changed": true,
+    "changed": false,
     "category": "CHAUSSURES"
   },
   {
@@ -527,7 +532,7 @@
       "réduction"
     ],
     "error": null,
-    "changed": true,
+    "changed": false,
     "category": "CHAUSSURES"
   },
   {
@@ -545,7 +550,7 @@
       "sales"
     ],
     "error": null,
-    "changed": true,
+    "changed": false,
     "category": "CHAUSSURES"
   },
   {
@@ -558,7 +563,7 @@
       "deal"
     ],
     "error": null,
-    "changed": true,
+    "changed": false,
     "category": "CHAUSSURES"
   },
   {
@@ -573,7 +578,7 @@
       "sale"
     ],
     "error": null,
-    "changed": true,
+    "changed": false,
     "category": "CHAUSSURES"
   },
   {
@@ -584,7 +589,7 @@
     "has_promo": false,
     "found": [],
     "error": null,
-    "changed": true,
+    "changed": false,
     "category": "LINGE DE MAISON"
   },
   {
@@ -597,7 +602,7 @@
       "deal"
     ],
     "error": null,
-    "changed": true,
+    "changed": false,
     "category": "LINGE DE MAISON"
   },
   {
@@ -624,7 +629,7 @@
       "promo"
     ],
     "error": null,
-    "changed": true,
+    "changed": false,
     "category": "LINGE DE MAISON"
   }
 ]
