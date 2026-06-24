@@ -12,7 +12,7 @@
       "soldes"
     ],
     "error": null,
-    "changed": true,
+    "changed": false,
     "category": "FEMMES"
   },
   {
@@ -24,14 +24,11 @@
     "found": [
       "promo",
       "promotion",
-      "reductions",
       "réduction",
-      "sale",
-      "sales",
       "soldes"
     ],
     "error": null,
-    "changed": false,
+    "changed": true,
     "category": "FEMMES"
   },
   {
@@ -66,10 +63,12 @@
     "status": "ok",
     "http_status": 200,
     "final_url": "https://noyoco.com/collections/femme-voir-tout",
-    "has_promo": false,
-    "found": [],
+    "has_promo": true,
+    "found": [
+      "soldes"
+    ],
     "error": null,
-    "changed": false,
+    "changed": true,
     "category": "FEMMES"
   },
   {
@@ -151,10 +150,13 @@
     "status": "ok",
     "http_status": 200,
     "final_url": "https://www.figaret.com/collections/chemises-femme",
-    "has_promo": false,
-    "found": [],
+    "has_promo": true,
+    "found": [
+      "-50%",
+      "soldes"
+    ],
     "error": null,
-    "changed": false,
+    "changed": true,
     "category": "FEMMES"
   },
   {
@@ -169,7 +171,7 @@
       "sales"
     ],
     "error": null,
-    "changed": true,
+    "changed": false,
     "category": "FEMMES"
   },
   {
@@ -201,10 +203,13 @@
     "status": "ok",
     "http_status": 200,
     "final_url": "https://www.fromfuture.com/collections/toute-la-collection-femme",
-    "has_promo": false,
-    "found": [],
+    "has_promo": true,
+    "found": [
+      "-50%",
+      "soldes"
+    ],
     "error": null,
-    "changed": false,
+    "changed": true,
     "category": "FEMMES"
   },
   {
@@ -225,7 +230,7 @@
     "url": "https://www.yade-paris.fr/",
     "status": "ok",
     "http_status": 200,
-    "final_url": "https://www.yade-paris.com/fr?shpxid=b73cad7d-9c74-4344-a35f-0d52c41986d4",
+    "final_url": "https://www.yade-paris.com/fr?shpxid=88a4f8c3-3f36-4098-9a05-731f748d7d2c",
     "has_promo": true,
     "found": [
       "promo",
@@ -277,7 +282,7 @@
       "soldes"
     ],
     "error": null,
-    "changed": true,
+    "changed": false,
     "category": "HOMMES"
   },
   {
@@ -289,14 +294,11 @@
     "found": [
       "promo",
       "promotion",
-      "reductions",
       "réduction",
-      "sale",
-      "sales",
       "soldes"
     ],
     "error": null,
-    "changed": false,
+    "changed": true,
     "category": "HOMMES"
   },
   {
@@ -331,10 +333,11 @@
     "final_url": "https://www.balibaris.com/",
     "has_promo": true,
     "found": [
-      "-50%"
+      "-50%",
+      "soldes"
     ],
     "error": null,
-    "changed": false,
+    "changed": true,
     "category": "HOMMES"
   },
   {
@@ -342,10 +345,12 @@
     "status": "ok",
     "http_status": 200,
     "final_url": "https://noyoco.com/collections/homme-voir-tout",
-    "has_promo": false,
-    "found": [],
+    "has_promo": true,
+    "found": [
+      "soldes"
+    ],
     "error": null,
-    "changed": false,
+    "changed": true,
     "category": "HOMMES"
   },
   {
@@ -424,10 +429,13 @@
     "status": "ok",
     "http_status": 200,
     "final_url": "https://www.figaret.com/collections/chemises-homme",
-    "has_promo": false,
-    "found": [],
+    "has_promo": true,
+    "found": [
+      "-50%",
+      "soldes"
+    ],
     "error": null,
-    "changed": false,
+    "changed": true,
     "category": "HOMMES"
   },
   {
@@ -476,10 +484,12 @@
     "final_url": "https://www.fromfuture.com/collections/toute-la-collection-homme",
     "has_promo": true,
     "found": [
-      "deal"
+      "-50%",
+      "deal",
+      "soldes"
     ],
     "error": null,
-    "changed": false,
+    "changed": true,
     "category": "HOMMES"
   },
   {
@@ -520,10 +530,12 @@
     "status": "ok",
     "http_status": 200,
     "final_url": "https://julesjenn.com/",
-    "has_promo": false,
-    "found": [],
+    "has_promo": true,
+    "found": [
+      "soldes"
+    ],
     "error": null,
-    "changed": false,
+    "changed": true,
     "category": "CHAUSSURES"
   },
   {
@@ -533,13 +545,15 @@
     "final_url": "https://www.zeta-shoes.com/fr-us",
     "has_promo": true,
     "found": [
+      "-50%",
       "promo",
       "promotion",
       "reductions",
-      "réduction"
+      "réduction",
+      "soldes"
     ],
     "error": null,
-    "changed": false,
+    "changed": true,
     "category": "CHAUSSURES"
   },
   {
@@ -567,10 +581,12 @@
     "final_url": "https://caval.fr/",
     "has_promo": true,
     "found": [
-      "deal"
+      "-50%",
+      "deal",
+      "soldes"
     ],
     "error": null,
-    "changed": false,
+    "changed": true,
     "category": "CHAUSSURES"
   },
   {
@@ -580,12 +596,14 @@
     "final_url": "https://moea.io/fr/",
     "has_promo": true,
     "found": [
+      "-50%",
       "deal",
       "deals",
-      "sale"
+      "promo",
+      "soldes"
     ],
     "error": null,
-    "changed": false,
+    "changed": true,
     "category": "CHAUSSURES"
   },
   {
