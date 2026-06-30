@@ -176,11 +176,13 @@
   },
   {
     "url": "https://www.flotte.fr/collections/femme",
-    "status": "http_429",
-    "http_status": 429,
+    "status": "ok",
+    "http_status": 200,
     "final_url": "https://www.flotte.fr/fr-int/collections/femme",
-    "has_promo": false,
-    "found": [],
+    "has_promo": true,
+    "found": [
+      "deal"
+    ],
     "error": null,
     "changed": true,
     "category": "FEMMES"
@@ -198,31 +200,37 @@
   },
   {
     "url": "https://www.fromfuture.com/collections/toute-la-collection-femme",
-    "status": "http_429",
-    "http_status": 429,
+    "status": "ok",
+    "http_status": 200,
     "final_url": "https://www.fromfuture.com/collections/toute-la-collection-femme",
-    "has_promo": false,
-    "found": [],
+    "has_promo": true,
+    "found": [
+      "-50%",
+      "soldes"
+    ],
     "error": null,
     "changed": true,
     "category": "FEMMES"
   },
   {
     "url": "https://minastorm.com/",
-    "status": "http_429",
-    "http_status": 429,
+    "status": "ok",
+    "http_status": 200,
     "final_url": "https://minastorm.com/",
-    "has_promo": false,
-    "found": [],
+    "has_promo": true,
+    "found": [
+      "deal",
+      "discount"
+    ],
     "error": null,
     "changed": true,
     "category": "FEMMES"
   },
   {
     "url": "https://www.yade-paris.fr/",
-    "status": "http_429",
-    "http_status": 429,
-    "final_url": "https://www.yade-paris.fr/",
+    "status": "ok",
+    "http_status": 200,
+    "final_url": "https://www.yade-paris.com/fr?shpxid=97652829-9b9a-4095-92e8-62b809564d97",
     "has_promo": false,
     "found": [],
     "error": null,
@@ -231,19 +239,26 @@
   },
   {
     "url": "https://organicbasics.com/collections/all-womens-products",
-    "status": "http_429",
-    "http_status": 429,
+    "status": "ok",
+    "http_status": 200,
     "final_url": "https://organicbasics.com/collections/all-womens-products",
-    "has_promo": false,
-    "found": [],
+    "has_promo": true,
+    "found": [
+      "50%",
+      "70%",
+      "discount",
+      "offers",
+      "sale",
+      "sales"
+    ],
     "error": null,
     "changed": true,
     "category": "FEMMES"
   },
   {
     "url": "https://yvoetmoi.com/",
-    "status": "http_429",
-    "http_status": 429,
+    "status": "ok",
+    "http_status": 200,
     "final_url": "https://yvoetmoi.com/",
     "has_promo": false,
     "found": [],
@@ -253,22 +268,32 @@
   },
   {
     "url": "https://www.armedangels.com/fr-fr/pages/homme-home",
-    "status": "http_429",
-    "http_status": 429,
+    "status": "ok",
+    "http_status": 200,
     "final_url": "https://www.armedangels.com/fr-fr/pages/homme-home",
-    "has_promo": false,
-    "found": [],
+    "has_promo": true,
+    "found": [
+      "promo",
+      "promotion",
+      "promotions",
+      "soldes"
+    ],
     "error": null,
     "changed": true,
     "category": "HOMMES"
   },
   {
     "url": "https://thinkingmu.com/fr/collections/man-clothing",
-    "status": "http_429",
-    "http_status": 429,
+    "status": "ok",
+    "http_status": 200,
     "final_url": "https://thinkingmu.com/fr/collections/man-clothing",
-    "has_promo": false,
-    "found": [],
+    "has_promo": true,
+    "found": [
+      "promo",
+      "promotion",
+      "réduction",
+      "soldes"
+    ],
     "error": null,
     "changed": true,
     "category": "HOMMES"
@@ -302,52 +327,61 @@
   },
   {
     "url": "https://www.balibaris.com/",
-    "status": "http_429",
-    "http_status": 429,
+    "status": "ok",
+    "http_status": 200,
     "final_url": "https://www.balibaris.com/",
-    "has_promo": false,
-    "found": [],
+    "has_promo": true,
+    "found": [
+      "-50%",
+      "soldes"
+    ],
     "error": null,
     "changed": true,
     "category": "HOMMES"
   },
   {
     "url": "https://noyoco.com/collections/homme-voir-tout",
-    "status": "http_429",
-    "http_status": 429,
+    "status": "ok",
+    "http_status": 200,
     "final_url": "https://noyoco.com/collections/homme-voir-tout",
-    "has_promo": false,
-    "found": [],
+    "has_promo": true,
+    "found": [
+      "soldes"
+    ],
     "error": null,
     "changed": true,
     "category": "HOMMES"
   },
   {
     "url": "https://bonnegueule.fr/",
-    "status": "http_429",
-    "http_status": 429,
-    "final_url": "https://bonnegueule.fr/",
-    "has_promo": false,
-    "found": [],
+    "status": "ok",
+    "http_status": 200,
+    "final_url": "https://bonnegueule.fr/fr-us",
+    "has_promo": true,
+    "found": [
+      "réduction"
+    ],
     "error": null,
     "changed": true,
     "category": "HOMMES"
   },
   {
     "url": "https://forlife-paris.com/",
-    "status": "http_429",
-    "http_status": 429,
+    "status": "ok",
+    "http_status": 200,
     "final_url": "https://forlife-paris.com/",
-    "has_promo": false,
-    "found": [],
+    "has_promo": true,
+    "found": [
+      "soldes"
+    ],
     "error": null,
     "changed": true,
     "category": "HOMMES"
   },
   {
     "url": "https://www.hastparis.com/",
-    "status": "http_429",
-    "http_status": 429,
+    "status": "ok",
+    "http_status": 200,
     "final_url": "https://www.hastparis.com/",
     "has_promo": false,
     "found": [],
@@ -379,33 +413,43 @@
   },
   {
     "url": "https://www.loom.fr/collections/vestiaire-homme",
-    "status": "http_429",
-    "http_status": 429,
+    "status": "ok",
+    "http_status": 200,
     "final_url": "https://www.loom.fr/collections/vestiaire-homme",
-    "has_promo": false,
-    "found": [],
+    "has_promo": true,
+    "found": [
+      "promo",
+      "promos"
+    ],
     "error": null,
     "changed": true,
     "category": "HOMMES"
   },
   {
     "url": "https://www.figaret.com/collections/chemises-homme",
-    "status": "http_429",
-    "http_status": 429,
+    "status": "ok",
+    "http_status": 200,
     "final_url": "https://www.figaret.com/collections/chemises-homme",
-    "has_promo": false,
-    "found": [],
+    "has_promo": true,
+    "found": [
+      "-50%",
+      "soldes"
+    ],
     "error": null,
     "changed": true,
     "category": "HOMMES"
   },
   {
     "url": "https://ecoalf.com/fr/collections/hombre",
-    "status": "http_429",
-    "http_status": 429,
+    "status": "ok",
+    "http_status": 200,
     "final_url": "https://ecoalf.com/fr/collections/hombre",
-    "has_promo": false,
-    "found": [],
+    "has_promo": true,
+    "found": [
+      "deal",
+      "remise",
+      "soldes"
+    ],
     "error": null,
     "changed": true,
     "category": "HOMMES"
@@ -418,7 +462,7 @@
     "has_promo": false,
     "found": [],
     "error": null,
-    "changed": true,
+    "changed": false,
     "category": "HOMMES"
   },
   {
@@ -434,11 +478,15 @@
   },
   {
     "url": "https://www.fromfuture.com/collections/toute-la-collection-homme",
-    "status": "http_429",
-    "http_status": 429,
+    "status": "ok",
+    "http_status": 200,
     "final_url": "https://www.fromfuture.com/collections/toute-la-collection-homme",
-    "has_promo": false,
-    "found": [],
+    "has_promo": true,
+    "found": [
+      "-50%",
+      "deal",
+      "soldes"
+    ],
     "error": null,
     "changed": true,
     "category": "HOMMES"
@@ -451,7 +499,7 @@
     "has_promo": false,
     "found": [],
     "error": null,
-    "changed": true,
+    "changed": false,
     "category": "HOMMES"
   },
   {
@@ -462,7 +510,7 @@
     "has_promo": false,
     "found": [],
     "error": null,
-    "changed": true,
+    "changed": false,
     "category": "CHAUSSURES"
   },
   {
@@ -473,7 +521,7 @@
     "has_promo": false,
     "found": [],
     "error": null,
-    "changed": true,
+    "changed": false,
     "category": "CHAUSSURES"
   },
   {
@@ -484,7 +532,7 @@
     "has_promo": false,
     "found": [],
     "error": null,
-    "changed": true,
+    "changed": false,
     "category": "CHAUSSURES"
   },
   {
@@ -495,7 +543,7 @@
     "has_promo": false,
     "found": [],
     "error": null,
-    "changed": true,
+    "changed": false,
     "category": "CHAUSSURES"
   },
   {
@@ -506,7 +554,7 @@
     "has_promo": false,
     "found": [],
     "error": null,
-    "changed": true,
+    "changed": false,
     "category": "CHAUSSURES"
   },
   {
@@ -517,7 +565,7 @@
     "has_promo": false,
     "found": [],
     "error": null,
-    "changed": true,
+    "changed": false,
     "category": "CHAUSSURES"
   },
   {
@@ -528,7 +576,7 @@
     "has_promo": false,
     "found": [],
     "error": null,
-    "changed": true,
+    "changed": false,
     "category": "LINGE DE MAISON"
   },
   {
@@ -539,7 +587,7 @@
     "has_promo": false,
     "found": [],
     "error": null,
-    "changed": true,
+    "changed": false,
     "category": "LINGE DE MAISON"
   },
   {
@@ -564,7 +612,7 @@
     "has_promo": false,
     "found": [],
     "error": null,
-    "changed": true,
+    "changed": false,
     "category": "LINGE DE MAISON"
   }
 ]
