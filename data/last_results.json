@@ -184,7 +184,7 @@
       "deal"
     ],
     "error": null,
-    "changed": true,
+    "changed": false,
     "category": "FEMMES"
   },
   {
@@ -209,7 +209,7 @@
       "soldes"
     ],
     "error": null,
-    "changed": true,
+    "changed": false,
     "category": "FEMMES"
   },
   {
@@ -223,14 +223,14 @@
       "discount"
     ],
     "error": null,
-    "changed": true,
+    "changed": false,
     "category": "FEMMES"
   },
   {
     "url": "https://www.yade-paris.fr/",
     "status": "ok",
     "http_status": 200,
-    "final_url": "https://www.yade-paris.com/fr?shpxid=97652829-9b9a-4095-92e8-62b809564d97",
+    "final_url": "https://www.yade-paris.com/fr?shpxid=d7d06585-f896-424d-9a60-f60b877ec275",
     "has_promo": false,
     "found": [],
     "error": null,
@@ -252,7 +252,7 @@
       "sales"
     ],
     "error": null,
-    "changed": true,
+    "changed": false,
     "category": "FEMMES"
   },
   {
@@ -263,7 +263,7 @@
     "has_promo": false,
     "found": [],
     "error": null,
-    "changed": true,
+    "changed": false,
     "category": "FEMMES"
   },
   {
@@ -279,7 +279,7 @@
       "soldes"
     ],
     "error": null,
-    "changed": true,
+    "changed": false,
     "category": "HOMMES"
   },
   {
@@ -295,7 +295,7 @@
       "soldes"
     ],
     "error": null,
-    "changed": true,
+    "changed": false,
     "category": "HOMMES"
   },
   {
@@ -336,7 +336,7 @@
       "soldes"
     ],
     "error": null,
-    "changed": true,
+    "changed": false,
     "category": "HOMMES"
   },
   {
@@ -349,7 +349,7 @@
       "soldes"
     ],
     "error": null,
-    "changed": true,
+    "changed": false,
     "category": "HOMMES"
   },
   {
@@ -362,7 +362,7 @@
       "réduction"
     ],
     "error": null,
-    "changed": true,
+    "changed": false,
     "category": "HOMMES"
   },
   {
@@ -375,7 +375,7 @@
       "soldes"
     ],
     "error": null,
-    "changed": true,
+    "changed": false,
     "category": "HOMMES"
   },
   {
@@ -386,7 +386,7 @@
     "has_promo": false,
     "found": [],
     "error": null,
-    "changed": true,
+    "changed": false,
     "category": "HOMMES"
   },
   {
@@ -422,7 +422,7 @@
       "promos"
     ],
     "error": null,
-    "changed": true,
+    "changed": false,
     "category": "HOMMES"
   },
   {
@@ -436,7 +436,7 @@
       "soldes"
     ],
     "error": null,
-    "changed": true,
+    "changed": false,
     "category": "HOMMES"
   },
   {
@@ -451,18 +451,20 @@
       "soldes"
     ],
     "error": null,
-    "changed": true,
+    "changed": false,
     "category": "HOMMES"
   },
   {
     "url": "https://www.flotte.fr/collections/homme",
-    "status": "http_429",
-    "http_status": 429,
+    "status": "ok",
+    "http_status": 200,
     "final_url": "https://www.flotte.fr/collections/homme",
-    "has_promo": false,
-    "found": [],
+    "has_promo": true,
+    "found": [
+      "deal"
+    ],
     "error": null,
-    "changed": false,
+    "changed": true,
     "category": "HOMMES"
   },
   {
@@ -488,106 +490,147 @@
       "soldes"
     ],
     "error": null,
-    "changed": true,
+    "changed": false,
     "category": "HOMMES"
   },
   {
     "url": "https://organicbasics.com/collections/all-mens-products",
-    "status": "http_429",
-    "http_status": 429,
+    "status": "ok",
+    "http_status": 200,
     "final_url": "https://organicbasics.com/collections/all-mens-products",
-    "has_promo": false,
-    "found": [],
+    "has_promo": true,
+    "found": [
+      "50%",
+      "70%",
+      "deal",
+      "discount",
+      "offers",
+      "sale",
+      "sales"
+    ],
     "error": null,
-    "changed": false,
+    "changed": true,
     "category": "HOMMES"
   },
   {
     "url": "https://minuitsurterre.com/",
-    "status": "http_429",
-    "http_status": 429,
+    "status": "ok",
+    "http_status": 200,
     "final_url": "https://minuitsurterre.com/",
-    "has_promo": false,
-    "found": [],
+    "has_promo": true,
+    "found": [
+      "60%",
+      "réduction"
+    ],
     "error": null,
-    "changed": false,
+    "changed": true,
     "category": "CHAUSSURES"
   },
   {
     "url": "https://julesjenn.com/",
-    "status": "http_429",
-    "http_status": 429,
+    "status": "ok",
+    "http_status": 200,
     "final_url": "https://julesjenn.com/",
-    "has_promo": false,
-    "found": [],
+    "has_promo": true,
+    "found": [
+      "soldes"
+    ],
     "error": null,
-    "changed": false,
+    "changed": true,
     "category": "CHAUSSURES"
   },
   {
     "url": "https://www.zeta-shoes.com/",
-    "status": "http_429",
-    "http_status": 429,
-    "final_url": "https://www.zeta-shoes.com/",
-    "has_promo": false,
-    "found": [],
+    "status": "ok",
+    "http_status": 200,
+    "final_url": "https://www.zeta-shoes.com/fr-us",
+    "has_promo": true,
+    "found": [
+      "-50%",
+      "promo",
+      "promotion",
+      "reductions",
+      "réduction",
+      "soldes"
+    ],
     "error": null,
-    "changed": false,
+    "changed": true,
     "category": "CHAUSSURES"
   },
   {
     "url": "https://alohas.com/fr",
-    "status": "http_429",
-    "http_status": 429,
-    "final_url": "https://alohas.com/fr",
-    "has_promo": false,
-    "found": [],
+    "status": "ok",
+    "http_status": 200,
+    "final_url": "https://alohas.com/en-us",
+    "has_promo": true,
+    "found": [
+      "discount",
+      "promo",
+      "promotion",
+      "promotions",
+      "sale",
+      "sales"
+    ],
     "error": null,
-    "changed": false,
+    "changed": true,
     "category": "CHAUSSURES"
   },
   {
     "url": "https://caval.fr/",
-    "status": "http_429",
-    "http_status": 429,
+    "status": "ok",
+    "http_status": 200,
     "final_url": "https://caval.fr/",
-    "has_promo": false,
-    "found": [],
+    "has_promo": true,
+    "found": [
+      "-50%",
+      "deal",
+      "soldes"
+    ],
     "error": null,
-    "changed": false,
+    "changed": true,
     "category": "CHAUSSURES"
   },
   {
     "url": "https://moea.io/fr/",
-    "status": "http_429",
-    "http_status": 429,
+    "status": "ok",
+    "http_status": 200,
     "final_url": "https://moea.io/fr/",
-    "has_promo": false,
-    "found": [],
+    "has_promo": true,
+    "found": [
+      "-50%",
+      "deal",
+      "deals",
+      "promo",
+      "soldes"
+    ],
     "error": null,
-    "changed": false,
+    "changed": true,
     "category": "CHAUSSURES"
   },
   {
     "url": "https://www.greige.fr/",
-    "status": "http_429",
-    "http_status": 429,
+    "status": "ok",
+    "http_status": 200,
     "final_url": "https://www.greige.fr/",
-    "has_promo": false,
-    "found": [],
+    "has_promo": true,
+    "found": [
+      "remise"
+    ],
     "error": null,
-    "changed": false,
+    "changed": true,
     "category": "LINGE DE MAISON"
   },
   {
     "url": "https://le-drap-francais.com/pages/linge-de-lit",
-    "status": "http_429",
-    "http_status": 429,
+    "status": "ok",
+    "http_status": 200,
     "final_url": "https://le-drap-francais.com/pages/linge-de-lit",
-    "has_promo": false,
-    "found": [],
+    "has_promo": true,
+    "found": [
+      "deal"
+    ],
     "error": null,
-    "changed": false,
+    "changed": true,
     "category": "LINGE DE MAISON"
   },
   {
@@ -606,13 +649,15 @@
   },
   {
     "url": "https://www.pulpehome.com/collections/all",
-    "status": "http_429",
-    "http_status": 429,
+    "status": "ok",
+    "http_status": 200,
     "final_url": "https://www.pulpehome.com/collections/all",
-    "has_promo": false,
-    "found": [],
+    "has_promo": true,
+    "found": [
+      "promo"
+    ],
     "error": null,
-    "changed": false,
+    "changed": true,
     "category": "LINGE DE MAISON"
   }
 ]
