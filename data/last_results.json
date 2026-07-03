@@ -230,7 +230,7 @@
     "url": "https://www.yade-paris.fr/",
     "status": "ok",
     "http_status": 200,
-    "final_url": "https://www.yade-paris.com/fr?shpxid=9639fa1c-ccae-469b-bdab-2aa1c31d603c",
+    "final_url": "https://www.yade-paris.com/fr?shpxid=40544d11-0400-4db6-bb29-e3540285e424",
     "has_promo": false,
     "found": [],
     "error": null,
@@ -360,7 +360,7 @@
     "has_promo": false,
     "found": [],
     "error": null,
-    "changed": true,
+    "changed": false,
     "category": "HOMMES"
   },
   {
