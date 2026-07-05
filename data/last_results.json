@@ -84,16 +84,13 @@
   },
   {
     "url": "https://www.1083.fr/",
-    "status": "ok",
-    "http_status": 200,
+    "status": "http_403",
+    "http_status": 403,
     "final_url": "https://www.1083.fr/",
-    "has_promo": true,
-    "found": [
-      "-50%",
-      "soldes"
-    ],
+    "has_promo": false,
+    "found": [],
     "error": null,
-    "changed": false,
+    "changed": true,
     "category": "FEMMES"
   },
   {
@@ -230,7 +227,7 @@
     "url": "https://www.yade-paris.fr/",
     "status": "ok",
     "http_status": 200,
-    "final_url": "https://www.yade-paris.com/fr?shpxid=566973c4-ae81-4cd5-a9ef-f176a899d478",
+    "final_url": "https://www.yade-paris.com/fr?shpxid=5b7db3a8-1ebb-42e7-9f48-1c39ded3800f",
     "has_promo": false,
     "found": [],
     "error": null,
@@ -300,15 +297,13 @@
   },
   {
     "url": "https://www.1083.fr/homme.html",
-    "status": "ok",
-    "http_status": 200,
+    "status": "http_403",
+    "http_status": 403,
     "final_url": "https://www.1083.fr/homme.html",
-    "has_promo": true,
-    "found": [
-      "soldes"
-    ],
+    "has_promo": false,
+    "found": [],
     "error": null,
-    "changed": false,
+    "changed": true,
     "category": "HOMMES"
   },
   {
