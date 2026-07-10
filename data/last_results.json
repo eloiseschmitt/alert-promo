@@ -6,13 +6,15 @@
     "final_url": "https://www.armedangels.com/fr-fr/pages/femme-home",
     "has_promo": true,
     "found": [
+      "-50 %",
+      "-50%",
       "promo",
       "promotion",
       "promotions",
       "soldes"
     ],
     "error": null,
-    "changed": false,
+    "changed": true,
     "category": "FEMMES"
   },
   {
@@ -65,10 +67,11 @@
     "final_url": "https://noyoco.com/collections/femme-voir-tout",
     "has_promo": true,
     "found": [
+      "-50%",
       "soldes"
     ],
     "error": null,
-    "changed": false,
+    "changed": true,
     "category": "FEMMES"
   },
   {
@@ -173,7 +176,7 @@
       "sale"
     ],
     "error": null,
-    "changed": true,
+    "changed": false,
     "category": "FEMMES"
   },
   {
@@ -232,7 +235,7 @@
     "url": "https://www.yade-paris.fr/",
     "status": "ok",
     "http_status": 200,
-    "final_url": "https://www.yade-paris.com/fr?shpxid=3ec1989d-e978-4fb1-a446-5e08e8019bf0",
+    "final_url": "https://www.yade-paris.com/fr?shpxid=c5c155b8-7279-4cbd-a7da-4d016c61d087",
     "has_promo": false,
     "found": [],
     "error": null,
@@ -278,13 +281,15 @@
     "final_url": "https://www.armedangels.com/fr-fr/pages/homme-home",
     "has_promo": true,
     "found": [
+      "-50 %",
+      "-50%",
       "promo",
       "promotion",
       "promotions",
       "soldes"
     ],
     "error": null,
-    "changed": false,
+    "changed": true,
     "category": "HOMMES"
   },
   {
@@ -351,10 +356,11 @@
     "final_url": "https://noyoco.com/collections/homme-voir-tout",
     "has_promo": true,
     "found": [
+      "-50%",
       "soldes"
     ],
     "error": null,
-    "changed": false,
+    "changed": true,
     "category": "HOMMES"
   },
   {
