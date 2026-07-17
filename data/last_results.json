@@ -15,7 +15,7 @@
       "soldes"
     ],
     "error": null,
-    "changed": true,
+    "changed": false,
     "category": "FEMMES"
   },
   {
@@ -236,7 +236,7 @@
     "url": "https://www.yade-paris.fr/",
     "status": "ok",
     "http_status": 200,
-    "final_url": "https://www.yade-paris.com/fr?shpxid=aa6caa0a-a766-4f2f-9993-70a3371f2623",
+    "final_url": "https://www.yade-paris.com/fr?shpxid=b1eb7bf2-e0cb-4b6f-b0be-5a210e1613ac",
     "has_promo": false,
     "found": [],
     "error": null,
@@ -290,7 +290,7 @@
       "soldes"
     ],
     "error": null,
-    "changed": true,
+    "changed": false,
     "category": "HOMMES"
   },
   {
@@ -464,7 +464,7 @@
       "soldes"
     ],
     "error": null,
-    "changed": true,
+    "changed": false,
     "category": "HOMMES"
   },
   {
@@ -577,6 +577,7 @@
     "final_url": "https://alohas.com/en-us",
     "has_promo": true,
     "found": [
+      "50%",
       "discount",
       "promo",
       "promotion",
@@ -585,7 +586,7 @@
       "sales"
     ],
     "error": null,
-    "changed": false,
+    "changed": true,
     "category": "CHAUSSURES"
   },
   {
