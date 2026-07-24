@@ -12,7 +12,7 @@
       "soldes"
     ],
     "error": null,
-    "changed": true,
+    "changed": false,
     "category": "FEMMES"
   },
   {
@@ -180,13 +180,13 @@
     "url": "https://www.flotte.fr/collections/femme",
     "status": "ok",
     "http_status": 200,
-    "final_url": "https://www.flotte.fr/fr-int/collections/femme",
+    "final_url": "https://www.flotte.fr/collections/femme",
     "has_promo": true,
     "found": [
       "deal"
     ],
     "error": null,
-    "changed": false,
+    "changed": true,
     "category": "FEMMES"
   },
   {
@@ -231,7 +231,7 @@
     "url": "https://www.yade-paris.fr/",
     "status": "ok",
     "http_status": 200,
-    "final_url": "https://www.yade-paris.com/fr?shpxid=e1f4c2f3-0191-4731-b7aa-c517c9bb2aff",
+    "final_url": "https://www.yade-paris.com/fr?shpxid=95a4c771-ea50-409e-bf03-02f3a943d4c2",
     "has_promo": false,
     "found": [],
     "error": null,
@@ -282,7 +282,7 @@
       "soldes"
     ],
     "error": null,
-    "changed": true,
+    "changed": false,
     "category": "HOMMES"
   },
   {
