@@ -11,7 +11,7 @@
       "soldes"
     ],
     "error": null,
-    "changed": true,
+    "changed": false,
     "category": "FEMMES"
   },
   {
@@ -151,7 +151,7 @@
     "has_promo": false,
     "found": [],
     "error": null,
-    "changed": true,
+    "changed": false,
     "category": "FEMMES"
   },
   {
@@ -229,7 +229,7 @@
     "has_promo": false,
     "found": [],
     "error": null,
-    "changed": true,
+    "changed": false,
     "category": "FEMMES"
   },
   {
@@ -275,7 +275,7 @@
       "soldes"
     ],
     "error": null,
-    "changed": true,
+    "changed": false,
     "category": "HOMMES"
   },
   {
@@ -299,10 +299,12 @@
     "status": "ok",
     "http_status": 200,
     "final_url": "https://www.1083.fr/homme.html",
-    "has_promo": false,
-    "found": [],
+    "has_promo": true,
+    "found": [
+      "remise"
+    ],
     "error": null,
-    "changed": false,
+    "changed": true,
     "category": "HOMMES"
   },
   {
@@ -355,7 +357,7 @@
       "50%"
     ],
     "error": null,
-    "changed": true,
+    "changed": false,
     "category": "HOMMES"
   },
   {
@@ -424,7 +426,7 @@
     "has_promo": false,
     "found": [],
     "error": null,
-    "changed": true,
+    "changed": false,
     "category": "HOMMES"
   },
   {
