@@ -82,15 +82,13 @@
   },
   {
     "url": "https://www.1083.fr/",
-    "status": "ok",
-    "http_status": 200,
+    "status": "http_403",
+    "http_status": 403,
     "final_url": "https://www.1083.fr/",
-    "has_promo": true,
-    "found": [
-      "-50%"
-    ],
+    "has_promo": false,
+    "found": [],
     "error": null,
-    "changed": false,
+    "changed": true,
     "category": "FEMMES"
   },
   {
@@ -296,13 +294,11 @@
   },
   {
     "url": "https://www.1083.fr/homme.html",
-    "status": "ok",
-    "http_status": 200,
+    "status": "http_403",
+    "http_status": 403,
     "final_url": "https://www.1083.fr/homme.html",
-    "has_promo": true,
-    "found": [
-      "remise"
-    ],
+    "has_promo": false,
+    "found": [],
     "error": null,
     "changed": true,
     "category": "HOMMES"
@@ -490,7 +486,6 @@
     "final_url": "https://organicbasics.com/collections/all-mens-products",
     "has_promo": true,
     "found": [
-      "50%",
       "70%",
       "deal",
       "discount",
@@ -499,7 +494,7 @@
       "sales"
     ],
     "error": null,
-    "changed": false,
+    "changed": true,
     "category": "HOMMES"
   },
   {
