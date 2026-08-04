@@ -6,12 +6,10 @@
     "final_url": "https://www.armedangels.com/fr-fr/pages/femme-home",
     "has_promo": true,
     "found": [
-      "-60 %",
-      "-60%",
       "soldes"
     ],
     "error": null,
-    "changed": false,
+    "changed": true,
     "category": "FEMMES"
   },
   {
@@ -91,7 +89,7 @@
       "remise"
     ],
     "error": null,
-    "changed": true,
+    "changed": false,
     "category": "FEMMES"
   },
   {
@@ -271,12 +269,10 @@
     "final_url": "https://www.armedangels.com/fr-fr/pages/homme-home",
     "has_promo": true,
     "found": [
-      "-60 %",
-      "-60%",
       "soldes"
     ],
     "error": null,
-    "changed": false,
+    "changed": true,
     "category": "HOMMES"
   },
   {
@@ -305,7 +301,7 @@
       "remise"
     ],
     "error": null,
-    "changed": true,
+    "changed": false,
     "category": "HOMMES"
   },
   {
@@ -500,7 +496,7 @@
       "sales"
     ],
     "error": null,
-    "changed": true,
+    "changed": false,
     "category": "HOMMES"
   },
   {
