@@ -114,7 +114,7 @@
       "promotion"
     ],
     "error": null,
-    "changed": true,
+    "changed": false,
     "category": "FEMMES"
   },
   {
@@ -235,7 +235,6 @@
     "final_url": "https://organicbasics.com/collections/all-womens-products",
     "has_promo": true,
     "found": [
-      "50%",
       "70%",
       "discount",
       "offers",
