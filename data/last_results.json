@@ -242,7 +242,7 @@
       "sales"
     ],
     "error": null,
-    "changed": true,
+    "changed": false,
     "category": "FEMMES"
   },
   {
@@ -522,13 +522,14 @@
     "final_url": "https://www.zeta-shoes.com/fr-us",
     "has_promo": true,
     "found": [
+      "-50%",
       "promo",
       "promotion",
       "reductions",
       "réduction"
     ],
     "error": null,
-    "changed": false,
+    "changed": true,
     "category": "CHAUSSURES"
   },
   {
