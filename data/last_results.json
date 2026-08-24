@@ -235,6 +235,7 @@
     "final_url": "https://organicbasics.com/collections/all-womens-products",
     "has_promo": true,
     "found": [
+      "50%",
       "70%",
       "discount",
       "offers",
@@ -242,7 +243,7 @@
       "sales"
     ],
     "error": null,
-    "changed": false,
+    "changed": true,
     "category": "FEMMES"
   },
   {
@@ -438,11 +439,13 @@
   },
   {
     "url": "https://www.flotte.fr/collections/homme",
-    "status": "http_429",
-    "http_status": 429,
+    "status": "ok",
+    "http_status": 200,
     "final_url": "https://www.flotte.fr/collections/homme",
-    "has_promo": false,
-    "found": [],
+    "has_promo": true,
+    "found": [
+      "deal"
+    ],
     "error": null,
     "changed": true,
     "category": "HOMMES"
@@ -460,22 +463,33 @@
   },
   {
     "url": "https://www.fromfuture.com/collections/toute-la-collection-homme",
-    "status": "http_429",
-    "http_status": 429,
+    "status": "ok",
+    "http_status": 200,
     "final_url": "https://www.fromfuture.com/collections/toute-la-collection-homme",
-    "has_promo": false,
-    "found": [],
+    "has_promo": true,
+    "found": [
+      "deal",
+      "soldes"
+    ],
     "error": null,
     "changed": true,
     "category": "HOMMES"
   },
   {
     "url": "https://organicbasics.com/collections/all-mens-products",
-    "status": "http_429",
-    "http_status": 429,
+    "status": "ok",
+    "http_status": 200,
     "final_url": "https://organicbasics.com/collections/all-mens-products",
-    "has_promo": false,
-    "found": [],
+    "has_promo": true,
+    "found": [
+      "50%",
+      "70%",
+      "deal",
+      "discount",
+      "offers",
+      "sale",
+      "sales"
+    ],
     "error": null,
     "changed": true,
     "category": "HOMMES"
@@ -488,7 +502,7 @@
     "has_promo": false,
     "found": [],
     "error": null,
-    "changed": true,
+    "changed": false,
     "category": "CHAUSSURES"
   },
   {
@@ -499,7 +513,7 @@
     "has_promo": false,
     "found": [],
     "error": null,
-    "changed": true,
+    "changed": false,
     "category": "CHAUSSURES"
   },
   {
@@ -510,7 +524,7 @@
     "has_promo": false,
     "found": [],
     "error": null,
-    "changed": true,
+    "changed": false,
     "category": "CHAUSSURES"
   },
   {
@@ -521,7 +535,7 @@
     "has_promo": false,
     "found": [],
     "error": null,
-    "changed": true,
+    "changed": false,
     "category": "CHAUSSURES"
   },
   {
@@ -532,7 +546,7 @@
     "has_promo": false,
     "found": [],
     "error": null,
-    "changed": true,
+    "changed": false,
     "category": "CHAUSSURES"
   },
   {
@@ -543,7 +557,7 @@
     "has_promo": false,
     "found": [],
     "error": null,
-    "changed": true,
+    "changed": false,
     "category": "CHAUSSURES"
   },
   {
@@ -554,7 +568,7 @@
     "has_promo": false,
     "found": [],
     "error": null,
-    "changed": true,
+    "changed": false,
     "category": "LINGE DE MAISON"
   },
   {
@@ -565,7 +579,7 @@
     "has_promo": false,
     "found": [],
     "error": null,
-    "changed": true,
+    "changed": false,
     "category": "LINGE DE MAISON"
   },
   {
@@ -590,7 +604,7 @@
     "has_promo": false,
     "found": [],
     "error": null,
-    "changed": true,
+    "changed": false,
     "category": "LINGE DE MAISON"
   }
 ]
