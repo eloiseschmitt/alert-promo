@@ -347,12 +347,10 @@
     "status": "ok",
     "http_status": 200,
     "final_url": "https://bonnegueule.fr/fr-us",
-    "has_promo": true,
-    "found": [
-      "sale"
-    ],
+    "has_promo": false,
+    "found": [],
     "error": null,
-    "changed": false,
+    "changed": true,
     "category": "HOMMES"
   },
   {
