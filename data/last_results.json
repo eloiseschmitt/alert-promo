@@ -237,6 +237,7 @@
     "final_url": "https://organicbasics.com/collections/all-womens-products",
     "has_promo": true,
     "found": [
+      "50%",
       "70%",
       "discount",
       "offers",
@@ -244,7 +245,7 @@
       "sales"
     ],
     "error": null,
-    "changed": false,
+    "changed": true,
     "category": "FEMMES"
   },
   {
@@ -498,12 +499,10 @@
     "status": "ok",
     "http_status": 200,
     "final_url": "https://minuitsurterre.com/",
-    "has_promo": true,
-    "found": [
-      "réduction"
-    ],
+    "has_promo": false,
+    "found": [],
     "error": null,
-    "changed": false,
+    "changed": true,
     "category": "CHAUSSURES"
   },
   {
