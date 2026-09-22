@@ -212,11 +212,12 @@
     "final_url": "https://minastorm.com/",
     "has_promo": true,
     "found": [
+      "-50%",
       "deal",
       "discount"
     ],
     "error": null,
-    "changed": false,
+    "changed": true,
     "category": "FEMMES"
   },
   {
@@ -239,6 +240,7 @@
     "found": [
       "50%",
       "70%",
+      "deal",
       "discount",
       "offers",
       "sale",
@@ -502,7 +504,7 @@
     "has_promo": false,
     "found": [],
     "error": null,
-    "changed": true,
+    "changed": false,
     "category": "CHAUSSURES"
   },
   {
