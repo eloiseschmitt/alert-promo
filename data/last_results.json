@@ -213,12 +213,12 @@
     "final_url": "https://minastorm.com/",
     "has_promo": true,
     "found": [
-      "-50%",
+      "60%",
       "deal",
       "discount"
     ],
     "error": null,
-    "changed": false,
+    "changed": true,
     "category": "FEMMES"
   },
   {
@@ -484,7 +484,6 @@
     "final_url": "https://organicbasics.com/collections/all-mens-products",
     "has_promo": true,
     "found": [
-      "50%",
       "70%",
       "deal",
       "discount",
@@ -493,7 +492,7 @@
       "sales"
     ],
     "error": null,
-    "changed": false,
+    "changed": true,
     "category": "HOMMES"
   },
   {
@@ -501,12 +500,10 @@
     "status": "ok",
     "http_status": 200,
     "final_url": "https://minuitsurterre.com/",
-    "has_promo": true,
-    "found": [
-      "- 70%"
-    ],
+    "has_promo": false,
+    "found": [],
     "error": null,
-    "changed": false,
+    "changed": true,
     "category": "CHAUSSURES"
   },
   {
@@ -600,10 +597,11 @@
     "final_url": "https://le-drap-francais.com/pages/linge-de-lit",
     "has_promo": true,
     "found": [
-      "deal"
+      "deal",
+      "sale"
     ],
     "error": null,
-    "changed": false,
+    "changed": true,
     "category": "LINGE DE MAISON"
   },
   {
