@@ -49,12 +49,10 @@
     "status": "ok",
     "http_status": 200,
     "final_url": "https://www.wedressfair.fr/accueil-femme?oc=nav",
-    "has_promo": true,
-    "found": [
-      "remise"
-    ],
+    "has_promo": false,
+    "found": [],
     "error": null,
-    "changed": false,
+    "changed": true,
     "category": "FEMMES"
   },
   {
@@ -213,12 +211,11 @@
     "final_url": "https://minastorm.com/",
     "has_promo": true,
     "found": [
-      "60%",
       "deal",
       "discount"
     ],
     "error": null,
-    "changed": false,
+    "changed": true,
     "category": "FEMMES"
   },
   {
@@ -287,10 +284,11 @@
       "deal",
       "promo",
       "promotion",
-      "réduction"
+      "réduction",
+      "soldes"
     ],
     "error": null,
-    "changed": false,
+    "changed": true,
     "category": "HOMMES"
   },
   {
@@ -309,12 +307,10 @@
     "status": "ok",
     "http_status": 200,
     "final_url": "https://www.wedressfair.fr/accueil-homme?oc=nav",
-    "has_promo": true,
-    "found": [
-      "remise"
-    ],
+    "has_promo": false,
+    "found": [],
     "error": null,
-    "changed": false,
+    "changed": true,
     "category": "HOMMES"
   },
   {
@@ -493,7 +489,7 @@
       "sales"
     ],
     "error": null,
-    "changed": true,
+    "changed": false,
     "category": "HOMMES"
   },
   {
@@ -601,7 +597,7 @@
       "deal"
     ],
     "error": null,
-    "changed": true,
+    "changed": false,
     "category": "LINGE DE MAISON"
   },
   {
