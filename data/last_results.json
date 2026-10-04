@@ -49,12 +49,10 @@
     "status": "ok",
     "http_status": 200,
     "final_url": "https://www.wedressfair.fr/accueil-femme?oc=nav",
-    "has_promo": true,
-    "found": [
-      "remise"
-    ],
+    "has_promo": false,
+    "found": [],
     "error": null,
-    "changed": false,
+    "changed": true,
     "category": "FEMMES"
   },
   {
@@ -309,12 +307,10 @@
     "status": "ok",
     "http_status": 200,
     "final_url": "https://www.wedressfair.fr/accueil-homme?oc=nav",
-    "has_promo": true,
-    "found": [
-      "remise"
-    ],
+    "has_promo": false,
+    "found": [],
     "error": null,
-    "changed": false,
+    "changed": true,
     "category": "HOMMES"
   },
   {
