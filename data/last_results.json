@@ -52,7 +52,7 @@
     "has_promo": false,
     "found": [],
     "error": null,
-    "changed": true,
+    "changed": false,
     "category": "FEMMES"
   },
   {
@@ -252,12 +252,10 @@
     "status": "ok",
     "http_status": 200,
     "final_url": "https://yvoetmoi.com/",
-    "has_promo": true,
-    "found": [
-      "deal"
-    ],
+    "has_promo": false,
+    "found": [],
     "error": null,
-    "changed": false,
+    "changed": true,
     "category": "FEMMES"
   },
   {
@@ -284,11 +282,10 @@
       "deal",
       "promo",
       "promotion",
-      "réduction",
-      "soldes"
+      "réduction"
     ],
     "error": null,
-    "changed": false,
+    "changed": true,
     "category": "HOMMES"
   },
   {
@@ -310,7 +307,7 @@
     "has_promo": false,
     "found": [],
     "error": null,
-    "changed": true,
+    "changed": false,
     "category": "HOMMES"
   },
   {
