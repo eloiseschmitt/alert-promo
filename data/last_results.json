@@ -49,10 +49,12 @@
     "status": "ok",
     "http_status": 200,
     "final_url": "https://www.wedressfair.fr/accueil-femme?oc=nav",
-    "has_promo": false,
-    "found": [],
+    "has_promo": true,
+    "found": [
+      "remise"
+    ],
     "error": null,
-    "changed": false,
+    "changed": true,
     "category": "FEMMES"
   },
   {
@@ -286,7 +288,7 @@
       "soldes"
     ],
     "error": null,
-    "changed": true,
+    "changed": false,
     "category": "HOMMES"
   },
   {
@@ -305,10 +307,12 @@
     "status": "ok",
     "http_status": 200,
     "final_url": "https://www.wedressfair.fr/accueil-homme?oc=nav",
-    "has_promo": false,
-    "found": [],
+    "has_promo": true,
+    "found": [
+      "remise"
+    ],
     "error": null,
-    "changed": false,
+    "changed": true,
     "category": "HOMMES"
   },
   {
@@ -520,14 +524,13 @@
     "final_url": "https://www.zeta-shoes.com/fr-us",
     "has_promo": true,
     "found": [
-      "-50%",
       "promo",
       "promotion",
       "reductions",
       "réduction"
     ],
     "error": null,
-    "changed": false,
+    "changed": true,
     "category": "CHAUSSURES"
   },
   {
