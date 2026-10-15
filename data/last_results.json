@@ -39,7 +39,7 @@
       "remise"
     ],
     "error": null,
-    "changed": true,
+    "changed": false,
     "category": "FEMMES"
   },
   {
@@ -47,8 +47,10 @@
     "status": "ok",
     "http_status": 200,
     "final_url": "https://www.wedressfair.fr/accueil-femme?oc=nav",
-    "has_promo": false,
-    "found": [],
+    "has_promo": true,
+    "found": [
+      "remise"
+    ],
     "error": null,
     "changed": true,
     "category": "FEMMES"
@@ -263,10 +265,11 @@
     "final_url": "https://www.armedangels.com/fr-fr/pages/homme-home",
     "has_promo": true,
     "found": [
+      "-60 %",
       "soldes"
     ],
     "error": null,
-    "changed": false,
+    "changed": true,
     "category": "HOMMES"
   },
   {
@@ -302,8 +305,10 @@
     "status": "ok",
     "http_status": 200,
     "final_url": "https://www.wedressfair.fr/accueil-homme?oc=nav",
-    "has_promo": false,
-    "found": [],
+    "has_promo": true,
+    "found": [
+      "remise"
+    ],
     "error": null,
     "changed": true,
     "category": "HOMMES"
