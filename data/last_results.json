@@ -25,7 +25,7 @@
       "réduction"
     ],
     "error": null,
-    "changed": true,
+    "changed": false,
     "category": "FEMMES"
   },
   {
@@ -233,6 +233,7 @@
     "final_url": "https://organicbasics.com/collections/all-womens-products",
     "has_promo": true,
     "found": [
+      "50%",
       "70%",
       "deal",
       "discount",
@@ -602,11 +603,12 @@
     "final_url": "https://www.bonsoirs.com/fr-fr",
     "has_promo": true,
     "found": [
+      "deal",
       "promo",
       "promos"
     ],
     "error": null,
-    "changed": false,
+    "changed": true,
     "category": "LINGE DE MAISON"
   },
   {
