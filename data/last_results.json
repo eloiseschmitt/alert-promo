@@ -3,13 +3,11 @@
     "url": "https://www.armedangels.com/fr-fr/pages/femme-home",
     "status": "ok",
     "http_status": 200,
-    "final_url": "https://www.armedangels.com/en-wo/pages/women-home",
+    "final_url": "https://www.armedangels.com/en-us/pages/women-home",
     "has_promo": true,
     "found": [
-      "60%",
       "discount",
-      "offers",
-      "sale"
+      "offers"
     ],
     "error": null,
     "changed": true,
@@ -27,7 +25,7 @@
       "réduction"
     ],
     "error": null,
-    "changed": true,
+    "changed": false,
     "category": "FEMMES"
   },
   {
@@ -516,7 +514,7 @@
     "url": "https://www.zeta-shoes.com/",
     "status": "ok",
     "http_status": 200,
-    "final_url": "https://www.zeta-shoes.com/fr-ca",
+    "final_url": "https://www.zeta-shoes.com/fr-us",
     "has_promo": true,
     "found": [
       "promo",
@@ -532,7 +530,7 @@
     "url": "https://alohas.com/fr",
     "status": "ok",
     "http_status": 200,
-    "final_url": "https://alohas.com/en-ca",
+    "final_url": "https://alohas.com/en-us",
     "has_promo": true,
     "found": [
       "discount",
@@ -563,7 +561,7 @@
     "url": "https://moea.io/fr/",
     "status": "ok",
     "http_status": 200,
-    "final_url": "https://moea.io/fr-int",
+    "final_url": "https://moea.io/fr/",
     "has_promo": true,
     "found": [
       "deal",
