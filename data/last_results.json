@@ -44,13 +44,13 @@
   },
   {
     "url": "https://www.wedressfair.fr/accueil-femme?oc=nav",
-    "status": "ok",
-    "http_status": 200,
+    "status": "http_403",
+    "http_status": 403,
     "final_url": "https://www.wedressfair.fr/accueil-femme?oc=nav",
     "has_promo": false,
     "found": [],
     "error": null,
-    "changed": false,
+    "changed": true,
     "category": "FEMMES"
   },
   {
@@ -301,13 +301,13 @@
   },
   {
     "url": "https://www.wedressfair.fr/accueil-homme?oc=nav",
-    "status": "ok",
-    "http_status": 200,
+    "status": "http_403",
+    "http_status": 403,
     "final_url": "https://www.wedressfair.fr/accueil-homme?oc=nav",
     "has_promo": false,
     "found": [],
     "error": null,
-    "changed": false,
+    "changed": true,
     "category": "HOMMES"
   },
   {
