@@ -22,10 +22,12 @@
     "found": [
       "promo",
       "promotion",
-      "réduction"
+      "réduction",
+      "sale",
+      "sales"
     ],
     "error": null,
-    "changed": false,
+    "changed": true,
     "category": "FEMMES"
   },
   {
@@ -281,10 +283,12 @@
       "promo",
       "promotion",
       "réduction",
+      "sale",
+      "sales",
       "soldes"
     ],
     "error": null,
-    "changed": false,
+    "changed": true,
     "category": "HOMMES"
   },
   {
