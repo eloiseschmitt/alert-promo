@@ -24,10 +24,11 @@
       "promotion",
       "réduction",
       "sale",
-      "sales"
+      "sales",
+      "soldes"
     ],
     "error": null,
-    "changed": false,
+    "changed": true,
     "category": "FEMMES"
   },
   {
@@ -320,7 +321,6 @@
     "final_url": "https://www.balibaris.com/",
     "has_promo": true,
     "found": [
-      "50 %",
       "promo",
       "promotion",
       "soldes"
