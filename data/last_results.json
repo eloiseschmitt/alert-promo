@@ -22,10 +22,7 @@
     "found": [
       "promo",
       "promotion",
-      "réduction",
-      "sale",
-      "sales",
-      "soldes"
+      "réduction"
     ],
     "error": null,
     "changed": true,
@@ -284,12 +281,10 @@
       "promo",
       "promotion",
       "réduction",
-      "sale",
-      "sales",
       "soldes"
     ],
     "error": null,
-    "changed": false,
+    "changed": true,
     "category": "HOMMES"
   },
   {
@@ -326,7 +321,7 @@
       "soldes"
     ],
     "error": null,
-    "changed": true,
+    "changed": false,
     "category": "HOMMES"
   },
   {
