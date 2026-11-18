@@ -316,12 +316,12 @@
     "final_url": "https://www.balibaris.com/",
     "has_promo": true,
     "found": [
-      "promo",
-      "promotion",
+      "- 50%",
+      "-50%",
       "soldes"
     ],
     "error": null,
-    "changed": false,
+    "changed": true,
     "category": "HOMMES"
   },
   {
